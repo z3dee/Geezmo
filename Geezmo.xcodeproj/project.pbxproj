@@ -12,7 +12,6 @@
 		CA667A6F2C4918F1007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */; };
 		CA667A752C4918F1007E8F87 /* Geezmo Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CA667A7A2C4918F1007E8F87 /* GeezmoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A792C4918F1007E8F87 /* GeezmoApp.swift */; };
-		CA667A7C2C4918F1007E8F87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A7B2C4918F1007E8F87 /* ContentView.swift */; };
 		CA667A7E2C4918F2007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A7D2C4918F2007E8F87 /* Assets.xcassets */; };
 		CA667A812C4918F2007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A802C4918F2007E8F87 /* Preview Assets.xcassets */; };
 		CA667A8C2C492101007E8F87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A8B2C492101007E8F87 /* MainView.swift */; };
@@ -55,6 +54,22 @@
 		CA667AE22C49310E007E8F87 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AE12C49310E007E8F87 /* Globals.swift */; };
 		CA667AE62C493155007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667AE52C493155007E8F87 /* Foil */; };
 		CA667AE82C493159007E8F87 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667AE72C493159007E8F87 /* WebOSClient */; };
+		CA667AEA2C493548007E8F87 /* KeyButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AE92C493548007E8F87 /* KeyButtonType.swift */; };
+		CA667AED2C493576007E8F87 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AEC2C493576007E8F87 /* Strings.swift */; };
+		CA667AF02C49359F007E8F87 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AEF2C49359F007E8F87 /* Globals.swift */; };
+		CA667AF32C4935D4007E8F87 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AF22C4935D4007E8F87 /* MainTabView.swift */; };
+		CA667AF62C49361C007E8F87 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AF52C49361C007E8F87 /* NavigationView.swift */; };
+		CA667AF82C493655007E8F87 /* PlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AF72C493655007E8F87 /* PlaybackView.swift */; };
+		CA667AFA2C493696007E8F87 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AF92C493696007E8F87 /* PreferencesView.swift */; };
+		CA667AFC2C4936CB007E8F87 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AFB2C4936CB007E8F87 /* VolumeView.swift */; };
+		CA667AFE2C49370E007E8F87 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AFD2C49370E007E8F87 /* KeyButton.swift */; };
+		CA667B012C4937B7007E8F87 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B002C4937B7007E8F87 /* ButtonRow.swift */; };
+		CA667B032C4937E2007E8F87 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B022C4937E2007E8F87 /* ButtonGroup.swift */; };
+		CA667B052C49383C007E8F87 /* NavigationDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B042C49383C007E8F87 /* NavigationDefaultView.swift */; };
+		CA667B082C49388F007E8F87 /* NavigationAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B072C49388F007E8F87 /* NavigationAlternativeView.swift */; };
+		CA667B0A2C4938EC007E8F87 /* PlaybackDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B092C4938EC007E8F87 /* PlaybackDefaultView.swift */; };
+		CA667B0C2C493925007E8F87 /* PlaybackAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B0B2C493925007E8F87 /* PlaybackAlternativeView.swift */; };
+		CA667B0E2C493963007E8F87 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B0D2C493963007E8F87 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +103,6 @@
 		CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geezmo Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA667A792C4918F1007E8F87 /* GeezmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoApp.swift; sourceTree = "<group>"; };
-		CA667A7B2C4918F1007E8F87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA667A7D2C4918F2007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA667A802C4918F2007E8F87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA667A8B2C492101007E8F87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -122,6 +136,22 @@
 		CA667ADA2C4930B3007E8F87 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		CA667ADE2C4930D8007E8F87 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		CA667AE12C49310E007E8F87 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		CA667AE92C493548007E8F87 /* KeyButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButtonType.swift; sourceTree = "<group>"; };
+		CA667AEC2C493576007E8F87 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CA667AEF2C49359F007E8F87 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		CA667AF22C4935D4007E8F87 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		CA667AF52C49361C007E8F87 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		CA667AF72C493655007E8F87 /* PlaybackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackView.swift; sourceTree = "<group>"; };
+		CA667AF92C493696007E8F87 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		CA667AFB2C4936CB007E8F87 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
+		CA667AFD2C49370E007E8F87 /* KeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
+		CA667B002C4937B7007E8F87 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
+		CA667B022C4937E2007E8F87 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
+		CA667B042C49383C007E8F87 /* NavigationDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDefaultView.swift; sourceTree = "<group>"; };
+		CA667B072C49388F007E8F87 /* NavigationAlternativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAlternativeView.swift; sourceTree = "<group>"; };
+		CA667B092C4938EC007E8F87 /* PlaybackDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackDefaultView.swift; sourceTree = "<group>"; };
+		CA667B0B2C493925007E8F87 /* PlaybackAlternativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackAlternativeView.swift; sourceTree = "<group>"; };
+		CA667B0D2C493963007E8F87 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +226,11 @@
 			isa = PBXGroup;
 			children = (
 				CA667A792C4918F1007E8F87 /* GeezmoApp.swift */,
-				CA667A7B2C4918F1007E8F87 /* ContentView.swift */,
+				CA667AF42C4935FB007E8F87 /* Views */,
+				CA667B0F2C49397C007E8F87 /* ViewModels */,
+				CA667AF12C4935AF007E8F87 /* Globals */,
+				CA667AEB2C49355F007E8F87 /* Types */,
+				CA667AEE2C49357C007E8F87 /* Resources */,
 				CA667A7D2C4918F2007E8F87 /* Assets.xcassets */,
 				CA667A7F2C4918F2007E8F87 /* Preview Content */,
 			);
@@ -320,6 +354,73 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA667AEB2C49355F007E8F87 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AE92C493548007E8F87 /* KeyButtonType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		CA667AEE2C49357C007E8F87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AEC2C493576007E8F87 /* Strings.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA667AF12C4935AF007E8F87 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AEF2C49359F007E8F87 /* Globals.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		CA667AF42C4935FB007E8F87 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AFF2C49379D007E8F87 /* HelperViews */,
+				CA667B062C49383F007E8F87 /* ButtonGroupViews */,
+				CA667AF22C4935D4007E8F87 /* MainTabView.swift */,
+				CA667AF52C49361C007E8F87 /* NavigationView.swift */,
+				CA667AF72C493655007E8F87 /* PlaybackView.swift */,
+				CA667AF92C493696007E8F87 /* PreferencesView.swift */,
+				CA667AFB2C4936CB007E8F87 /* VolumeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA667AFF2C49379D007E8F87 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AFD2C49370E007E8F87 /* KeyButton.swift */,
+				CA667B002C4937B7007E8F87 /* ButtonRow.swift */,
+				CA667B022C4937E2007E8F87 /* ButtonGroup.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		CA667B062C49383F007E8F87 /* ButtonGroupViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA667B042C49383C007E8F87 /* NavigationDefaultView.swift */,
+				CA667B072C49388F007E8F87 /* NavigationAlternativeView.swift */,
+				CA667B092C4938EC007E8F87 /* PlaybackDefaultView.swift */,
+				CA667B0B2C493925007E8F87 /* PlaybackAlternativeView.swift */,
+			);
+			path = ButtonGroupViews;
+			sourceTree = "<group>";
+		};
+		CA667B0F2C49397C007E8F87 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CA667B0D2C493963007E8F87 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,11 +580,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA667A7C2C4918F1007E8F87 /* ContentView.swift in Sources */,
 				CA667A7A2C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
+				CA667AF62C49361C007E8F87 /* NavigationView.swift in Sources */,
+				CA667B012C4937B7007E8F87 /* ButtonRow.swift in Sources */,
 				CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */,
+				CA667AF82C493655007E8F87 /* PlaybackView.swift in Sources */,
+				CA667B082C49388F007E8F87 /* NavigationAlternativeView.swift in Sources */,
 				CA667AD82C49308C007E8F87 /* AppSettings.swift in Sources */,
+				CA667B052C49383C007E8F87 /* NavigationDefaultView.swift in Sources */,
+				CA667AF32C4935D4007E8F87 /* MainTabView.swift in Sources */,
 				CA667ADD2C4930C7007E8F87 /* BundleExtensions.swift in Sources */,
+				CA667B0C2C493925007E8F87 /* PlaybackAlternativeView.swift in Sources */,
+				CA667AED2C493576007E8F87 /* Strings.swift in Sources */,
+				CA667AF02C49359F007E8F87 /* Globals.swift in Sources */,
+				CA667AEA2C493548007E8F87 /* KeyButtonType.swift in Sources */,
+				CA667B0A2C4938EC007E8F87 /* PlaybackDefaultView.swift in Sources */,
+				CA667B0E2C493963007E8F87 /* MainViewModel.swift in Sources */,
+				CA667AFC2C4936CB007E8F87 /* VolumeView.swift in Sources */,
+				CA667AFE2C49370E007E8F87 /* KeyButton.swift in Sources */,
+				CA667B032C4937E2007E8F87 /* ButtonGroup.swift in Sources */,
+				CA667AFA2C493696007E8F87 /* PreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

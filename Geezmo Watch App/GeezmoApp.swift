@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct Geezmo_Watch_AppApp: App {
+struct GeezmoWatchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
+        .environmentObject(MainViewModel())
     }
 }
