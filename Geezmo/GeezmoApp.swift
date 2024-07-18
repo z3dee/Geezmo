@@ -11,7 +11,7 @@ import SwiftUI
 struct GeezmoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(viewModel: MainViewModel())
         }
     }
 }

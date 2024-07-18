@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A672C4918F1007E8F87 /* GeezmoApp.swift */; };
-		CA667A6A2C4918F1007E8F87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A692C4918F1007E8F87 /* ContentView.swift */; };
 		CA667A6C2C4918F1007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6B2C4918F1007E8F87 /* Assets.xcassets */; };
 		CA667A6F2C4918F1007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */; };
 		CA667A752C4918F1007E8F87 /* Geezmo Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -16,6 +15,46 @@
 		CA667A7C2C4918F1007E8F87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A7B2C4918F1007E8F87 /* ContentView.swift */; };
 		CA667A7E2C4918F2007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A7D2C4918F2007E8F87 /* Assets.xcassets */; };
 		CA667A812C4918F2007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A802C4918F2007E8F87 /* Preview Assets.xcassets */; };
+		CA667A8C2C492101007E8F87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A8B2C492101007E8F87 /* MainView.swift */; };
+		CA667A8F2C49215F007E8F87 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A8E2C49215F007E8F87 /* PreferencesView.swift */; };
+		CA667A912C49218E007E8F87 /* DeviceDiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */; };
+		CA667A942C4921B9007E8F87 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A932C4921B9007E8F87 /* SSDPClient */; };
+		CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A962C4921C5007E8F87 /* ActivityIndicatorView */; };
+		CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A992C4921CF007E8F87 /* Foil */; };
+		CA667A9D2C4921E0007E8F87 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A9C2C4921E0007E8F87 /* WebOSClient */; };
+		CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A9E2C4921F9007E8F87 /* AboutView.swift */; };
+		CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA02C492223007E8F87 /* TipView.swift.swift */; };
+		CA667AA32C49223F007E8F87 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA22C49223F007E8F87 /* GuideView.swift */; };
+		CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA42C492265007E8F87 /* ToastConfiguration.swift */; };
+		CA667AA72C49227E007E8F87 /* ToastSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA62C49227E007E8F87 /* ToastSheetView.swift */; };
+		CA667AA92C4922D9007E8F87 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA82C4922D9007E8F87 /* KeyboardView.swift */; };
+		CA667AAB2C492315007E8F87 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AAA2C492315007E8F87 /* ButtonGroup.swift */; };
+		CA667AAE2C49233A007E8F87 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AAD2C49233A007E8F87 /* ButtonRow.swift */; };
+		CA667AB22C4923D6007E8F87 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AB12C4923D6007E8F87 /* KeyButton.swift */; };
+		CA667AB42C492CF0007E8F87 /* ButtonGroupDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AB32C492CF0007E8F87 /* ButtonGroupDefaultView.swift */; };
+		CA667AB72C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AB62C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift */; };
+		CA667AB92C492DCF007E8F87 /* ButtonGroupColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AB82C492DCF007E8F87 /* ButtonGroupColorView.swift */; };
+		CA667ABB2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ABA2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift */; };
+		CA667ABD2C492E94007E8F87 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ABC2C492E94007E8F87 /* MainViewModel.swift */; };
+		CA667AC02C492EBB007E8F87 /* MainViewModel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ABF2C492EBB007E8F87 /* MainViewModel+.swift */; };
+		CA667AC22C492EDF007E8F87 /* WebOSClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AC12C492EDF007E8F87 /* WebOSClientDelegate.swift */; };
+		CA667AC42C492F04007E8F87 /* WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AC32C492F04007E8F87 /* WCSessionDelegate.swift */; };
+		CA667AC62C492F2B007E8F87 /* SSDPDiscoveryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AC52C492F2B007E8F87 /* SSDPDiscoveryDelegate.swift */; };
+		CA667AC82C492F5C007E8F87 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AC72C492F5C007E8F87 /* UINavigationController+.swift */; };
+		CA667ACB2C492F8A007E8F87 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ACA2C492F8A007E8F87 /* Strings.swift */; };
+		CA667ACE2C492FD3007E8F87 /* KeyButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ACD2C492FD3007E8F87 /* KeyButtonType.swift */; };
+		CA667AD12C49300D007E8F87 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AD02C49300D007E8F87 /* DeviceData.swift */; };
+		CA667AD32C493021007E8F87 /* NavigationScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AD22C493021007E8F87 /* NavigationScreens.swift */; };
+		CA667AD52C49303C007E8F87 /* ToastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AD42C49303C007E8F87 /* ToastType.swift */; };
+		CA667AD72C493088007E8F87 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AD62C493088007E8F87 /* AppSettings.swift */; };
+		CA667AD82C49308C007E8F87 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AD62C493088007E8F87 /* AppSettings.swift */; };
+		CA667ADB2C4930B3007E8F87 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ADA2C4930B3007E8F87 /* BundleExtensions.swift */; };
+		CA667ADD2C4930C7007E8F87 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ADA2C4930B3007E8F87 /* BundleExtensions.swift */; };
+		CA667ADF2C4930D8007E8F87 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ADE2C4930D8007E8F87 /* StringExtensions.swift */; };
+		CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ADE2C4930D8007E8F87 /* StringExtensions.swift */; };
+		CA667AE22C49310E007E8F87 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AE12C49310E007E8F87 /* Globals.swift */; };
+		CA667AE62C493155007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667AE52C493155007E8F87 /* Foil */; };
+		CA667AE82C493159007E8F87 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667AE72C493159007E8F87 /* WebOSClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +84,6 @@
 /* Begin PBXFileReference section */
 		CA667A642C4918F1007E8F87 /* Geezmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geezmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA667A672C4918F1007E8F87 /* GeezmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoApp.swift; sourceTree = "<group>"; };
-		CA667A692C4918F1007E8F87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA667A6B2C4918F1007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geezmo Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +91,37 @@
 		CA667A7B2C4918F1007E8F87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA667A7D2C4918F2007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA667A802C4918F2007E8F87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CA667A8B2C492101007E8F87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CA667A8E2C49215F007E8F87 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryView.swift; sourceTree = "<group>"; };
+		CA667A9E2C4921F9007E8F87 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		CA667AA02C492223007E8F87 /* TipView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift.swift; sourceTree = "<group>"; };
+		CA667AA22C49223F007E8F87 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		CA667AA42C492265007E8F87 /* ToastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
+		CA667AA62C49227E007E8F87 /* ToastSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastSheetView.swift; sourceTree = "<group>"; };
+		CA667AA82C4922D9007E8F87 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		CA667AAA2C492315007E8F87 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
+		CA667AAD2C49233A007E8F87 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
+		CA667AB12C4923D6007E8F87 /* KeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
+		CA667AB32C492CF0007E8F87 /* ButtonGroupDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupDefaultView.swift; sourceTree = "<group>"; };
+		CA667AB62C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupDefaultAlternativeView.swift; sourceTree = "<group>"; };
+		CA667AB82C492DCF007E8F87 /* ButtonGroupColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupColorView.swift; sourceTree = "<group>"; };
+		CA667ABA2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupColorAlternativeView.swift; sourceTree = "<group>"; };
+		CA667ABC2C492E94007E8F87 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CA667ABF2C492EBB007E8F87 /* MainViewModel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+.swift"; sourceTree = "<group>"; };
+		CA667AC12C492EDF007E8F87 /* WebOSClientDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebOSClientDelegate.swift; sourceTree = "<group>"; };
+		CA667AC32C492F04007E8F87 /* WCSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionDelegate.swift; sourceTree = "<group>"; };
+		CA667AC52C492F2B007E8F87 /* SSDPDiscoveryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPDiscoveryDelegate.swift; sourceTree = "<group>"; };
+		CA667AC72C492F5C007E8F87 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		CA667ACA2C492F8A007E8F87 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CA667ACD2C492FD3007E8F87 /* KeyButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButtonType.swift; sourceTree = "<group>"; };
+		CA667AD02C49300D007E8F87 /* DeviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
+		CA667AD22C493021007E8F87 /* NavigationScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationScreens.swift; sourceTree = "<group>"; };
+		CA667AD42C49303C007E8F87 /* ToastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastType.swift; sourceTree = "<group>"; };
+		CA667AD62C493088007E8F87 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		CA667ADA2C4930B3007E8F87 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		CA667ADE2C4930D8007E8F87 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		CA667AE12C49310E007E8F87 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +129,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */,
+				CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */,
+				CA667A9D2C4921E0007E8F87 /* WebOSClient in Frameworks */,
+				CA667A942C4921B9007E8F87 /* SSDPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA667AE82C493159007E8F87 /* WebOSClient in Frameworks */,
+				CA667AE62C493155007E8F87 /* Foil in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,9 +151,11 @@
 		CA667A5B2C4918F1007E8F87 = {
 			isa = PBXGroup;
 			children = (
+				CA667AD92C493090007E8F87 /* Shared */,
 				CA667A662C4918F1007E8F87 /* Geezmo */,
 				CA667A782C4918F1007E8F87 /* Geezmo Watch App */,
 				CA667A652C4918F1007E8F87 /* Products */,
+				CA667AE42C493155007E8F87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +172,12 @@
 			isa = PBXGroup;
 			children = (
 				CA667A672C4918F1007E8F87 /* GeezmoApp.swift */,
-				CA667A692C4918F1007E8F87 /* ContentView.swift */,
+				CA667A8D2C49211F007E8F87 /* Views */,
+				CA667ABE2C492E99007E8F87 /* ViewModels */,
+				CA667AE32C49311B007E8F87 /* Globals */,
+				CA667ACF2C492FD7007E8F87 /* Types */,
+				CA667ACC2C492F93007E8F87 /* Resources */,
+				CA667AC92C492F68007E8F87 /* Extensions */,
 				CA667A6B2C4918F1007E8F87 /* Assets.xcassets */,
 				CA667A6D2C4918F1007E8F87 /* Preview Content */,
 			);
@@ -129,6 +211,117 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CA667A8D2C49211F007E8F87 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AAC2C492323007E8F87 /* HelperViews */,
+				CA667AB52C492CF4007E8F87 /* ButtonGroupViews */,
+				CA667A8B2C492101007E8F87 /* MainView.swift */,
+				CA667A8E2C49215F007E8F87 /* PreferencesView.swift */,
+				CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */,
+				CA667A9E2C4921F9007E8F87 /* AboutView.swift */,
+				CA667AA02C492223007E8F87 /* TipView.swift.swift */,
+				CA667AA22C49223F007E8F87 /* GuideView.swift */,
+				CA667AA42C492265007E8F87 /* ToastConfiguration.swift */,
+				CA667AA62C49227E007E8F87 /* ToastSheetView.swift */,
+				CA667AA82C4922D9007E8F87 /* KeyboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA667AAC2C492323007E8F87 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AAA2C492315007E8F87 /* ButtonGroup.swift */,
+				CA667AAD2C49233A007E8F87 /* ButtonRow.swift */,
+				CA667AB12C4923D6007E8F87 /* KeyButton.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		CA667AB52C492CF4007E8F87 /* ButtonGroupViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AB32C492CF0007E8F87 /* ButtonGroupDefaultView.swift */,
+				CA667AB62C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift */,
+				CA667AB82C492DCF007E8F87 /* ButtonGroupColorView.swift */,
+				CA667ABA2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift */,
+			);
+			path = ButtonGroupViews;
+			sourceTree = "<group>";
+		};
+		CA667ABE2C492E99007E8F87 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CA667ABC2C492E94007E8F87 /* MainViewModel.swift */,
+				CA667ABF2C492EBB007E8F87 /* MainViewModel+.swift */,
+				CA667AC12C492EDF007E8F87 /* WebOSClientDelegate.swift */,
+				CA667AC32C492F04007E8F87 /* WCSessionDelegate.swift */,
+				CA667AC52C492F2B007E8F87 /* SSDPDiscoveryDelegate.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CA667AC92C492F68007E8F87 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AC72C492F5C007E8F87 /* UINavigationController+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA667ACC2C492F93007E8F87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA667ACA2C492F8A007E8F87 /* Strings.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA667ACF2C492FD7007E8F87 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				CA667ACD2C492FD3007E8F87 /* KeyButtonType.swift */,
+				CA667AD02C49300D007E8F87 /* DeviceData.swift */,
+				CA667AD22C493021007E8F87 /* NavigationScreens.swift */,
+				CA667AD42C49303C007E8F87 /* ToastType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		CA667AD92C493090007E8F87 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CA667ADC2C4930BF007E8F87 /* Extensions */,
+				CA667AD62C493088007E8F87 /* AppSettings.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CA667ADC2C4930BF007E8F87 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA667ADA2C4930B3007E8F87 /* BundleExtensions.swift */,
+				CA667ADE2C4930D8007E8F87 /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA667AE32C49311B007E8F87 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				CA667AE12C49310E007E8F87 /* Globals.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		CA667AE42C493155007E8F87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +340,12 @@
 				CA667A772C4918F1007E8F87 /* PBXTargetDependency */,
 			);
 			name = Geezmo;
+			packageProductDependencies = (
+				CA667A932C4921B9007E8F87 /* SSDPClient */,
+				CA667A962C4921C5007E8F87 /* ActivityIndicatorView */,
+				CA667A992C4921CF007E8F87 /* Foil */,
+				CA667A9C2C4921E0007E8F87 /* WebOSClient */,
+			);
 			productName = Geezmo;
 			productReference = CA667A642C4918F1007E8F87 /* Geezmo.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +363,10 @@
 			dependencies = (
 			);
 			name = "Geezmo Watch App";
+			packageProductDependencies = (
+				CA667AE52C493155007E8F87 /* Foil */,
+				CA667AE72C493159007E8F87 /* WebOSClient */,
+			);
 			productName = "Geezmo Watch App";
 			productReference = CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +398,12 @@
 				Base,
 			);
 			mainGroup = CA667A5B2C4918F1007E8F87;
+			packageReferences = (
+				CA667A922C4921B9007E8F87 /* XCRemoteSwiftPackageReference "SSDPClient" */,
+				CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+				CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */,
+				CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */,
+			);
 			productRefGroup = CA667A652C4918F1007E8F87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,8 +440,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA667A6A2C4918F1007E8F87 /* ContentView.swift in Sources */,
+				CA667ACE2C492FD3007E8F87 /* KeyButtonType.swift in Sources */,
+				CA667AB72C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift in Sources */,
 				CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
+				CA667AC82C492F5C007E8F87 /* UINavigationController+.swift in Sources */,
+				CA667A8F2C49215F007E8F87 /* PreferencesView.swift in Sources */,
+				CA667AB42C492CF0007E8F87 /* ButtonGroupDefaultView.swift in Sources */,
+				CA667A8C2C492101007E8F87 /* MainView.swift in Sources */,
+				CA667AD52C49303C007E8F87 /* ToastType.swift in Sources */,
+				CA667AA92C4922D9007E8F87 /* KeyboardView.swift in Sources */,
+				CA667AD32C493021007E8F87 /* NavigationScreens.swift in Sources */,
+				CA667AD72C493088007E8F87 /* AppSettings.swift in Sources */,
+				CA667AC42C492F04007E8F87 /* WCSessionDelegate.swift in Sources */,
+				CA667AE22C49310E007E8F87 /* Globals.swift in Sources */,
+				CA667AC22C492EDF007E8F87 /* WebOSClientDelegate.swift in Sources */,
+				CA667AAB2C492315007E8F87 /* ButtonGroup.swift in Sources */,
+				CA667ACB2C492F8A007E8F87 /* Strings.swift in Sources */,
+				CA667A912C49218E007E8F87 /* DeviceDiscoveryView.swift in Sources */,
+				CA667AB92C492DCF007E8F87 /* ButtonGroupColorView.swift in Sources */,
+				CA667AC62C492F2B007E8F87 /* SSDPDiscoveryDelegate.swift in Sources */,
+				CA667AA32C49223F007E8F87 /* GuideView.swift in Sources */,
+				CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */,
+				CA667ABB2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift in Sources */,
+				CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */,
+				CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */,
+				CA667ADF2C4930D8007E8F87 /* StringExtensions.swift in Sources */,
+				CA667AAE2C49233A007E8F87 /* ButtonRow.swift in Sources */,
+				CA667AC02C492EBB007E8F87 /* MainViewModel+.swift in Sources */,
+				CA667AB22C4923D6007E8F87 /* KeyButton.swift in Sources */,
+				CA667AD12C49300D007E8F87 /* DeviceData.swift in Sources */,
+				CA667AA72C49227E007E8F87 /* ToastSheetView.swift in Sources */,
+				CA667ABD2C492E94007E8F87 /* MainViewModel.swift in Sources */,
+				CA667ADB2C4930B3007E8F87 /* BundleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +481,9 @@
 			files = (
 				CA667A7C2C4918F1007E8F87 /* ContentView.swift in Sources */,
 				CA667A7A2C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
+				CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */,
+				CA667AD82C49308C007E8F87 /* AppSettings.swift in Sources */,
+				CA667ADD2C4930C7007E8F87 /* BundleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +777,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA667A922C4921B9007E8F87 /* XCRemoteSwiftPackageReference "SSDPClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pierrickrouxel/SSDPClient.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+		CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jessesquires/Foil.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jareksedy/WebOSClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA667A932C4921B9007E8F87 /* SSDPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA667A922C4921B9007E8F87 /* XCRemoteSwiftPackageReference "SSDPClient" */;
+			productName = SSDPClient;
+		};
+		CA667A962C4921C5007E8F87 /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+		CA667A992C4921CF007E8F87 /* Foil */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */;
+			productName = Foil;
+		};
+		CA667A9C2C4921E0007E8F87 /* WebOSClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */;
+			productName = WebOSClient;
+		};
+		CA667AE52C493155007E8F87 /* Foil */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */;
+			productName = Foil;
+		};
+		CA667AE72C493159007E8F87 /* WebOSClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */;
+			productName = WebOSClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA667A5C2C4918F1007E8F87 /* Project object */;
 }
