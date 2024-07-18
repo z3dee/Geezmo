@@ -41,7 +41,7 @@ struct GeezmoWidgetEntryView: View {
     var body: some View {
         ZStack {
             Color(UIColor(named: "WidgetBackground")!)
-            Image("moteWatchAppWidgetIcon")
+            Image("geezmoWatchAppWidgetIcon")
                 .resizable()
                 .scaledToFill()
         }
@@ -49,8 +49,8 @@ struct GeezmoWidgetEntryView: View {
 }
 
 @main
-struct MoteWidget: Widget {
-    let kind: String = "MoteWidget"
+struct GeezmoWidget: Widget {
+    let kind: String = "GeezmoWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -64,7 +64,7 @@ struct MoteWidget: Widget {
 }
 
 #Preview(as: .accessoryCircular) {
-    MoteWidget()
+    GeezmoWidget()
 } timeline: {
     SimpleEntry(date: .now)
 }
