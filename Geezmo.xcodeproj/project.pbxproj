@@ -71,6 +71,11 @@
 		CA667B0C2C493925007E8F87 /* PlaybackAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B0B2C493925007E8F87 /* PlaybackAlternativeView.swift */; };
 		CA667B0E2C493963007E8F87 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B0D2C493963007E8F87 /* MainViewModel.swift */; };
 		CA667B122C49403F007E8F87 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA667B102C49403F007E8F87 /* Localizable.strings */; };
+		CA667B1B2C49428B007E8F87 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA667B1A2C49428B007E8F87 /* WidgetKit.framework */; };
+		CA667B1D2C49428B007E8F87 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA667B1C2C49428B007E8F87 /* SwiftUI.framework */; };
+		CA667B202C49428B007E8F87 /* GeezmoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B1F2C49428B007E8F87 /* GeezmoWidget.swift */; };
+		CA667B222C49428C007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667B212C49428C007E8F87 /* Assets.xcassets */; };
+		CA667B262C49428C007E8F87 /* GeezmoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CA667B192C49428B007E8F87 /* GeezmoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CA667A732C4918F1007E8F87;
 			remoteInfo = "Geezmo Watch App";
+		};
+		CA667B242C49428C007E8F87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA667A5C2C4918F1007E8F87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA667B182C49428B007E8F87;
+			remoteInfo = GeezmoWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -93,6 +105,17 @@
 				CA667A752C4918F1007E8F87 /* Geezmo Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA667B2A2C49428C007E8F87 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CA667B262C49428C007E8F87 /* GeezmoWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -156,6 +179,12 @@
 		CA667B112C49403F007E8F87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA667B132C494045007E8F87 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA667B142C494045007E8F87 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CA667B192C49428B007E8F87 /* GeezmoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GeezmoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA667B1A2C49428B007E8F87 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CA667B1C2C49428B007E8F87 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CA667B1F2C49428B007E8F87 /* GeezmoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoWidget.swift; sourceTree = "<group>"; };
+		CA667B212C49428C007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA667B232C49428C007E8F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +208,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA667B162C49428B007E8F87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA667B1D2C49428B007E8F87 /* SwiftUI.framework in Frameworks */,
+				CA667B1B2C49428B007E8F87 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -188,6 +226,7 @@
 				CA667AD92C493090007E8F87 /* Shared */,
 				CA667A662C4918F1007E8F87 /* Geezmo */,
 				CA667A782C4918F1007E8F87 /* Geezmo Watch App */,
+				CA667B1E2C49428B007E8F87 /* GeezmoWidget */,
 				CA667A652C4918F1007E8F87 /* Products */,
 				CA667AE42C493155007E8F87 /* Frameworks */,
 			);
@@ -198,6 +237,7 @@
 			children = (
 				CA667A642C4918F1007E8F87 /* Geezmo.app */,
 				CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */,
+				CA667B192C49428B007E8F87 /* GeezmoWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -356,6 +396,8 @@
 		CA667AE42C493155007E8F87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA667B1A2C49428B007E8F87 /* WidgetKit.framework */,
+				CA667B1C2C49428B007E8F87 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,6 +470,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		CA667B1E2C49428B007E8F87 /* GeezmoWidget */ = {
+			isa = PBXGroup;
+			children = (
+				CA667B1F2C49428B007E8F87 /* GeezmoWidget.swift */,
+				CA667B212C49428C007E8F87 /* Assets.xcassets */,
+				CA667B232C49428C007E8F87 /* Info.plist */,
+			);
+			path = GeezmoWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -463,10 +515,12 @@
 				CA667A702C4918F1007E8F87 /* Sources */,
 				CA667A712C4918F1007E8F87 /* Frameworks */,
 				CA667A722C4918F1007E8F87 /* Resources */,
+				CA667B2A2C49428C007E8F87 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA667B252C49428C007E8F87 /* PBXTargetDependency */,
 			);
 			name = "Geezmo Watch App";
 			packageProductDependencies = (
@@ -476,6 +530,23 @@
 			productName = "Geezmo Watch App";
 			productReference = CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CA667B182C49428B007E8F87 /* GeezmoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA667B272C49428C007E8F87 /* Build configuration list for PBXNativeTarget "GeezmoWidgetExtension" */;
+			buildPhases = (
+				CA667B152C49428B007E8F87 /* Sources */,
+				CA667B162C49428B007E8F87 /* Frameworks */,
+				CA667B172C49428B007E8F87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeezmoWidgetExtension;
+			productName = GeezmoWidgetExtension;
+			productReference = CA667B192C49428B007E8F87 /* GeezmoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -491,6 +562,9 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					CA667A732C4918F1007E8F87 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					CA667B182C49428B007E8F87 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -517,6 +591,7 @@
 			targets = (
 				CA667A632C4918F1007E8F87 /* Geezmo */,
 				CA667A732C4918F1007E8F87 /* Geezmo Watch App */,
+				CA667B182C49428B007E8F87 /* GeezmoWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -538,6 +613,14 @@
 				CA667A812C4918F2007E8F87 /* Preview Assets.xcassets in Resources */,
 				CA667B122C49403F007E8F87 /* Localizable.strings in Resources */,
 				CA667A7E2C4918F2007E8F87 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA667B172C49428B007E8F87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA667B222C49428C007E8F87 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +693,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA667B152C49428B007E8F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA667B202C49428B007E8F87 /* GeezmoWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -617,6 +708,11 @@
 			isa = PBXTargetDependency;
 			target = CA667A732C4918F1007E8F87 /* Geezmo Watch App */;
 			targetProxy = CA667A762C4918F1007E8F87 /* PBXContainerItemProxy */;
+		};
+		CA667B252C49428C007E8F87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA667B182C49428B007E8F87 /* GeezmoWidgetExtension */;
+			targetProxy = CA667B242C49428C007E8F87 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -755,6 +851,7 @@
 		CA667A852C4918F2007E8F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -785,6 +882,7 @@
 		CA667A862C4918F2007E8F87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -882,6 +980,67 @@
 			};
 			name = Release;
 		};
+		CA667B282C49428C007E8F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NK62H99X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GeezmoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GeezmoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 0.9.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jareksedy.Geezmo.watchkitapp.GeezmoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		CA667B292C49428C007E8F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NK62H99X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GeezmoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GeezmoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 0.9.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jareksedy.Geezmo.watchkitapp.GeezmoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -908,6 +1067,15 @@
 			buildConfigurations = (
 				CA667A892C4918F2007E8F87 /* Debug */,
 				CA667A8A2C4918F2007E8F87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA667B272C49428C007E8F87 /* Build configuration list for PBXNativeTarget "GeezmoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA667B282C49428C007E8F87 /* Debug */,
+				CA667B292C49428C007E8F87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
