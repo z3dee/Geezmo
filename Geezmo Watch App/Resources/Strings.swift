@@ -21,4 +21,3 @@ enum Strings {
         static let appName = "Mote Watch App"
     }
 }
-

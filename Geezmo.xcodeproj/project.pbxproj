@@ -11,7 +11,7 @@
 		CA667A6C2C4918F1007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6B2C4918F1007E8F87 /* Assets.xcassets */; };
 		CA667A6F2C4918F1007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */; };
 		CA667A752C4918F1007E8F87 /* Geezmo Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CA667A7A2C4918F1007E8F87 /* GeezmoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A792C4918F1007E8F87 /* GeezmoApp.swift */; };
+		CA667A7A2C4918F1007E8F87 /* GeezmoWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A792C4918F1007E8F87 /* GeezmoWatchApp.swift */; };
 		CA667A7E2C4918F2007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A7D2C4918F2007E8F87 /* Assets.xcassets */; };
 		CA667A812C4918F2007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A802C4918F2007E8F87 /* Preview Assets.xcassets */; };
 		CA667A8C2C492101007E8F87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A8B2C492101007E8F87 /* MainView.swift */; };
@@ -70,6 +70,7 @@
 		CA667B0A2C4938EC007E8F87 /* PlaybackDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B092C4938EC007E8F87 /* PlaybackDefaultView.swift */; };
 		CA667B0C2C493925007E8F87 /* PlaybackAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B0B2C493925007E8F87 /* PlaybackAlternativeView.swift */; };
 		CA667B0E2C493963007E8F87 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B0D2C493963007E8F87 /* MainViewModel.swift */; };
+		CA667B122C49403F007E8F87 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA667B102C49403F007E8F87 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +103,7 @@
 		CA667A6B2C4918F1007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geezmo Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA667A792C4918F1007E8F87 /* GeezmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoApp.swift; sourceTree = "<group>"; };
+		CA667A792C4918F1007E8F87 /* GeezmoWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoWatchApp.swift; sourceTree = "<group>"; };
 		CA667A7D2C4918F2007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA667A802C4918F2007E8F87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA667A8B2C492101007E8F87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -152,6 +153,9 @@
 		CA667B092C4938EC007E8F87 /* PlaybackDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackDefaultView.swift; sourceTree = "<group>"; };
 		CA667B0B2C493925007E8F87 /* PlaybackAlternativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackAlternativeView.swift; sourceTree = "<group>"; };
 		CA667B0D2C493963007E8F87 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CA667B112C49403F007E8F87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CA667B132C494045007E8F87 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CA667B142C494045007E8F87 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +229,7 @@
 		CA667A782C4918F1007E8F87 /* Geezmo Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				CA667A792C4918F1007E8F87 /* GeezmoApp.swift */,
+				CA667A792C4918F1007E8F87 /* GeezmoWatchApp.swift */,
 				CA667AF42C4935FB007E8F87 /* Views */,
 				CA667B0F2C49397C007E8F87 /* ViewModels */,
 				CA667AF12C4935AF007E8F87 /* Globals */,
@@ -368,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				CA667AEC2C493576007E8F87 /* Strings.swift */,
+				CA667B102C49403F007E8F87 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -496,7 +501,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
+				kk,
 			);
 			mainGroup = CA667A5B2C4918F1007E8F87;
 			packageReferences = (
@@ -530,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667A812C4918F2007E8F87 /* Preview Assets.xcassets in Resources */,
+				CA667B122C49403F007E8F87 /* Localizable.strings in Resources */,
 				CA667A7E2C4918F2007E8F87 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,7 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA667A7A2C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
+				CA667A7A2C4918F1007E8F87 /* GeezmoWatchApp.swift in Sources */,
 				CA667AF62C49361C007E8F87 /* NavigationView.swift in Sources */,
 				CA667B012C4937B7007E8F87 /* KeyButtonRow.swift in Sources */,
 				CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */,
@@ -612,6 +619,19 @@
 			targetProxy = CA667A762C4918F1007E8F87 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA667B102C49403F007E8F87 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA667B112C49403F007E8F87 /* en */,
+				CA667B132C494045007E8F87 /* kk */,
+				CA667B142C494045007E8F87 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CA667A822C4918F2007E8F87 /* Debug */ = {

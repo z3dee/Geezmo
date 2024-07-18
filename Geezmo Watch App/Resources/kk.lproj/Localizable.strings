@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Geezmo
+
+  Created by Ярослав Седышев on 18.07.2024.
+  
+*/
+
+"#navigationViewTitle" = "Навигация";
+"#playbackViewTitle" = "Медиа ойнату";
+"#preferencesViewTitle" = "Баптаулар";
+
+"#alternativeLayout" = "Балама көрініс";
+"#hapticFeedback" = "Тактильді жауап";

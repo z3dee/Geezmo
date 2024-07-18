@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Geezmo
+
+  Created by Ярослав Седышев on 18.07.2024.
+  
+*/
+
+"#navigationViewTitle" = "Navigation";
+"#playbackViewTitle" = "Playback";
+"#preferencesViewTitle" = "Preferences";
+
+"#alternativeLayout" = "Alternative layout";
+"#hapticFeedback" = "Haptic feedback";

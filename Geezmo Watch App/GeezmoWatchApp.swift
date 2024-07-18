@@ -1,5 +1,5 @@
 //
-//  GeezmoApp.swift
+//  GeezmoWatchApp.swift
 //  Geezmo Watch App
 //
 //  Created by Ярослав Седышев on 18.07.2024.
