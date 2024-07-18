@@ -9,48 +9,48 @@ import SwiftUI
 
 struct ButtonGroupColorView: View {
     var body: some View {
-        ButtonGroup {
-            ButtonRow {
+        KeyButtonGroup {
+            KeyButtonRow {
                 KeyButton(.powerOff)
                 KeyButton(.grid)
                 KeyButton(.settings)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.red)
                 KeyButton(.green)
                 KeyButton(.yellow)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.num4)
                 KeyButton(.blue)
                 KeyButton(.num6)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.num7)
                 KeyButton(.num8)
                 KeyButton(.num9)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.screenOff)
                 KeyButton(.num0)
                 KeyButton(.mute)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.channelUp)
                 KeyButton(.up)
                 KeyButton(.volumeUp)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.left)
                 KeyButton(.ok)
                 KeyButton(.right)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.channelDown)
                 KeyButton(.down)
                 KeyButton(.volumeDown)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.home)
                 KeyButton(.playPause)
                 KeyButton(.back)

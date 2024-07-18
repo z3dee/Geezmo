@@ -27,8 +27,8 @@
 		CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA42C492265007E8F87 /* ToastConfiguration.swift */; };
 		CA667AA72C49227E007E8F87 /* ToastSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA62C49227E007E8F87 /* ToastSheetView.swift */; };
 		CA667AA92C4922D9007E8F87 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA82C4922D9007E8F87 /* KeyboardView.swift */; };
-		CA667AAB2C492315007E8F87 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AAA2C492315007E8F87 /* ButtonGroup.swift */; };
-		CA667AAE2C49233A007E8F87 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AAD2C49233A007E8F87 /* ButtonRow.swift */; };
+		CA667AAB2C492315007E8F87 /* KeyButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AAA2C492315007E8F87 /* KeyButtonGroup.swift */; };
+		CA667AAE2C49233A007E8F87 /* KeyButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AAD2C49233A007E8F87 /* KeyButtonRow.swift */; };
 		CA667AB22C4923D6007E8F87 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AB12C4923D6007E8F87 /* KeyButton.swift */; };
 		CA667AB42C492CF0007E8F87 /* ButtonGroupDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AB32C492CF0007E8F87 /* ButtonGroupDefaultView.swift */; };
 		CA667AB72C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AB62C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift */; };
@@ -114,8 +114,8 @@
 		CA667AA42C492265007E8F87 /* ToastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
 		CA667AA62C49227E007E8F87 /* ToastSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastSheetView.swift; sourceTree = "<group>"; };
 		CA667AA82C4922D9007E8F87 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
-		CA667AAA2C492315007E8F87 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
-		CA667AAD2C49233A007E8F87 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
+		CA667AAA2C492315007E8F87 /* KeyButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButtonGroup.swift; sourceTree = "<group>"; };
+		CA667AAD2C49233A007E8F87 /* KeyButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButtonRow.swift; sourceTree = "<group>"; };
 		CA667AB12C4923D6007E8F87 /* KeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
 		CA667AB32C492CF0007E8F87 /* ButtonGroupDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupDefaultView.swift; sourceTree = "<group>"; };
 		CA667AB62C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupDefaultAlternativeView.swift; sourceTree = "<group>"; };
@@ -266,9 +266,9 @@
 		CA667AAC2C492323007E8F87 /* HelperViews */ = {
 			isa = PBXGroup;
 			children = (
-				CA667AAA2C492315007E8F87 /* ButtonGroup.swift */,
-				CA667AAD2C49233A007E8F87 /* ButtonRow.swift */,
 				CA667AB12C4923D6007E8F87 /* KeyButton.swift */,
+				CA667AAD2C49233A007E8F87 /* KeyButtonRow.swift */,
+				CA667AAA2C492315007E8F87 /* KeyButtonGroup.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -555,7 +555,7 @@
 				CA667AC42C492F04007E8F87 /* WCSessionDelegate.swift in Sources */,
 				CA667AE22C49310E007E8F87 /* Globals.swift in Sources */,
 				CA667AC22C492EDF007E8F87 /* WebOSClientDelegate.swift in Sources */,
-				CA667AAB2C492315007E8F87 /* ButtonGroup.swift in Sources */,
+				CA667AAB2C492315007E8F87 /* KeyButtonGroup.swift in Sources */,
 				CA667ACB2C492F8A007E8F87 /* Strings.swift in Sources */,
 				CA667A912C49218E007E8F87 /* DeviceDiscoveryView.swift in Sources */,
 				CA667AB92C492DCF007E8F87 /* ButtonGroupColorView.swift in Sources */,
@@ -566,7 +566,7 @@
 				CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */,
 				CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */,
 				CA667ADF2C4930D8007E8F87 /* StringExtensions.swift in Sources */,
-				CA667AAE2C49233A007E8F87 /* ButtonRow.swift in Sources */,
+				CA667AAE2C49233A007E8F87 /* KeyButtonRow.swift in Sources */,
 				CA667AC02C492EBB007E8F87 /* MainViewModel+.swift in Sources */,
 				CA667AB22C4923D6007E8F87 /* KeyButton.swift in Sources */,
 				CA667AD12C49300D007E8F87 /* DeviceData.swift in Sources */,

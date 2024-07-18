@@ -9,48 +9,48 @@ import SwiftUI
 
 struct ButtonGroupDefaultAlternativeView: View {
     var body: some View {
-        ButtonGroup {
-            ButtonRow {
+        KeyButtonGroup {
+            KeyButtonRow {
                 KeyButton(.powerOff)
                 KeyButton(.grid)
                 KeyButton(.settings)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.num1)
                 KeyButton(.num2)
                 KeyButton(.num3)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.num4)
                 KeyButton(.num5)
                 KeyButton(.num6)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.num7)
                 KeyButton(.num8)
                 KeyButton(.num9)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.screenOff)
                 KeyButton(.num0)
                 KeyButton(.mute)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.homeAlternative)
                 KeyButton(.up)
                 KeyButton(.volumeUp)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.left)
                 KeyButton(.ok)
                 KeyButton(.right)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.backAlternative)
                 KeyButton(.down)
                 KeyButton(.volumeDown)
             }
-            ButtonRow {
+            KeyButtonRow {
                 KeyButton(.channelUpAlternative)
                 KeyButton(.playPause)
                 KeyButton(.channelDownAlternative)
