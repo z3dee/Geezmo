@@ -9,17 +9,17 @@ import SwiftUI
 
 struct PlaybackDefaultView: View {
     var body: some View {
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.screenOff)
             KeyButton(.powerOff)
             KeyButton(.mute)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.rewind)
             KeyButton(.playPause)
             KeyButton(.fastForward)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.home)
             KeyButton(.settings)
             KeyButton(.back)

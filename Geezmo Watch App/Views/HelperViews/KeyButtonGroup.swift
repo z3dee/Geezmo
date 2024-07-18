@@ -1,5 +1,5 @@
 //
-//  ButtonGroup.swift
+//  KeyButtonGroup.swift
 //  Geezmo Watch App
 //
 //  Created by Ярослав Седышев on 18.07.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonGroup<Content: View>: View {
+struct KeyButtonGroup<Content: View>: View {
     let content: () -> Content
     init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content

@@ -9,17 +9,17 @@ import SwiftUI
 
 struct NavigationAlternativeView: View {
     var body: some View {
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.homeAlternative)
             KeyButton(.up)
             KeyButton(.volumeUp)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.left)
             KeyButton(.ok)
             KeyButton(.right)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.backAlternative)
             KeyButton(.down)
             KeyButton(.volumeDown)

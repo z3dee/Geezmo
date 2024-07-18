@@ -12,7 +12,7 @@ struct PlaybackView: View {
 
     var body: some View {
         NavigationStack {
-            ButtonGroup {
+            KeyButtonGroup {
                 if viewModel.preferencesAlternativeView {
                     PlaybackAlternativeView()
                 } else {

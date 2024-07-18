@@ -9,17 +9,17 @@ import SwiftUI
 
 struct PlaybackAlternativeView: View {
     var body: some View {
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.channelUpAlternative)
             KeyButton(.powerOff)
             KeyButton(.mute)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.rewind)
             KeyButton(.playPause)
             KeyButton(.fastForward)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.channelDownAlternative)
             KeyButton(.settings)
             KeyButton(.screenOff)

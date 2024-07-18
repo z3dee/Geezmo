@@ -9,17 +9,17 @@ import SwiftUI
 
 struct NavigationDefaultView: View {
     var body: some View {
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.channelUp)
             KeyButton(.up)
             KeyButton(.volumeUp)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.left)
             KeyButton(.ok)
             KeyButton(.right)
         }
-        ButtonRow {
+        KeyButtonRow {
             KeyButton(.channelDown)
             KeyButton(.down)
             KeyButton(.volumeDown)

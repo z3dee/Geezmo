@@ -63,8 +63,8 @@
 		CA667AFA2C493696007E8F87 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AF92C493696007E8F87 /* PreferencesView.swift */; };
 		CA667AFC2C4936CB007E8F87 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AFB2C4936CB007E8F87 /* VolumeView.swift */; };
 		CA667AFE2C49370E007E8F87 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AFD2C49370E007E8F87 /* KeyButton.swift */; };
-		CA667B012C4937B7007E8F87 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B002C4937B7007E8F87 /* ButtonRow.swift */; };
-		CA667B032C4937E2007E8F87 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B022C4937E2007E8F87 /* ButtonGroup.swift */; };
+		CA667B012C4937B7007E8F87 /* KeyButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B002C4937B7007E8F87 /* KeyButtonRow.swift */; };
+		CA667B032C4937E2007E8F87 /* KeyButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B022C4937E2007E8F87 /* KeyButtonGroup.swift */; };
 		CA667B052C49383C007E8F87 /* NavigationDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B042C49383C007E8F87 /* NavigationDefaultView.swift */; };
 		CA667B082C49388F007E8F87 /* NavigationAlternativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B072C49388F007E8F87 /* NavigationAlternativeView.swift */; };
 		CA667B0A2C4938EC007E8F87 /* PlaybackDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B092C4938EC007E8F87 /* PlaybackDefaultView.swift */; };
@@ -145,8 +145,8 @@
 		CA667AF92C493696007E8F87 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		CA667AFB2C4936CB007E8F87 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		CA667AFD2C49370E007E8F87 /* KeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
-		CA667B002C4937B7007E8F87 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
-		CA667B022C4937E2007E8F87 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
+		CA667B002C4937B7007E8F87 /* KeyButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButtonRow.swift; sourceTree = "<group>"; };
+		CA667B022C4937E2007E8F87 /* KeyButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButtonGroup.swift; sourceTree = "<group>"; };
 		CA667B042C49383C007E8F87 /* NavigationDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDefaultView.swift; sourceTree = "<group>"; };
 		CA667B072C49388F007E8F87 /* NavigationAlternativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAlternativeView.swift; sourceTree = "<group>"; };
 		CA667B092C4938EC007E8F87 /* PlaybackDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackDefaultView.swift; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				CA667AFD2C49370E007E8F87 /* KeyButton.swift */,
-				CA667B002C4937B7007E8F87 /* ButtonRow.swift */,
-				CA667B022C4937E2007E8F87 /* ButtonGroup.swift */,
+				CA667B002C4937B7007E8F87 /* KeyButtonRow.swift */,
+				CA667B022C4937E2007E8F87 /* KeyButtonGroup.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -582,7 +582,7 @@
 			files = (
 				CA667A7A2C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
 				CA667AF62C49361C007E8F87 /* NavigationView.swift in Sources */,
-				CA667B012C4937B7007E8F87 /* ButtonRow.swift in Sources */,
+				CA667B012C4937B7007E8F87 /* KeyButtonRow.swift in Sources */,
 				CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */,
 				CA667AF82C493655007E8F87 /* PlaybackView.swift in Sources */,
 				CA667B082C49388F007E8F87 /* NavigationAlternativeView.swift in Sources */,
@@ -598,7 +598,7 @@
 				CA667B0E2C493963007E8F87 /* MainViewModel.swift in Sources */,
 				CA667AFC2C4936CB007E8F87 /* VolumeView.swift in Sources */,
 				CA667AFE2C49370E007E8F87 /* KeyButton.swift in Sources */,
-				CA667B032C4937E2007E8F87 /* ButtonGroup.swift in Sources */,
+				CA667B032C4937E2007E8F87 /* KeyButtonGroup.swift in Sources */,
 				CA667AFA2C493696007E8F87 /* PreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

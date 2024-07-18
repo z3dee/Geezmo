@@ -12,7 +12,7 @@ struct NavigationView: View {
 
     var body: some View {
         NavigationStack {
-            ButtonGroup {
+            KeyButtonGroup {
                 if viewModel.preferencesAlternativeView {
                     NavigationAlternativeView()
                 } else {
