@@ -14,7 +14,7 @@ extension MainViewModel {
             return
         }
 
-        let url = URL(string: "wss://192.168.8.10:3001")
+        let url = URL(string: "wss://192.168.8.10:3001")!
 
         tv = WebOSClient(url: url, shouldPerformHeartbeat: true, heartbeatTimeInterval: 4)
         tv?.delegate = self

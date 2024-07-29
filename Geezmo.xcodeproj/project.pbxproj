@@ -121,6 +121,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA33563A2C4A186000B55DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA667A642C4918F1007E8F87 /* Geezmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geezmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA667A672C4918F1007E8F87 /* GeezmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoApp.swift; sourceTree = "<group>"; };
 		CA667A6B2C4918F1007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +246,7 @@
 		CA667A662C4918F1007E8F87 /* Geezmo */ = {
 			isa = PBXGroup;
 			children = (
+				CA33563A2C4A186000B55DB3 /* Info.plist */,
 				CA667A672C4918F1007E8F87 /* GeezmoApp.swift */,
 				CA667A8D2C49211F007E8F87 /* Views */,
 				CA667ABE2C492E99007E8F87 /* ViewModels */,
@@ -923,8 +925,10 @@
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Geezmo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Geezmo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "The application needs access to the local network to discover TVs on your network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -957,8 +961,10 @@
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Geezmo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Geezmo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "The application needs access to the local network to discover TVs on your network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
