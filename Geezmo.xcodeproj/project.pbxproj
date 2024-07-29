@@ -20,7 +20,6 @@
 		CA667A942C4921B9007E8F87 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A932C4921B9007E8F87 /* SSDPClient */; };
 		CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A962C4921C5007E8F87 /* ActivityIndicatorView */; };
 		CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A992C4921CF007E8F87 /* Foil */; };
-		CA667A9D2C4921E0007E8F87 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A9C2C4921E0007E8F87 /* WebOSClient */; };
 		CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A9E2C4921F9007E8F87 /* AboutView.swift */; };
 		CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA02C492223007E8F87 /* TipView.swift.swift */; };
 		CA667AA32C49223F007E8F87 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA22C49223F007E8F87 /* GuideView.swift */; };
@@ -53,7 +52,6 @@
 		CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667ADE2C4930D8007E8F87 /* StringExtensions.swift */; };
 		CA667AE22C49310E007E8F87 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AE12C49310E007E8F87 /* Globals.swift */; };
 		CA667AE62C493155007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667AE52C493155007E8F87 /* Foil */; };
-		CA667AE82C493159007E8F87 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667AE72C493159007E8F87 /* WebOSClient */; };
 		CA667AEA2C493548007E8F87 /* KeyButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AE92C493548007E8F87 /* KeyButtonType.swift */; };
 		CA667AED2C493576007E8F87 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AEC2C493576007E8F87 /* Strings.swift */; };
 		CA667AF02C49359F007E8F87 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AEF2C49359F007E8F87 /* Globals.swift */; };
@@ -76,6 +74,8 @@
 		CA667B202C49428B007E8F87 /* GeezmoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667B1F2C49428B007E8F87 /* GeezmoWidget.swift */; };
 		CA667B222C49428C007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667B212C49428C007E8F87 /* Assets.xcassets */; };
 		CA667B262C49428C007E8F87 /* GeezmoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CA667B192C49428B007E8F87 /* GeezmoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA79FC3D2C57EBD500B357F1 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA79FC3C2C57EBD500B357F1 /* WebOSClient */; };
+		CA79FC3F2C58068400B357F1 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA79FC3E2C58068400B357F1 /* WebOSClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,7 +195,7 @@
 			files = (
 				CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */,
 				CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */,
-				CA667A9D2C4921E0007E8F87 /* WebOSClient in Frameworks */,
+				CA79FC3D2C57EBD500B357F1 /* WebOSClient in Frameworks */,
 				CA667A942C4921B9007E8F87 /* SSDPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA667AE82C493159007E8F87 /* WebOSClient in Frameworks */,
+				CA79FC3F2C58068400B357F1 /* WebOSClient in Frameworks */,
 				CA667AE62C493155007E8F87 /* Foil in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +504,7 @@
 				CA667A932C4921B9007E8F87 /* SSDPClient */,
 				CA667A962C4921C5007E8F87 /* ActivityIndicatorView */,
 				CA667A992C4921CF007E8F87 /* Foil */,
-				CA667A9C2C4921E0007E8F87 /* WebOSClient */,
+				CA79FC3C2C57EBD500B357F1 /* WebOSClient */,
 			);
 			productName = Geezmo;
 			productReference = CA667A642C4918F1007E8F87 /* Geezmo.app */;
@@ -527,7 +527,7 @@
 			name = "Geezmo Watch App";
 			packageProductDependencies = (
 				CA667AE52C493155007E8F87 /* Foil */,
-				CA667AE72C493159007E8F87 /* WebOSClient */,
+				CA79FC3E2C58068400B357F1 /* WebOSClient */,
 			);
 			productName = "Geezmo Watch App";
 			productReference = CA667A742C4918F1007E8F87 /* Geezmo Watch App.app */;
@@ -585,7 +585,7 @@
 				CA667A922C4921B9007E8F87 /* XCRemoteSwiftPackageReference "SSDPClient" */,
 				CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */,
-				CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */,
+				CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */,
 			);
 			productRefGroup = CA667A652C4918F1007E8F87 /* Products */;
 			projectDirPath = "";
@@ -1113,12 +1113,12 @@
 				minimumVersion = 5.1.1;
 			};
 		};
-		CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */ = {
+		CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jareksedy/WebOSClient";
+			repositoryURL = "https://github.com/jareksedy/WebOSClient.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.3;
+				minimumVersion = 1.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1139,19 +1139,19 @@
 			package = CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */;
 			productName = Foil;
 		};
-		CA667A9C2C4921E0007E8F87 /* WebOSClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */;
-			productName = WebOSClient;
-		};
 		CA667AE52C493155007E8F87 /* Foil */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */;
 			productName = Foil;
 		};
-		CA667AE72C493159007E8F87 /* WebOSClient */ = {
+		CA79FC3C2C57EBD500B357F1 /* WebOSClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CA667A9B2C4921E0007E8F87 /* XCRemoteSwiftPackageReference "WebOSClient" */;
+			package = CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */;
+			productName = WebOSClient;
+		};
+		CA79FC3E2C58068400B357F1 /* WebOSClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */;
 			productName = WebOSClient;
 		};
 /* End XCSwiftPackageProductDependency section */

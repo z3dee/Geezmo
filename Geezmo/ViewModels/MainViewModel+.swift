@@ -16,7 +16,7 @@ extension MainViewModel {
 
         let url = URL(string: "wss://192.168.8.10:3001")!
 
-        tv = WebOSClient(url: url, shouldPerformHeartbeat: true, heartbeatTimeInterval: 4)
+        tv = WebOSClient(url: url, shouldPerformHeartbeat: true, heartbeatTimeInterval: 4, shouldLogActivity: true)
         tv?.delegate = self
         tv?.connect()
         tv?.send(.register(clientKey: AppSettings.shared.clientKey), id: "registration")
