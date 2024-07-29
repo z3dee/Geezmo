@@ -31,7 +31,7 @@ extension MainViewModel {
 
     func handleScenePhase(_ scenePhase: ScenePhase) {
         switch scenePhase {
-        case .active: connectAndRegister()
+        case .active: connectAndRegister(forceConnect: true)
         case .background: disconnect()
         default: break
         }
