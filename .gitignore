@@ -1,0 +1,59 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+xcuserdata/
+
+# Swift Package Manager
+/.build/
+/Packages
+# Package Resolved File
+Package.resolved
+
+# CocoaPods
+/Pods/
+/Podfile.lock
+
+# Carthage
+/Carthage/Build/
+
+# fastlane
+/fastlane/report.xml
+/fastlane/Preview.html
+/fastlane/screenshots
+/fastlane/test_output
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+
+# Unit test Xcode scheme
+.xcscheme
+
+# Xcode Automatically generated files
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+
+# Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# SwiftUI Previews
+*.preview-thumbnails
+
+# Swift Package Manager
+/.swiftpm
