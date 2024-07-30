@@ -41,10 +41,6 @@ struct PinPadView: View {
                     showModal = focused
                 }
                 .onChange(of: inputString) {
-                    if inputString.count == 8 {
-                        viewModel.tv?.send(.setPin(inputString))
-                        showModal = false
-                    }
                     handleUserInput(inputString)
                 }
         }
@@ -64,7 +60,7 @@ struct PinPadView: View {
     }
     
     private func handleUserInput(_ newValue: String) {
-        for i in 0..<pinArray.count {
+        for i in 0 ..< pinArray.count {
             if i < newValue.count {
                 let index = newValue.index(newValue.startIndex, offsetBy: i)
                 pinArray[i] = String(newValue[index])
