@@ -19,12 +19,15 @@ extension MainViewModel {
             url: url,
             delegate: self,
             shouldPerformHeartbeat: true,
-            heartbeatTimeInterval: 4,
-            shouldLogActivity: true
+            heartbeatTimeInterval: 5,
+            shouldLogActivity: false
         )
 
         tv?.connect()
-        tv?.send(.register(pairingType: .pin, clientKey: AppSettings.shared.clientKey), id: "registration")
+        tv?.send(
+            .register(pairingType: .pin, clientKey: AppSettings.shared.clientKey),
+            id: Globals.SubscriptionIds.registrationRequestId
+        )
     }
 
     func disconnect() {
@@ -63,13 +66,24 @@ extension MainViewModel {
     func showConnectionStatus() {
         toast(isConnected ? .connected : .disconnected)
     }
+    
+    func pairDiscoveredDevice(with host: String) {
+        disconnect()
+        AppSettings.shared.host = host
+        AppSettings.shared.clientKey = nil
+        preferencesPresented = false
+        connectAndRegister(forcingConnection: true)
+    }
 
     func resetConnectionData() {
         disconnect()
         AppSettings.shared.host = nil
         AppSettings.shared.clientKey = nil
         preferencesPresented = false
-        connectAndRegister(forcingConnection: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + Globals.TimeIntervals.medium) { [weak self] in
+            guard let self else { return }
+            preferencesPresented = true
+        }
     }
 
     func setHostManually(host: String) {
@@ -80,4 +94,3 @@ extension MainViewModel {
         connectAndRegister(forcingConnection: true)
     }
 }
-

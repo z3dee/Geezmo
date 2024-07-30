@@ -20,11 +20,7 @@ struct DeviceDiscoveryView: View {
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.secondary)
                             .onTapGesture {
-                                AppSettings.shared.host = device.host
-                                AppSettings.shared.clientKey = nil
-                                viewModel.disconnect()
-                                viewModel.connectAndRegister()
-                                viewModel.preferencesPresented = false
+                                viewModel.pairDiscoveredDevice(with: device.host)
                             }
                     }
                 }

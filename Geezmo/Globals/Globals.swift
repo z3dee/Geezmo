@@ -9,12 +9,14 @@ import SwiftUI
 
 enum Globals {
     enum SubscriptionIds {
+        static let registrationRequestId = "registrationSubscription"
         static let remoteKeyboardRequestId = "remoteKeyboardSubscription"
         static let mediaPlaybackInfoRequestId = "mediaPlaybackInfoSubscription"
     }
 
-    enum AnimationIntervals {
-        // static let buttonFadeInterval: TimeInterval = 0.1
+    enum TimeIntervals {
+        static let minimal: TimeInterval = 0.1
+        static let medium: TimeInterval = 0.25
     }
 
     static let smallTitleSize: CGFloat = 18
