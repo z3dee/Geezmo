@@ -9,8 +9,8 @@ import SwiftUI
 import WebOSClient
 
 extension MainViewModel {
-    func connectAndRegister(forceConnect: Bool = false) {
-        guard !isConnected || forceConnect else {
+    func connectAndRegister(forcingConnection: Bool = false) {
+        guard !isConnected || forcingConnection else {
             return
         }
 
@@ -19,7 +19,7 @@ extension MainViewModel {
         tv = WebOSClient(url: url, shouldPerformHeartbeat: true, heartbeatTimeInterval: 4, shouldLogActivity: true)
         tv?.delegate = self
         tv?.connect()
-        tv?.send(.register(clientKey: AppSettings.shared.clientKey), id: "registration")
+        tv?.send(.register(pairingType: .pin, clientKey: AppSettings.shared.clientKey), id: "registration")
     }
 
     func disconnect() {
@@ -31,7 +31,7 @@ extension MainViewModel {
 
     func handleScenePhase(_ scenePhase: ScenePhase) {
         switch scenePhase {
-        case .active: connectAndRegister(forceConnect: true)
+        case .active: connectAndRegister(forcingConnection: true)
         case .background: disconnect()
         default: break
         }
@@ -64,7 +64,7 @@ extension MainViewModel {
         AppSettings.shared.host = nil
         AppSettings.shared.clientKey = nil
         preferencesPresented = false
-        connectAndRegister(forceConnect: true)
+        connectAndRegister(forcingConnection: true)
     }
 
     func setHostManually(host: String) {
@@ -72,7 +72,7 @@ extension MainViewModel {
         AppSettings.shared.host = host
         AppSettings.shared.clientKey = nil
         preferencesPresented = false
-        connectAndRegister(forceConnect: true)
+        connectAndRegister(forcingConnection: true)
     }
 }
 

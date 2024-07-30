@@ -76,6 +76,7 @@
 		CA667B262C49428C007E8F87 /* GeezmoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CA667B192C49428B007E8F87 /* GeezmoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CA79FC3D2C57EBD500B357F1 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA79FC3C2C57EBD500B357F1 /* WebOSClient */; };
 		CA79FC3F2C58068400B357F1 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA79FC3E2C58068400B357F1 /* WebOSClient */; };
+		CA7C9AA12C58BCA0007C8045 /* PinPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,7 @@
 		CA667B1F2C49428B007E8F87 /* GeezmoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoWidget.swift; sourceTree = "<group>"; };
 		CA667B212C49428C007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA667B232C49428C007E8F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 				CA667AA42C492265007E8F87 /* ToastConfiguration.swift */,
 				CA667AA62C49227E007E8F87 /* ToastSheetView.swift */,
 				CA667AA82C4922D9007E8F87 /* KeyboardView.swift */,
+				CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */,
 				CA667ABB2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift in Sources */,
 				CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */,
+				CA7C9AA12C58BCA0007C8045 /* PinPadView.swift in Sources */,
 				CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */,
 				CA667ADF2C4930D8007E8F87 /* StringExtensions.swift in Sources */,
 				CA667AAE2C49233A007E8F87 /* KeyButtonRow.swift in Sources */,

@@ -14,6 +14,12 @@ extension MainViewModel: WebOSClientDelegate {
             toast(.prompted)
         }
     }
+    
+    func didDisplayPin() {
+        Task { @MainActor in
+            pinPadPresented = true
+        }
+    }
 
     func didRegister(with clientKey: String) {
         AppSettings.shared.clientKey = clientKey

@@ -121,6 +121,15 @@ struct MainView: View {
                 }
             )
             .sheet(
+                isPresented: $viewModel.pinPadPresented,
+                content: {
+                    PinPadView(showModal: $viewModel.pinPadPresented, viewModel: viewModel)
+                        .presentationDetents([.height(75)])
+                        .presentationDragIndicator(.visible)
+                        .presentationCornerRadius(12)
+                }
+            )
+            .sheet(
                 isPresented: $viewModel.isToastPresented,
                 onDismiss: {
                     if viewModel.toastConfiguration == .prompted && viewModel.isConnected {
