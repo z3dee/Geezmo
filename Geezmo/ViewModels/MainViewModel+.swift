@@ -10,14 +10,19 @@ import WebOSClient
 
 extension MainViewModel {
     func connectAndRegister(forcingConnection: Bool = false) {
-        guard !isConnected || forcingConnection else {
-            return
-        }
+        guard let host = AppSettings.shared.host,
+              let url = URL(string: "wss://\(host):3001"),
+              !isConnected || forcingConnection 
+        else { return }
 
-        let url = URL(string: "wss://192.168.8.10:3001")!
+        tv = WebOSClient(
+            url: url,
+            delegate: self,
+            shouldPerformHeartbeat: true,
+            heartbeatTimeInterval: 4,
+            shouldLogActivity: true
+        )
 
-        tv = WebOSClient(url: url, shouldPerformHeartbeat: true, heartbeatTimeInterval: 4, shouldLogActivity: true)
-        tv?.delegate = self
         tv?.connect()
         tv?.send(.register(pairingType: .pin, clientKey: AppSettings.shared.clientKey), id: "registration")
     }

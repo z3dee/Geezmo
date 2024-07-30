@@ -80,8 +80,8 @@ struct MainView: View {
                     .padding(.top, 10)
                     .contentTransition(.symbolEffect(.replace.byLayer))
                     .onTapGesture {
-                        viewModel.pinPadPresented = true
-                        //viewModel.showConnectionStatus()
+                        //viewModel.pinPadPresented = true
+                        viewModel.showConnectionStatus()
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
