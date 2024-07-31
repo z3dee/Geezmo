@@ -53,6 +53,13 @@ extension MainViewModel: WebOSClientDelegate {
         if case .failure(let error) = result {
             print("~e: \(error.localizedDescription)")
         }
+        
+        if case .failure(let error) = result {
+            let errorMessage = error.localizedDescription
+            if errorMessage.contains("rejected pairing") || errorMessage.contains("cancelled") {
+                connectAndRegister(forcingConnection: true)
+            }
+        }
     }
 
     func didReceiveNetworkError(_ error: Error?) {
@@ -64,10 +71,6 @@ extension MainViewModel: WebOSClientDelegate {
                 }
             }
         }
-
-//        if let error = error as? NSError {
-//            print("~err:\(error.localizedDescription) code: \(error.code) ")
-//        }
     }
 }
 
