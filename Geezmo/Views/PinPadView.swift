@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PinPadView: View {
-    private let placeholderChar = "·"
+    private let placeholderChar = "_"
     private var viewModel: MainViewModel
     
     @FocusState private var focused: Bool
@@ -20,14 +20,14 @@ struct PinPadView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack(alignment: .center, spacing: 20) {
+                HStack(alignment: .center, spacing: 5) {
                     ForEach(0..<pinArray.count, id: \.self) { index in
                         Text(pinArray[index])
-                            .font(.system(size: 24, weight: .bold, design: .monospaced))
+                            .font(.system(size: 36, weight: .light, design: .monospaced))
                             .foregroundColor(pinArray[index] == placeholderChar ? .gray.opacity(0.5) : .primary)
                     }
                 }
-                //.padding(.bottom, -25)
+                .padding(.bottom, -5)
                 
                 TextField("", text: $inputString)
                     .keyboardType(.numberPad)
@@ -38,19 +38,13 @@ struct PinPadView: View {
                     .onSubmit {
                         guard inputString != "" else { return }
                     }
-                    .onChange(of: focused) {
-                        showModal = focused
-                    }
-                    .onChange(of: inputString) {
-                        handleUserInput(inputString)
-                    }
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     Text(Strings.Titles.pairingTitle)
                         .font(.system(size: Globals.smallTitleSize, weight: .bold, design: .rounded))
                         .foregroundColor(.accent)
-                        .padding(.trailing, Globals.iconPadding)
+                        .padding(.leading, Globals.iconPadding)
                         .padding(.top, 10)
                 }
             }
@@ -63,7 +57,12 @@ struct PinPadView: View {
                 UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
             }
         }
-        
+        .onChange(of: focused) {
+            showModal = focused
+        }
+        .onChange(of: inputString) {
+            handleUserInput(inputString)
+        }
     }
     
     init(showModal: Binding<Bool>, viewModel: MainViewModel) {

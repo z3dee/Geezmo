@@ -19,7 +19,7 @@ enum Strings {
         static let alternativeLayout = "Alternative layout"
         static let hapticFeedback = "Haptic feedback"
         
-        static let pairingTitle = "Enter TV code"
+        static let pairingTitle = "Pairing Code"
     }
 
     enum SectionHeaders {
