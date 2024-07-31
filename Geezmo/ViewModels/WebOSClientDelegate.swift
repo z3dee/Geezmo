@@ -73,4 +73,3 @@ extension MainViewModel: WebOSClientDelegate {
         }
     }
 }
-
