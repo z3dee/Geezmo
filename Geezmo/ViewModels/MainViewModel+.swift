@@ -20,7 +20,7 @@ extension MainViewModel {
             delegate: self,
             shouldPerformHeartbeat: true,
             heartbeatTimeInterval: 5,
-            shouldLogActivity: false
+            shouldLogActivity: true
         )
 
         tv?.connect()
