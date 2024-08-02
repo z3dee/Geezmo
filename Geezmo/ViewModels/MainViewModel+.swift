@@ -14,12 +14,14 @@ extension MainViewModel {
               let url = URL(string: "wss://\(host):3001"),
               !isConnected || forcingConnection 
         else { return }
+        
+        tv?.disconnect()
 
         tv = WebOSClient(
             url: url,
             delegate: self,
             shouldPerformHeartbeat: true,
-            heartbeatTimeInterval: 5,
+            heartbeatTimeInterval: 30,
             shouldLogActivity: true
         )
 

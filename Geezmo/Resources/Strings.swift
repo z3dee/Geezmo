@@ -33,6 +33,7 @@ enum Strings {
         static let authorInfo = "by Yaroslav Sedyshev"
         static let madeWith = "Made with"
         static let madeIn = "in Kazakhstan"
+        static let kzFlag = "🇰🇿"
     }
 
     enum ConnectTV {

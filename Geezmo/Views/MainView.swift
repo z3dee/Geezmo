@@ -47,14 +47,6 @@ struct MainView: View {
                         Text(Strings.General.shortAppName)
                             .font(.system(size: Globals.smallTitleSize, weight: .bold, design: .rounded))
                             .foregroundColor(.accent)
-                        
-//                        Image(
-//                            systemName: viewModel.isConnected ?
-//                            "checkmark.circle.fill" : "exclamationmark.circle"
-//                        )
-//                        .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
-//                        .foregroundColor(.accent)
-//                        .contentTransition(.symbolEffect(.replace.byLayer))
                     }
                     .padding(.leading, Globals.iconPadding)
                     .padding(.top, 10)
