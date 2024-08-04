@@ -38,6 +38,24 @@ extension MainViewModel {
             isConnected = false
         }
     }
+    
+    func checkLocalNetworkAuthorization() {
+        let authorization = LocalNetworkAuthorization()
+        authorization.requestAuthorization { [weak self] granted in
+            guard let self else { return }
+            if granted {
+                print("Permission Granted")
+                if AppSettings.shared.host == nil {
+                    preferencesPresented = true
+                }
+            } else {
+                alert(
+                    "Permission Denied",
+                    message: "Multicast networking permissions are required to discover and connect to your TV. Please enable these permissions in Settings."
+                )
+            }
+        }
+    }
 
     func handleScenePhase(_ scenePhase: ScenePhase) {
         switch scenePhase {

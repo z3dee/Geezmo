@@ -8,7 +8,6 @@
 import Foundation
 import Network
 
-@available(iOS 14.0, *)
 public class LocalNetworkAuthorization: NSObject {
     private var browser: NWBrowser?
     private var netService: NetService?
@@ -54,7 +53,6 @@ public class LocalNetworkAuthorization: NSObject {
     }
 }
 
-@available(iOS 14.0, *)
 extension LocalNetworkAuthorization : NetServiceDelegate {
     public func netServiceDidPublish(_ sender: NetService) {
         self.reset()

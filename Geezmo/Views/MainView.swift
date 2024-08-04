@@ -72,9 +72,7 @@ struct MainView: View {
                     .padding(.top, 10)
                     .contentTransition(.symbolEffect(.replace.byLayer))
                     .onTapGesture {
-                        viewModel.alert("Hello, world!", message: "I have something to tell ya!")
-                        //viewModel.pinPadPresented = true
-                        //viewModel.showConnectionStatus()
+                        viewModel.showConnectionStatus()
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
@@ -154,26 +152,7 @@ struct MainView: View {
                 viewModel.handleScenePhase(scenePhase)
             }
             .onAppear {
-                checkLocalNetworkAuthorization()
-            }
-        }
-    }
-}
-
-private extension MainView {
-    func checkLocalNetworkAuthorization() {
-        let authorization = LocalNetworkAuthorization()
-        authorization.requestAuthorization { granted in
-            if granted {
-                print("Permission Granted")
-                if AppSettings.shared.host == nil {
-                    viewModel.preferencesPresented = true
-                }
-            } else {
-                viewModel.alert(
-                    "Permission Denied",
-                    message: "Multicast networking permissions are required to discover and connect to your TV. Please enable these permissions in Settings."
-                )
+                viewModel.checkLocalNetworkAuthorization()
             }
         }
     }

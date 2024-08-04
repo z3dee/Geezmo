@@ -70,6 +70,10 @@ enum Strings {
         static let cancel = "Cancel"
         static let yourTextHere = "Enter text here..."
     }
+    
+    enum Alerts {
+        
+    }
 }
 
 // swiftlint:enable line_length
