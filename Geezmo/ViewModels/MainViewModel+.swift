@@ -39,20 +39,22 @@ extension MainViewModel {
         }
     }
     
-    func checkLocalNetworkAuthorization() {
+    func requestLocalNetworkAuthorization(_ completion: ((Bool) -> Void)?) {
         let authorization = LocalNetworkAuthorization()
-        authorization.requestAuthorization { [weak self] granted in
+        authorization.requestAuthorization { granted in
+            completion?(granted)
+        }
+    }
+    
+    func checkMulticastPermissions() {
+        requestLocalNetworkAuthorization { [weak self] granted in
             guard let self else { return }
             if granted {
-                print("Permission Granted")
                 if AppSettings.shared.host == nil {
                     preferencesPresented = true
                 }
             } else {
-                alert(
-                    "Permission Denied",
-                    message: "Multicast networking permissions are required to discover and connect to your TV. Please enable these permissions in Settings."
-                )
+                alert(.multicastPermissionsDenied)
             }
         }
     }

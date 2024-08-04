@@ -97,7 +97,7 @@ public class SSDPDiscovery {
     */
     open func discoverService(forDuration duration: TimeInterval = 10, searchTarget: String = "ssdp:all", port: Int32 = 1900) {
         self.delegate?.ssdpDiscoveryDidStart(self)
-        
+        print("~starting discovery...")
         let message = "M-SEARCH * HTTP/1.1\r\n" +
         "MAN: \"ssdp:discover\"\r\n" +
         "HOST: 239.255.255.250:\(port)\r\n" +
@@ -114,6 +114,7 @@ public class SSDPDiscovery {
         } catch let error {
             self.forceStop()
             self.delegate?.ssdpDiscovery(self, didFinishWithError: error)
+            print("~error: \(error.localizedDescription)")
         }
     }
 

@@ -17,8 +17,7 @@ private enum Constants {
 final class MainViewModel: NSObject, ObservableObject {
     @Published var isDiscoverDevicesActivityIndicatorShown: Bool = true
     @Published var isAlertPresented: Bool = false
-    @Published var alertTitle: String?
-    @Published var alertMessage: String?
+    @Published var alertConfiguration: AlertConfiguration?
     @Published var isToastPresented: Bool = false
     @Published var toastConfiguration: ToastConfiguration?
     @Published var colorButtonsPresented: Bool = false
@@ -91,9 +90,8 @@ final class MainViewModel: NSObject, ObservableObject {
         isToastPresented = true
     }
     
-    func alert(_ title: String, message: String) {
-        alertTitle = title
-        alertMessage = message
+    func alert(_ configuration: AlertConfiguration) {
+        alertConfiguration = configuration
         isAlertPresented = true
     }
 }

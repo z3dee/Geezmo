@@ -91,11 +91,20 @@ struct MainView: View {
                 }
             }
             .alert(isPresented: $viewModel.isAlertPresented) {
-                Alert(
-                    title: Text(viewModel.alertTitle ?? ""),
-                    message: Text(viewModel.alertMessage ?? ""),
-                    dismissButton: .none
-                )
+                if viewModel.alertConfiguration?.secondaryButton != nil {
+                    Alert(
+                        title: Text(viewModel.alertConfiguration?.title ?? ""),
+                        message: Text(viewModel.alertConfiguration?.message ?? ""),
+                        primaryButton: viewModel.alertConfiguration?.primaryButton ?? .cancel(),
+                        secondaryButton: viewModel.alertConfiguration?.secondaryButton ?? .cancel()
+                    )
+                } else {
+                    Alert(
+                        title: Text(viewModel.alertConfiguration?.title ?? ""),
+                        message: Text(viewModel.alertConfiguration?.message ?? ""),
+                        dismissButton: viewModel.alertConfiguration?.primaryButton ?? .cancel()
+                    )
+                }
             }
             .sheet(
                 isPresented: $viewModel.preferencesPresented,
@@ -152,7 +161,7 @@ struct MainView: View {
                 viewModel.handleScenePhase(scenePhase)
             }
             .onAppear {
-                viewModel.checkLocalNetworkAuthorization()
+                viewModel.checkMulticastPermissions()
             }
         }
     }

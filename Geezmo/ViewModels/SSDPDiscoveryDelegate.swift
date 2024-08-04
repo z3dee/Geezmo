@@ -10,7 +10,7 @@ import SSDPClient
 
 extension MainViewModel: SSDPDiscoveryDelegate {
     func ssdpDiscovery(_ discovery: SSDPDiscovery, didDiscoverService service: SSDPService) {
-        if let server = service.server, server.contains("LGE WebOS TV"), let deviceName = service.deviceName {
+        if let server = service.server, server.contains("TV"), let deviceName = service.deviceName {
             let newDevice = DeviceData(id: UUID().uuidString, name: deviceName, host: service.host)
             Task { @MainActor in
                 devices.insert(newDevice)

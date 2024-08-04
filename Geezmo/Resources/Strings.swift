@@ -72,7 +72,11 @@ enum Strings {
     }
     
     enum Alerts {
-        
+        enum MulticastPermissionsDenied {
+            static let title = "Permission Denied"
+            static let message = "Multicast networking permissions are required to discover and connect to your TV. Please enable these permissions in Settings → Privacy & Security → Local Network."
+            static let primaryButtonTitle = "Open Settings"
+        }
     }
 }
 
