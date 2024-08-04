@@ -79,6 +79,7 @@
 		CA8C4F9B2C5CD581004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4F9A2C5CD581004154E9 /* SSDPClient */; };
 		CA8C4F9E2C5CD657004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4F9D2C5CD657004154E9 /* SSDPClient */; };
 		CA8C4FA12C5CD7F6004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4FA02C5CD7F6004154E9 /* SSDPClient */; };
+		CA97AE572C5F5326006917B1 /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,7 @@
 		CA667B232C49428C007E8F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPadView.swift; sourceTree = "<group>"; };
 		CA8B526C2C59406800A9BA2B /* Geezmo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Geezmo.entitlements; sourceTree = "<group>"; };
+		CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				CA667ABC2C492E94007E8F87 /* MainViewModel.swift */,
+				CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */,
 				CA667ABF2C492EBB007E8F87 /* MainViewModel+.swift */,
 				CA667AC12C492EDF007E8F87 /* WebOSClientDelegate.swift */,
 				CA667AC32C492F04007E8F87 /* WCSessionDelegate.swift */,
@@ -650,6 +653,7 @@
 				CA667AC82C492F5C007E8F87 /* UINavigationController+.swift in Sources */,
 				CA667A8F2C49215F007E8F87 /* PreferencesView.swift in Sources */,
 				CA667AB42C492CF0007E8F87 /* ButtonGroupDefaultView.swift in Sources */,
+				CA97AE572C5F5326006917B1 /* LocalNetworkAuthorization.swift in Sources */,
 				CA667A8C2C492101007E8F87 /* MainView.swift in Sources */,
 				CA667AD52C49303C007E8F87 /* ToastType.swift in Sources */,
 				CA667AA92C4922D9007E8F87 /* KeyboardView.swift in Sources */,
