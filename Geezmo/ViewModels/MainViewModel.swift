@@ -26,7 +26,7 @@ final class MainViewModel: NSObject, ObservableObject {
     @Published var isFocused: Bool = false
     @Published var isConnected: Bool = false
     @Published var preferencesPresented: Bool = false
-    @Published var devices = [DeviceData]()
+    @Published var devices = Set<DeviceData>()
     @Published var navigationPath = [NavigationScreens]()
     @Published var preferencesAlternativeView: Bool = AppSettings.shared.phoneAlternativeView {
         didSet {

@@ -10,12 +10,10 @@ import SSDPClient
 
 extension MainViewModel: SSDPDiscoveryDelegate {
     func ssdpDiscovery(_ discovery: SSDPDiscovery, didDiscoverService service: SSDPService) {
-        if let searchTarget = service.searchTarget,
-           searchTarget.contains("tv"),
-           !devices.map({ $0.name }).contains("WebOS TV") {
-            let device = DeviceData(id: UUID().uuidString, name: "WebOS TV", host: service.host)
+        if let server = service.server, server.contains("LGE WebOS TV"), let deviceName = service.deviceName {
+            let newDevice = DeviceData(id: UUID().uuidString, name: deviceName, host: service.host)
             Task { @MainActor in
-                devices.append(device)
+                devices.insert(newDevice)
             }
         }
     }
@@ -26,4 +24,3 @@ extension MainViewModel: SSDPDiscoveryDelegate {
         }
     }
 }
-

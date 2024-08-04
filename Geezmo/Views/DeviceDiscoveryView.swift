@@ -14,14 +14,33 @@ struct DeviceDiscoveryView: View {
     var body: some View {
         VStack {
             if viewModel.deviceDiscoveryFinished {
-                List(viewModel.devices) { device in
+                List {
                     Section("Discovered devices") {
-                        Label("\(device.name) (\(device.host))", systemImage: "tv")
-                            .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
-                            .foregroundColor(.secondary)
+                        ForEach(Array(viewModel.devices)) { device in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(device.name)
+                                        .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
+                                        .foregroundColor(.primary)
+                                    
+                                    Spacer().frame(height: 2.5)
+                                    
+                                    Text(device.host)
+                                        .font(.system(size: Globals.bodyFontSize * 0.75, weight: .regular, design: .rounded))
+                                        .foregroundColor(.secondary)
+                                }
+                                
+                                Spacer()
+                                
+                                Image(systemName: "tv")
+                                    .foregroundColor(.secondary)
+                            }
+                            .padding(.vertical, 5)
+                            .contentShape(Rectangle())
                             .onTapGesture {
                                 viewModel.pairDiscoveredDevice(with: device.host)
                             }
+                        }
                     }
                 }
             } else {

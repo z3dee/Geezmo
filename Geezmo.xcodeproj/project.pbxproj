@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		CA667A8C2C492101007E8F87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A8B2C492101007E8F87 /* MainView.swift */; };
 		CA667A8F2C49215F007E8F87 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A8E2C49215F007E8F87 /* PreferencesView.swift */; };
 		CA667A912C49218E007E8F87 /* DeviceDiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */; };
-		CA667A942C4921B9007E8F87 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A932C4921B9007E8F87 /* SSDPClient */; };
 		CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A962C4921C5007E8F87 /* ActivityIndicatorView */; };
 		CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A992C4921CF007E8F87 /* Foil */; };
 		CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A9E2C4921F9007E8F87 /* AboutView.swift */; };
@@ -77,6 +76,9 @@
 		CA79FC3D2C57EBD500B357F1 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA79FC3C2C57EBD500B357F1 /* WebOSClient */; };
 		CA79FC3F2C58068400B357F1 /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA79FC3E2C58068400B357F1 /* WebOSClient */; };
 		CA7C9AA12C58BCA0007C8045 /* PinPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */; };
+		CA8C4F9B2C5CD581004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4F9A2C5CD581004154E9 /* SSDPClient */; };
+		CA8C4F9E2C5CD657004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4F9D2C5CD657004154E9 /* SSDPClient */; };
+		CA8C4FA12C5CD7F6004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4FA02C5CD7F6004154E9 /* SSDPClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,7 +201,9 @@
 				CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */,
 				CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */,
 				CA79FC3D2C57EBD500B357F1 /* WebOSClient in Frameworks */,
-				CA667A942C4921B9007E8F87 /* SSDPClient in Frameworks */,
+				CA8C4FA12C5CD7F6004154E9 /* SSDPClient in Frameworks */,
+				CA8C4F9B2C5CD581004154E9 /* SSDPClient in Frameworks */,
+				CA8C4F9E2C5CD657004154E9 /* SSDPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,10 +510,12 @@
 			);
 			name = Geezmo;
 			packageProductDependencies = (
-				CA667A932C4921B9007E8F87 /* SSDPClient */,
 				CA667A962C4921C5007E8F87 /* ActivityIndicatorView */,
 				CA667A992C4921CF007E8F87 /* Foil */,
 				CA79FC3C2C57EBD500B357F1 /* WebOSClient */,
+				CA8C4F9A2C5CD581004154E9 /* SSDPClient */,
+				CA8C4F9D2C5CD657004154E9 /* SSDPClient */,
+				CA8C4FA02C5CD7F6004154E9 /* SSDPClient */,
 			);
 			productName = Geezmo;
 			productReference = CA667A642C4918F1007E8F87 /* Geezmo.app */;
@@ -587,10 +593,10 @@
 			);
 			mainGroup = CA667A5B2C4918F1007E8F87;
 			packageReferences = (
-				CA667A922C4921B9007E8F87 /* XCRemoteSwiftPackageReference "SSDPClient" */,
 				CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */,
 				CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */,
+				CA8C4F9F2C5CD7F6004154E9 /* XCLocalSwiftPackageReference "LocalPackages/SSDPClient" */,
 			);
 			productRefGroup = CA667A652C4918F1007E8F87 /* Products */;
 			projectDirPath = "";
@@ -1100,15 +1106,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		CA667A922C4921B9007E8F87 /* XCRemoteSwiftPackageReference "SSDPClient" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pierrickrouxel/SSDPClient.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		CA8C4F9F2C5CD7F6004154E9 /* XCLocalSwiftPackageReference "LocalPackages/SSDPClient" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = LocalPackages/SSDPClient;
 		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
 		CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
@@ -1136,11 +1141,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CA667A932C4921B9007E8F87 /* SSDPClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA667A922C4921B9007E8F87 /* XCRemoteSwiftPackageReference "SSDPClient" */;
-			productName = SSDPClient;
-		};
 		CA667A962C4921C5007E8F87 /* ActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
@@ -1165,6 +1165,18 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */;
 			productName = WebOSClient;
+		};
+		CA8C4F9A2C5CD581004154E9 /* SSDPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SSDPClient;
+		};
+		CA8C4F9D2C5CD657004154E9 /* SSDPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SSDPClient;
+		};
+		CA8C4FA02C5CD7F6004154E9 /* SSDPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SSDPClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
