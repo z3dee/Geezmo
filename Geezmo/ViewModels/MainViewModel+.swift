@@ -39,22 +39,29 @@ extension MainViewModel {
         }
     }
     
-    func requestLocalNetworkAuthorization(_ completion: ((Bool) -> Void)?) {
+    private func requestLocalNetworkAuthorization(_ completion: ((Bool) -> Void)?) {
         let authorization = LocalNetworkAuthorization()
         authorization.requestAuthorization { granted in
             completion?(granted)
         }
     }
     
-    func checkMulticastPermissions() {
+    func navigateToDeviceDiscoveryViewIfNeeded(_ context: DeviceDiscoveryNavigationContext) {
         requestLocalNetworkAuthorization { [weak self] granted in
             guard let self else { return }
             if granted {
-                if AppSettings.shared.host == nil {
+                if context == .fromMainView && AppSettings.shared.host == nil {
                     preferencesPresented = true
+                } else if context == .fromPreferences && AppSettings.shared.host == nil {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + Globals.TimeIntervals.minimal) { [weak self] in
+                        guard let self else { return }
+                        navigationPath.append(.discover)
+                    }
                 }
             } else {
-                alert(.multicastPermissionsDenied)
+                if context == .fromMainView {
+                    alert(.multicastPermissionsDenied)
+                }
             }
         }
     }

@@ -161,7 +161,7 @@ struct MainView: View {
                 viewModel.handleScenePhase(scenePhase)
             }
             .onAppear {
-                viewModel.checkMulticastPermissions()
+                viewModel.navigateToDeviceDiscoveryViewIfNeeded(.fromMainView)
             }
         }
     }

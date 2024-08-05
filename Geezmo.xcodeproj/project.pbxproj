@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA21441E2C60BFCA00D3931A /* NavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21441D2C60BFCA00D3931A /* NavigationContext.swift */; };
 		CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A672C4918F1007E8F87 /* GeezmoApp.swift */; };
 		CA667A6C2C4918F1007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6B2C4918F1007E8F87 /* Assets.xcassets */; };
 		CA667A6F2C4918F1007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */; };
@@ -126,6 +127,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA21441D2C60BFCA00D3931A /* NavigationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContext.swift; sourceTree = "<group>"; };
 		CA33563A2C4A186000B55DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA667A642C4918F1007E8F87 /* Geezmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geezmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA667A672C4918F1007E8F87 /* GeezmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoApp.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				CA667AA22C49223F007E8F87 /* GuideView.swift */,
 				CA667AA42C492265007E8F87 /* ToastConfiguration.swift */,
 				CA97AE582C5FA91A006917B1 /* AlertConfiguration.swift */,
+				CA21441D2C60BFCA00D3931A /* NavigationContext.swift */,
 				CA667AA62C49227E007E8F87 /* ToastSheetView.swift */,
 				CA667AA82C4922D9007E8F87 /* KeyboardView.swift */,
 				CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */,
@@ -685,6 +688,7 @@
 				CA667AA72C49227E007E8F87 /* ToastSheetView.swift in Sources */,
 				CA667ABD2C492E94007E8F87 /* MainViewModel.swift in Sources */,
 				CA667ADB2C4930B3007E8F87 /* BundleExtensions.swift in Sources */,
+				CA21441E2C60BFCA00D3931A /* NavigationContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

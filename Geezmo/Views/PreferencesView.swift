@@ -135,16 +135,7 @@ struct PreferencesView: View {
                 Button(Strings.General.cancel, role: .cancel, action: {})
             }
             .onAppear {
-                viewModel.requestLocalNetworkAuthorization { granted in
-                    guard granted else {
-                        return
-                    }
-                    if AppSettings.shared.host == nil {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + Globals.TimeIntervals.minimal) {
-                            viewModel.navigationPath.append(.discover)
-                        }
-                    }
-                }
+                viewModel.navigateToDeviceDiscoveryViewIfNeeded(.fromPreferences)
             }
         }
     }
