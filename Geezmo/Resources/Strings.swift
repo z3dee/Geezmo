@@ -13,11 +13,11 @@ enum Strings {
         static let aboutApp = "About Geezmo"
         static let faq = "Frequently Asked Questions"
         static let connectTV = "Connect TV"
-        static let manuallyEnterIP = "Input IP address manually"
-        static let resetConnectionData = "Reset connection data"
+        static let manuallyEnterIP = "Input IP Address Manually"
+        static let resetConnectionData = "Reset Connection Data"
 
-        static let alternativeLayout = "Alternative layout"
-        static let hapticFeedback = "Haptic feedback"
+        static let alternativeLayout = "Alternative Layout"
+        static let hapticFeedback = "Haptic Feedback"
         
         static let pairingTitle = "Pairing Code"
     }
@@ -43,11 +43,6 @@ enum Strings {
     enum InputIP {
         static let inputIPMessage = "IP address of your TV"
         static let inputIPPrompt = "IP address"
-    }
-
-    enum ResetConnectionData {
-        static let title = "Do you want to reset connection data?"
-        static let message = "You will need to reconnect and re-register with the TV."
     }
 
     enum ToastMessages {
@@ -103,6 +98,11 @@ enum Strings {
             static let title = "Permission Denied"
             static let message = "Multicast networking permissions are required to discover and connect to your TV. Please enable these permissions in Settings → Privacy & Security → Local Network."
             static let primaryButtonTitle = "Open Settings"
+        }
+        
+        enum ResetConnectionData {
+            static let title = "Do you want to reset connection data?"
+            static let message = "You will need to reconnect and re-register with the TV."
         }
     }
 }

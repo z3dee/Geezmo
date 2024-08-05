@@ -9,7 +9,7 @@ import Foundation
 
 enum NavigationScreens {
     case about
-    case guide
+    case faq
     case discover
 }
 

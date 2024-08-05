@@ -25,7 +25,7 @@ struct PreferencesView: View {
                             .foregroundColor(.secondary)
                     }
 
-                    NavigationLink(value: NavigationScreens.guide) {
+                    NavigationLink(value: NavigationScreens.faq) {
                         Label(Strings.Titles.faq, systemImage: "questionmark.circle")
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.secondary)
@@ -34,13 +34,13 @@ struct PreferencesView: View {
 
                 Section(Strings.SectionHeaders.connection) {
                     NavigationLink(value: NavigationScreens.discover) {
-                        Label(Strings.Titles.connectTV, systemImage: "powercord")
+                        Label(Strings.Titles.connectTV, systemImage: "antenna.radiowaves.left.and.right")
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.secondary)
                     }
 
                     Button(action: { enterIpAlertShown.toggle() }, label: {
-                        Label(Strings.Titles.manuallyEnterIP, systemImage: "pencil.and.outline")
+                        Label(Strings.Titles.manuallyEnterIP, systemImage: "hand.point.up.left.and.text")
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.accentColor)
                     })
@@ -111,18 +111,18 @@ struct PreferencesView: View {
             .navigationDestination(for: NavigationScreens.self) { screen in
                 switch screen {
                 case .about: AboutView(viewModel: viewModel)
-                case .guide: FAQView(viewModel: viewModel)
+                case .faq: FAQView(viewModel: viewModel)
                 case .discover: DeviceDiscoveryView(viewModel: viewModel)
                 }
             }
             .alert(
-                Strings.ResetConnectionData.title,
+                Strings.Alerts.ResetConnectionData.title,
                 isPresented: $isClearAlertShown,
                 actions: {
                     Button(Strings.General.reset, role: .destructive, action: viewModel.resetConnectionData)
                     Button(Strings.General.cancel, role: .cancel, action: {})
                 }, message: {
-                    Text(Strings.ResetConnectionData.message)
+                    Text(Strings.Alerts.ResetConnectionData.message)
                 }
             )
             .alert(
