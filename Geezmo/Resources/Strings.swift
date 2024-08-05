@@ -76,14 +76,17 @@ enum Strings {
         static let q6 = "Can I use Geezmo with multiple TVs?"
         static let a6 = "No, not in the current version. Connecting to a different TV will reset the previously stored connection data."
         
-        static let q7 = "Is there an Android version available?"
-        static let a7 = "No, currently, Geezmo is only available for iOS devices."
+        static let q7 = "Are Samsung and other non-LG TVs supported?"
+        static let a7 = "No, and there are no plans to support TVs of other brands. This app is dedicated solely to WebOS TVs, such as those made by LG."
         
-        static let q8 = "Is Geezmo free and open source?"
-        static let a8 = "Yes, Geezmo is completely free and always will be. Additionally, it is open-source. Please visit our GitHub repository at"
+        static let q8 = "Is there an Android version available?"
+        static let a8 = "No, currently, Geezmo is only available for iOS devices."
         
-        static let q9 = "Questions? Comments?"
-        static let a9 = "Please contact the author at"
+        static let q9 = "Is Geezmo free and open source?"
+        static let a9 = "Yes, Geezmo is completely free and always will be. Additionally, it is open-source. Please visit our GitHub repository at"
+        
+        static let q10 = "Questions? Comments?"
+        static let a10 = "Please contact the author at"
     }
 
     enum General {

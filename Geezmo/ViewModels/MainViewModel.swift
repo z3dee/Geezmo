@@ -53,6 +53,7 @@ final class MainViewModel: NSObject, ObservableObject {
         FAQItem(question: Strings.FAQ.q7, answer: Strings.FAQ.a7, isExpanded: true),
         FAQItem(question: Strings.FAQ.q8, answer: Strings.FAQ.a8, isExpanded: true),
         FAQItem(question: Strings.FAQ.q9, answer: Strings.FAQ.a9, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q10, answer: Strings.FAQ.a10, isExpanded: true),
     ]
     
     var session: WCSession
