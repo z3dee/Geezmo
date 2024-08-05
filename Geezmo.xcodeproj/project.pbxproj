@@ -21,7 +21,7 @@
 		CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A962C4921C5007E8F87 /* ActivityIndicatorView */; };
 		CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A992C4921CF007E8F87 /* Foil */; };
 		CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A9E2C4921F9007E8F87 /* AboutView.swift */; };
-		CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA02C492223007E8F87 /* TipView.swift.swift */; };
+		CA667AA12C492223007E8F87 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA02C492223007E8F87 /* TipView.swift */; };
 		CA667AA32C49223F007E8F87 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA22C49223F007E8F87 /* FAQView.swift */; };
 		CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA42C492265007E8F87 /* ToastConfiguration.swift */; };
 		CA667AA72C49227E007E8F87 /* ToastSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA62C49227E007E8F87 /* ToastSheetView.swift */; };
@@ -141,7 +141,7 @@
 		CA667A8E2C49215F007E8F87 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryView.swift; sourceTree = "<group>"; };
 		CA667A9E2C4921F9007E8F87 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		CA667AA02C492223007E8F87 /* TipView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift.swift; sourceTree = "<group>"; };
+		CA667AA02C492223007E8F87 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		CA667AA22C49223F007E8F87 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		CA667AA42C492265007E8F87 /* ToastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
 		CA667AA62C49227E007E8F87 /* ToastSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastSheetView.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 				CA667A8E2C49215F007E8F87 /* PreferencesView.swift */,
 				CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */,
 				CA667A9E2C4921F9007E8F87 /* AboutView.swift */,
-				CA667AA02C492223007E8F87 /* TipView.swift.swift */,
+				CA667AA02C492223007E8F87 /* TipView.swift */,
 				CA667AA22C49223F007E8F87 /* FAQView.swift */,
 				CA667AA42C492265007E8F87 /* ToastConfiguration.swift */,
 				CA97AE582C5FA91A006917B1 /* AlertConfiguration.swift */,
@@ -679,7 +679,7 @@
 				CA667ABB2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift in Sources */,
 				CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */,
 				CA7C9AA12C58BCA0007C8045 /* PinPadView.swift in Sources */,
-				CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */,
+				CA667AA12C492223007E8F87 /* TipView.swift in Sources */,
 				CA667ADF2C4930D8007E8F87 /* StringExtensions.swift in Sources */,
 				CA667AAE2C49233A007E8F87 /* KeyButtonRow.swift in Sources */,
 				CA667AC02C492EBB007E8F87 /* MainViewModel+.swift in Sources */,

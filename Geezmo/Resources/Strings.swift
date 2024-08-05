@@ -58,7 +58,7 @@ enum Strings {
     }
 
     enum FAQ {
-        static let q1 = "Do you have a companion Apple Watch app?"
+        static let q1 = "Does it come with a companion Apple Watch app?"
         static let a1 = "Yes, Geezmo comes with a fantastic companion app specifically designed for the Apple Watch. Check it out!"
         
         static let q2 = "Can I customize the button layout?"
@@ -71,7 +71,7 @@ enum Strings {
         static let a4 = "Ensure that both your iPhone and your TV are connected to the same WiFi network and that you have granted local network permissions to Geezmo. This is essential for the app to function properly."
         
         static let q5 = "Does Geezmo support voice commands?"
-        static let a5 = "No, currenlty Geezmo does not support voice commands."
+        static let a5 = "No, currently Geezmo does not support voice commands."
         
         static let q6 = "Can I use Geezmo with multiple TVs?"
         static let a6 = "No, not in the current version. Connecting to a different TV will reset the previously stored connection data."
@@ -79,7 +79,7 @@ enum Strings {
         static let q7 = "Are Samsung and other non-LG TVs supported?"
         static let a7 = "No, and there are no plans to support TVs of other brands. This app is dedicated solely to WebOS TVs, such as those made by LG."
         
-        static let q8 = "Is there an Android version available?"
+        static let q8 = "Is Android version available?"
         static let a8 = "No, currently, Geezmo is only available for iOS devices."
         
         static let q9 = "Is Geezmo free and open source?"

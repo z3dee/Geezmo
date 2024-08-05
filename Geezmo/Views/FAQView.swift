@@ -18,12 +18,16 @@ struct FAQView: View {
                     isExpanded: $viewModel.faqItems[index].isExpanded
                 ) {
                     if faqItem.answer.contains("GitHub") {
-                        Text(faqItem.answer)
-                        Link("https://github.com/jareksedy/Geezmo", destination: URL(string: "https://github.com/jareksedy/Geezmo")!).foregroundColor(.accent)
+                            Text(faqItem.answer + "  ") +
+                            Text("https://github.com/jareksedy/Geezmo")
+                                .foregroundColor(.accent)
+                        
                     } else if faqItem.answer.contains("contact the author") {
-                        Text(faqItem.answer)
-                        Link("jareksedy@icloud.com", destination: URL(string: "mailto:jareksedy@icloud.com")!).foregroundColor(.accent)
-                        Spacer().frame(height: 5)
+                            Text(faqItem.answer + " ") +
+                            Text("jareksedy@icloud.com")
+                                .foregroundColor(.accent)
+                        
+                        Spacer().frame(height: 15)
                     } else {
                         Text(faqItem.answer)
                     }
