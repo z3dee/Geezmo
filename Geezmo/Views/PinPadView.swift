@@ -83,7 +83,7 @@ struct PinPadView: View {
         }
         
         if newValue.count == 8 {
-            viewModel.tv?.send(.setPin(newValue))
+            viewModel.pairingCode = newValue
             showModal = false
         }
     }

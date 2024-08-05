@@ -25,6 +25,7 @@ final class MainViewModel: NSObject, ObservableObject {
     @Published var deviceDiscoveryFinished: Bool = false
     @Published var keyboardPresented: Bool = false
     @Published var pinPadPresented: Bool = false
+    @Published var pairingCode: String? = nil
     @Published var isFocused: Bool = false
     @Published var isConnected: Bool = false
     @Published var preferencesPresented: Bool = false

@@ -130,6 +130,15 @@ struct MainView: View {
             )
             .sheet(
                 isPresented: $viewModel.pinPadPresented,
+                onDismiss: {
+                    if let pairingCode = viewModel.pairingCode, pairingCode.count == 8 {
+                        viewModel.tv?.send(.setPin(pairingCode))
+                    } else {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + Globals.TimeIntervals.medium) {
+                            viewModel.pinPadPresented = true
+                        }
+                    }
+                },
                 content: {
                     PinPadView(showModal: $viewModel.pinPadPresented, viewModel: viewModel)
                         .presentationDetents([.height(115)])
