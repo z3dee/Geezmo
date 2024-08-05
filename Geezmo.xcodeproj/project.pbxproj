@@ -22,7 +22,7 @@
 		CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = CA667A992C4921CF007E8F87 /* Foil */; };
 		CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A9E2C4921F9007E8F87 /* AboutView.swift */; };
 		CA667AA12C492223007E8F87 /* TipView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA02C492223007E8F87 /* TipView.swift.swift */; };
-		CA667AA32C49223F007E8F87 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA22C49223F007E8F87 /* GuideView.swift */; };
+		CA667AA32C49223F007E8F87 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA22C49223F007E8F87 /* FAQView.swift */; };
 		CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA42C492265007E8F87 /* ToastConfiguration.swift */; };
 		CA667AA72C49227E007E8F87 /* ToastSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA62C49227E007E8F87 /* ToastSheetView.swift */; };
 		CA667AA92C4922D9007E8F87 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667AA82C4922D9007E8F87 /* KeyboardView.swift */; };
@@ -142,7 +142,7 @@
 		CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryView.swift; sourceTree = "<group>"; };
 		CA667A9E2C4921F9007E8F87 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CA667AA02C492223007E8F87 /* TipView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift.swift; sourceTree = "<group>"; };
-		CA667AA22C49223F007E8F87 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		CA667AA22C49223F007E8F87 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		CA667AA42C492265007E8F87 /* ToastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
 		CA667AA62C49227E007E8F87 /* ToastSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastSheetView.swift; sourceTree = "<group>"; };
 		CA667AA82C4922D9007E8F87 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 				CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */,
 				CA667A9E2C4921F9007E8F87 /* AboutView.swift */,
 				CA667AA02C492223007E8F87 /* TipView.swift.swift */,
-				CA667AA22C49223F007E8F87 /* GuideView.swift */,
+				CA667AA22C49223F007E8F87 /* FAQView.swift */,
 				CA667AA42C492265007E8F87 /* ToastConfiguration.swift */,
 				CA97AE582C5FA91A006917B1 /* AlertConfiguration.swift */,
 				CA21441D2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift */,
@@ -674,7 +674,7 @@
 				CA667A912C49218E007E8F87 /* DeviceDiscoveryView.swift in Sources */,
 				CA667AB92C492DCF007E8F87 /* ButtonGroupColorView.swift in Sources */,
 				CA667AC62C492F2B007E8F87 /* SSDPDiscoveryDelegate.swift in Sources */,
-				CA667AA32C49223F007E8F87 /* GuideView.swift in Sources */,
+				CA667AA32C49223F007E8F87 /* FAQView.swift in Sources */,
 				CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */,
 				CA667ABB2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift in Sources */,
 				CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */,

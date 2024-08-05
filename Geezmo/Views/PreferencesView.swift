@@ -111,7 +111,7 @@ struct PreferencesView: View {
             .navigationDestination(for: NavigationScreens.self) { screen in
                 switch screen {
                 case .about: AboutView(viewModel: viewModel)
-                case .guide: GuideView(viewModel: viewModel)
+                case .guide: FAQView(viewModel: viewModel)
                 case .discover: DeviceDiscoveryView(viewModel: viewModel)
                 }
             }

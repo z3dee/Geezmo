@@ -58,8 +58,32 @@ enum Strings {
     }
 
     enum FAQ {
-        static let q1 = "How do I customize the buttons and layout?"
-        static let a1 = "Safely unwraps the URL and WebOSClient instance and avoids force unwrapping. Additionally, it provides error handling for potential failures during initialization. Make sure to adjust the error handling based on your application's needs."
+        static let q1 = "Do you have a companion Apple Watch app?"
+        static let a1 = "Yes, Geezmo comes with a fantastic companion app specifically designed for the Apple Watch. Check it out!"
+        
+        static let q2 = "Can I customize the button layout?"
+        static let a2 = "Currently, customization options are somewhat limited. Geezmo offers a basic layout and an alternative layout, which you can switch between in the settings menu."
+        
+        static let q3 = "Can I hold a button for a continuous action?"
+        static let a3 = "Yes, certain button types such as volume controls and arrow keys support continuous actions when held down."
+        
+        static let q4 = "How do I troubleshoot connection issues?"
+        static let a4 = "Ensure that both your iPhone and your TV are connected to the same WiFi network and that you have granted local network permissions to Geezmo. This is essential for the app to function properly."
+        
+        static let q5 = "Does Geezmo support voice commands?"
+        static let a5 = "No, currenlty Geezmo does not support voice commands."
+        
+        static let q6 = "Can I use Geezmo with multiple TVs?"
+        static let a6 = "No, not in the current version. Connecting to a different TV will reset the previously stored connection data."
+        
+        static let q7 = "Is there an Android version available?"
+        static let a7 = "No, currently, Geezmo is only available for iOS devices."
+        
+        static let q8 = "Is Geezmo free and open source?"
+        static let a8 = "Yes, Geezmo is completely free and always will be. Additionally, it is open-source. Please visit our GitHub repository at"
+        
+        static let q9 = "Questions? Comments?"
+        static let a9 = "Please contact the author at"
     }
 
     enum General {

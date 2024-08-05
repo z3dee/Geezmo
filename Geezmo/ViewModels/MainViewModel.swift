@@ -45,11 +45,14 @@ final class MainViewModel: NSObject, ObservableObject {
     @Published
     var faqItems: [FAQItem] = [
         FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1, isExpanded: true),
-        FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1),
-        FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1),
-        FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1),
-        FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1),
-        FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1)
+        FAQItem(question: Strings.FAQ.q2, answer: Strings.FAQ.a2, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q3, answer: Strings.FAQ.a3, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q4, answer: Strings.FAQ.a4, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q5, answer: Strings.FAQ.a5, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q6, answer: Strings.FAQ.a6, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q7, answer: Strings.FAQ.a7, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q8, answer: Strings.FAQ.a8, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q9, answer: Strings.FAQ.a9, isExpanded: true),
     ]
     
     var session: WCSession
