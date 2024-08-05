@@ -29,7 +29,7 @@ public class LocalNetworkAuthorization: NSObject {
                 print(error.localizedDescription)
             case .ready, .cancelled:
                 break
-            case let .waiting(error):
+            case .waiting:
                 self.reset()
                 self.completion?(false)
             default:
