@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CA21441E2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21441D2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift */; };
+		CA409B9A2C61EBBE00888518 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA409B992C61EBBE00888518 /* String+.swift */; };
+		CA409B9C2C61EC3C00888518 /* WakeOnLANService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA409B9B2C61EC3C00888518 /* WakeOnLANService.swift */; };
 		CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A672C4918F1007E8F87 /* GeezmoApp.swift */; };
 		CA667A6C2C4918F1007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6B2C4918F1007E8F87 /* Assets.xcassets */; };
 		CA667A6F2C4918F1007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */; };
@@ -129,6 +131,8 @@
 /* Begin PBXFileReference section */
 		CA21441D2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryNavigationContext.swift; sourceTree = "<group>"; };
 		CA33563A2C4A186000B55DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA409B992C61EBBE00888518 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		CA409B9B2C61EC3C00888518 /* WakeOnLANService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeOnLANService.swift; sourceTree = "<group>"; };
 		CA667A642C4918F1007E8F87 /* Geezmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geezmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA667A672C4918F1007E8F87 /* GeezmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoApp.swift; sourceTree = "<group>"; };
 		CA667A6B2C4918F1007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				CA667A672C4918F1007E8F87 /* GeezmoApp.swift */,
 				CA667A8D2C49211F007E8F87 /* Views */,
 				CA667ABE2C492E99007E8F87 /* ViewModels */,
+				CAA1FDFB2C61F858001A966F /* Services */,
 				CA667AE32C49311B007E8F87 /* Globals */,
 				CA667ACF2C492FD7007E8F87 /* Types */,
 				CA667ACC2C492F93007E8F87 /* Resources */,
@@ -351,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				CA667ABC2C492E94007E8F87 /* MainViewModel.swift */,
-				CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */,
 				CA667ABF2C492EBB007E8F87 /* MainViewModel+.swift */,
 				CA667AC12C492EDF007E8F87 /* WebOSClientDelegate.swift */,
 				CA667AC32C492F04007E8F87 /* WCSessionDelegate.swift */,
@@ -364,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				CA667AC72C492F5C007E8F87 /* UINavigationController+.swift */,
+				CA409B992C61EBBE00888518 /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -498,6 +503,15 @@
 				CA667B232C49428C007E8F87 /* Info.plist */,
 			);
 			path = GeezmoWidget;
+			sourceTree = "<group>";
+		};
+		CAA1FDFB2C61F858001A966F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */,
+				CA409B9B2C61EC3C00888518 /* WakeOnLANService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -658,6 +672,8 @@
 				CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
 				CA667AC82C492F5C007E8F87 /* UINavigationController+.swift in Sources */,
 				CA667A8F2C49215F007E8F87 /* PreferencesView.swift in Sources */,
+				CA409B9A2C61EBBE00888518 /* String+.swift in Sources */,
+				CA409B9C2C61EC3C00888518 /* WakeOnLANService.swift in Sources */,
 				CA667AB42C492CF0007E8F87 /* ButtonGroupDefaultView.swift in Sources */,
 				CA97AE572C5F5326006917B1 /* LocalNetworkAuthorization.swift in Sources */,
 				CA97AE592C5FA91A006917B1 /* AlertConfiguration.swift in Sources */,
