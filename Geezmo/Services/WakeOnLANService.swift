@@ -19,24 +19,19 @@ class WakeOnLANService {
             print("Invalid MAC address")
             return nil
         }
-        
         var magicPacket = Data(repeating: 0xFF, count: 6)
-        for _ in 0..<16 {
+        for _ in 0 ..< 16 {
             magicPacket.append(macData)
         }
-        
         return magicPacket
     }
     
-    // Function to send the Magic Packet
     func wakeDevice(at ipAddress: String, macAddress: String, port: UInt16 = 9, completion: @escaping (Result<Void, Error>) -> Void) {
         guard let magicPacket = createMagicPacket(macAddress: macAddress) else {
             completion(.failure(WakeOnLanError.invalidMacAddress))
             return
         }
-        
         let connection = NWConnection(host: NWEndpoint.Host(ipAddress), port: NWEndpoint.Port(rawValue: port)!, using: .udp)
-        
         connection.stateUpdateHandler = { state in
             switch state {
             case .ready:
@@ -54,7 +49,6 @@ class WakeOnLANService {
                 break
             }
         }
-        
         connection.start(queue: .global())
     }
     
@@ -62,4 +56,3 @@ class WakeOnLANService {
         case invalidMacAddress
     }
 }
-

@@ -85,7 +85,7 @@ struct KeyButtonStyle: ButtonStyle {
                             viewModel.toast(.goingOff)
                         }
                     } else {
-                        viewModel.connectAndRegister()
+                        viewModel.wakeMeUp()
                     }
                 }
             })
@@ -149,29 +149,22 @@ private func performAction(type: KeyButtonType, viewModel: MainViewModel) {
             return
         }
         switch playState {
-        case "playing":
-            viewModel.sendKey(.pause)
-        case "paused":
-            viewModel.sendKey(.play)
-        default:
-            break
+        case "playing": viewModel.sendKey(.pause)
+        case "paused": viewModel.sendKey(.play)
+        default: break
         }
-
         return
     }
 
     if type == .grid {
         viewModel.colorButtonsPresented.toggle()
     }
-
     if type == .powerOff {
         return
     }
-
     if let keyTarget = type.keyTarget {
         viewModel.sendKey(keyTarget)
     }
-
     if let commonTarget = type.commonTarget {
         viewModel.send(commonTarget)
     }

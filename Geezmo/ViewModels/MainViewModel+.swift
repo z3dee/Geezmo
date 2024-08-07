@@ -123,4 +123,17 @@ extension MainViewModel {
         preferencesPresented = false
         connectAndRegister(forcingConnection: true)
     }
+    
+    func wakeMeUp() {
+        guard let host = AppSettings.shared.host,
+              let mac = AppSettings.shared.mac else {
+            return
+        }
+        WakeOnLANService
+            .shared
+            .wakeDevice(at: host, macAddress: mac) { [weak self] _ in
+                guard let self else { return }
+                connectAndRegister(forcingConnection: true)
+            }
+    }
 }
