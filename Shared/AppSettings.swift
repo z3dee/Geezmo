@@ -10,9 +10,14 @@ import Foil
 
 final class AppSettings {
     static let shared = AppSettings()
+    
+    private init() {}
 
     @FoilDefaultStorageOptional(key: "host")
     var host: String?
+    
+    @FoilDefaultStorageOptional(key: "mac")
+    var mac: String?
 
     @FoilDefaultStorageOptional(key: "clientKey")
     var clientKey: String?

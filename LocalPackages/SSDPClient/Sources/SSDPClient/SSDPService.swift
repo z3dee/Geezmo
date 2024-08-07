@@ -17,6 +17,8 @@ public class SSDPService {
     public internal(set) var uniqueServiceName: String?
     /// Device name
     public internal(set) var deviceName: String?
+    /// WAKEUP
+    public internal(set) var wakeup: String?
 
     // MARK: Initialisation
 
@@ -38,8 +40,7 @@ public class SSDPService {
         self.searchTarget = headers["ST"]
         self.uniqueServiceName = headers["USN"]
         self.deviceName = headers["DLNADEVICENAME.LGE.COM"]
-        //print(headers["DLNADEVICENAME.LGE.COM"])
-        //print(headers)
+        self.wakeup = headers["WAKEUP"]
     }
 
     // MARK: Private functions

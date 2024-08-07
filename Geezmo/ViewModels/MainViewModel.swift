@@ -59,6 +59,7 @@ final class MainViewModel: NSObject, ObservableObject {
     var session: WCSession
     var tv: WebOSClient?
     var ssdpClient = SSDPDiscovery()
+    var services: [SSDPService] = []
 
     init(session: WCSession = .default) {
         self.session = session

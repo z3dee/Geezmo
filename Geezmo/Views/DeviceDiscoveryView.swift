@@ -38,7 +38,7 @@ struct DeviceDiscoveryView: View {
                             .padding(.vertical, 5)
                             .contentShape(Rectangle())
                             .onTapGesture {
-                                viewModel.pairDiscoveredDevice(with: device.host)
+                                viewModel.pairDiscoveredDevice(with: device)
                             }
                         }
                     }

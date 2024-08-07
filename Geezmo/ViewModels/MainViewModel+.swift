@@ -96,9 +96,10 @@ extension MainViewModel {
         toast(isConnected ? .connected : .disconnected)
     }
     
-    func pairDiscoveredDevice(with host: String) {
+    func pairDiscoveredDevice(with device: DeviceData) {
         disconnect()
-        AppSettings.shared.host = host
+        AppSettings.shared.host = device.host
+        AppSettings.shared.mac = device.mac
         AppSettings.shared.clientKey = nil
         preferencesPresented = false
         connectAndRegister(forcingConnection: true)

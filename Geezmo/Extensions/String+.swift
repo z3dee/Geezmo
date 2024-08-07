@@ -18,4 +18,20 @@ extension String {
         }
         return data.count > 0 ? data : nil
     }
+    
+    func extractMacAddress() -> String? {
+        let macAddressPattern = "([0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2})"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: macAddressPattern)
+            if let match = regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count)) {
+                if let range = Range(match.range, in: self) {
+                    return String(self[range])
+                }
+            }
+        } catch {
+            print("Invalid regular expression: \(error.localizedDescription)")
+        }
+        return nil
+    }
 }
