@@ -131,8 +131,20 @@ extension MainViewModel {
         }
         WakeOnLANService
             .shared
-            .wakeDevice(at: host, macAddress: mac) { [weak self] _ in
+            .wakeDevice(at: host, macAddress: mac) { [weak self] result in
                 guard let self else { return }
+                if case .failure(let error) = result {
+                    let alertConfiguration =
+                    AlertConfiguration(
+                        title: "Error",
+                        message: error.localizedDescription,
+                        primaryButton: Alert.Button.cancel(),
+                        secondaryButton: nil
+                    )
+                    alert(alertConfiguration)
+                    return
+                }
+                
                 connectAndRegister(forcingConnection: true)
             }
     }
