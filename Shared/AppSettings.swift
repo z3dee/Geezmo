@@ -13,6 +13,9 @@ final class AppSettings {
     
     private init() {}
 
+    @FoilDefaultStorageOptional(key: "deviceName")
+    var deviceName: String?
+    
     @FoilDefaultStorageOptional(key: "host")
     var host: String?
     

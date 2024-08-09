@@ -15,9 +15,9 @@ extension MainViewModel {
               !isConnected || forcingConnection 
         else { return }
         
-        tv?.disconnect()
+        disconnect()
 
-        tv = WebOSClient(
+        configure(
             url: url,
             delegate: self,
             shouldPerformHeartbeat: true,
@@ -25,18 +25,11 @@ extension MainViewModel {
             shouldLogActivity: true
         )
 
-        tv?.connect()
-        tv?.send(
+        connect()
+        send(
             .register(pairingType: .pin, clientKey: AppSettings.shared.clientKey),
             id: Globals.SubscriptionIds.registrationRequestId
         )
-    }
-
-    func disconnect() {
-        tv?.disconnect()
-        Task { @MainActor in
-            isConnected = false
-        }
     }
     
     private func requestLocalNetworkAuthorization(_ completion: ((Bool) -> Void)?) {
@@ -81,12 +74,12 @@ extension MainViewModel {
     }
 
     func subscribeAll() {
-        tv?.send(
+        send(
             .registerRemoteKeyboard,
             id: Globals.SubscriptionIds.remoteKeyboardRequestId
         )
 
-        tv?.send(
+        send(
             .getForegroundAppMediaStatus(subscribe: true),
             id: Globals.SubscriptionIds.mediaPlaybackInfoRequestId
         )
@@ -98,6 +91,7 @@ extension MainViewModel {
     
     func pairDiscoveredDevice(with device: DeviceData) {
         disconnect()
+        AppSettings.shared.deviceName = device.name
         AppSettings.shared.host = device.host
         AppSettings.shared.mac = device.mac
         AppSettings.shared.clientKey = nil
@@ -138,7 +132,7 @@ extension MainViewModel {
                     AlertConfiguration(
                         title: "Error",
                         message: error.localizedDescription,
-                        primaryButton: Alert.Button.cancel(),
+                        primaryButton: .cancel(),
                         secondaryButton: nil
                     )
                     alert(alertConfiguration)

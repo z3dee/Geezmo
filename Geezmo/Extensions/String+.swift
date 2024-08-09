@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WebOSClient
 
 extension String {
     var hexadecimal: Data? {

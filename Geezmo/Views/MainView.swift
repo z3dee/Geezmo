@@ -52,16 +52,6 @@ struct MainView: View {
                     .padding(.top, 10)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "keyboard.fill")
-                        .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
-                        .foregroundColor(.secondary)
-                        .padding(.trailing, Globals.iconPadding)
-                        .padding(.top, 10)
-                        .onTapGesture {
-                            viewModel.keyboardPresented = true
-                        }
-                }
-                ToolbarItem(placement: .topBarTrailing) {
                     Image(
                         systemName: viewModel.isConnected ?
                         "checkmark.circle.fill" : "exclamationmark.circle.fill"
@@ -132,7 +122,7 @@ struct MainView: View {
                 isPresented: $viewModel.pinPadPresented,
                 onDismiss: {
                     if let pairingCode = viewModel.pairingCode, pairingCode.count == 8 {
-                        viewModel.tv?.send(.setPin(pairingCode))
+                        viewModel.send(.setPin(pairingCode))
                     } else {
                         DispatchQueue.main.asyncAfter(deadline: .now() + Globals.TimeIntervals.medium) {
                             viewModel.pinPadPresented = true

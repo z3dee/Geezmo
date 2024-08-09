@@ -23,11 +23,11 @@ extension MainViewModel: WCSessionDelegate {
 
         if let targetString = message[.keyTarget] as? String,
            let targetData = targetString.data(using: .utf8) {
-            tv?.sendKey(keyData: targetData)
+            sendKey(keyData: targetData)
         }
 
         if let targetJSON = message[.commonTarget] as? String {
-            tv?.send(jsonRequest: targetJSON)
+            send(jsonRequest: targetJSON)
         }
     }
 

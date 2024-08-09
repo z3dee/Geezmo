@@ -41,7 +41,7 @@ final class MainViewModel: NSObject, ObservableObject {
             AppSettings.shared.phoneHaptics = preferencesHapticFeedback
         }
     }
-
+    
     @Published
     var faqItems: [FAQItem] = [
         FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1, isExpanded: true),
@@ -57,10 +57,10 @@ final class MainViewModel: NSObject, ObservableObject {
     ]
     
     var session: WCSession
-    var tv: WebOSClient?
+    private var tv: WebOSClient?
     var ssdpClient = SSDPDiscovery()
     var services: [SSDPService] = []
-
+    
     init(session: WCSession = .default) {
         self.session = session
         super.init()
@@ -68,6 +68,23 @@ final class MainViewModel: NSObject, ObservableObject {
         session.delegate = self
         session.activate()
         connectAndRegister()
+    }
+    
+    func configure(
+        url: URL,
+        delegate: WebOSClientDelegate?,
+        shouldPerformHeartbeat: Bool = true,
+        heartbeatTimeInterval: TimeInterval = 10,
+        shouldLogActivity: Bool = false
+    ) {
+        tv =
+        WebOSClient(
+            url: url,
+            delegate: delegate,
+            shouldPerformHeartbeat: shouldPerformHeartbeat,
+            heartbeatTimeInterval: heartbeatTimeInterval,
+            shouldLogActivity: shouldLogActivity
+        )
     }
 
     @discardableResult
@@ -86,9 +103,28 @@ final class MainViewModel: NSObject, ObservableObject {
 
         return newId
     }
+    
+    func send(jsonRequest: String) {
+        tv?.send(jsonRequest: jsonRequest)
+    }
 
     func sendKey(_ keyTarget: WebOSKeyTarget) {
         tv?.sendKey(keyTarget)
+    }
+    
+    func sendKey(keyData: Data) {
+        tv?.sendKey(keyData: keyData)
+    }
+    
+    func disconnect() {
+        tv?.disconnect()
+        Task { @MainActor in
+            isConnected = false
+        }
+    }
+    
+    func connect() {
+        tv?.connect()
     }
 
     func toast(_ configuration: ToastConfiguration) {
