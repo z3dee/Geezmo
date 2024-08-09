@@ -21,7 +21,7 @@ extension MainViewModel {
             url: url,
             delegate: self,
             shouldPerformHeartbeat: true,
-            heartbeatTimeInterval: 30,
+            heartbeatTimeInterval: 60,
             shouldLogActivity: true
         )
 

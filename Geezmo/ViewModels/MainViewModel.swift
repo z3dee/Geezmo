@@ -73,9 +73,9 @@ final class MainViewModel: NSObject, ObservableObject {
     func configure(
         url: URL,
         delegate: WebOSClientDelegate?,
-        shouldPerformHeartbeat: Bool = true,
-        heartbeatTimeInterval: TimeInterval = 10,
-        shouldLogActivity: Bool = false
+        shouldPerformHeartbeat: Bool,
+        heartbeatTimeInterval: TimeInterval,
+        shouldLogActivity: Bool
     ) {
         tv =
         WebOSClient(
