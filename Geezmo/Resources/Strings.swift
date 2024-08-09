@@ -12,6 +12,7 @@ enum Strings {
         static let preferences = "Preferences"
         static let aboutApp = "About Geezmo"
         static let faq = "Frequently Asked Questions"
+        static let rateUs = "Rate Us On App Store"
         static let connectTV = "Connect TV"
         static let manuallyEnterIP = "Input IP Address Manually"
         static let resetConnectionData = "Reset Connection Data"

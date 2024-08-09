@@ -30,6 +30,12 @@ struct PreferencesView: View {
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.secondary)
                     }
+                    
+                    Button(action: { }, label: {
+                        Label(Strings.Titles.rateUs, systemImage: "hands.clap")
+                            .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
+                            .foregroundColor(.accentColor)
+                    })
                 }
 
                 Section(Strings.SectionHeaders.connection) {
@@ -40,7 +46,7 @@ struct PreferencesView: View {
                     }
 
                     Button(action: { enterIpAlertShown.toggle() }, label: {
-                        Label(Strings.Titles.manuallyEnterIP, systemImage: "hand.point.up.left.and.text")
+                        Label(Strings.Titles.manuallyEnterIP, systemImage: "hand.raised.fingers.spread")
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.accentColor)
                     })

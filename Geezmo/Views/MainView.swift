@@ -15,7 +15,7 @@ struct MainView: View {
         NavigationStack {
             ScrollView([], showsIndicators: false) {
                 VStack {
-                    Spacer().frame(height: 25)
+                    Spacer()
 
                     if viewModel.preferencesAlternativeView {
                         if viewModel.colorButtonsPresented {
@@ -51,20 +51,31 @@ struct MainView: View {
                     .padding(.leading, Globals.iconPadding)
                     .padding(.top, 10)
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Image(
-                        systemName: viewModel.isConnected ?
-                        "checkmark.circle.fill" : "exclamationmark.circle.fill"
-                    )
-                    .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white, viewModel.isConnected ? .green : .red)
-                    .padding(.trailing, Globals.iconPadding)
-                    .padding(.top, 10)
-                    .contentTransition(.symbolEffect(.replace.byLayer))
-                    .onTapGesture {
-                        viewModel.showConnectionStatus()
-                    }
-                }
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    Image(
+//                        systemName: viewModel.isConnected ?
+//                        "checkmark.circle.fill" : "exclamationmark.circle.fill"
+//                    )
+//                    .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
+//                    .foregroundStyle(.white, viewModel.isConnected ? .green : .red)
+//                    .padding(.trailing, Globals.iconPadding)
+//                    .padding(.top, 10)
+//                    .contentTransition(.symbolEffect(.replace.byLayer))
+//                    .onTapGesture {
+//                        viewModel.showConnectionStatus()
+//                    }
+//                }
+
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    Image(systemName: "keyboard.fill")
+//                        .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
+//                        .foregroundColor(.secondary)
+//                        .padding(.trailing, Globals.iconPadding)
+//                        .padding(.top, 10)
+//                        .onTapGesture {
+//                            viewModel.keyboardPresented = true
+//                        }
+//                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "gearshape.fill")
                         .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
