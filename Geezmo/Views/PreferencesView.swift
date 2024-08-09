@@ -32,7 +32,7 @@ struct PreferencesView: View {
                     }
                     
                     Button(action: { }, label: {
-                        Label(Strings.Titles.rateUs, systemImage: "hands.clap")
+                        Label(Strings.Titles.rateUs, systemImage: "star.leadinghalf.filled")
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.accentColor)
                     })

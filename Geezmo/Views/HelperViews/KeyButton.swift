@@ -18,6 +18,7 @@ struct KeyButton: View {
         }, label: {})
             .buttonStyle(KeyButtonStyle(type))
             .buttonRepeatBehavior(type.repeatBehavior)
+            .disabled(viewModel.isButtonDisabled(type))
     }
 
     init(_ type: KeyButtonType) {
@@ -139,7 +140,11 @@ private extension KeyButtonStyle {
             return .white
         }
 
-        return pressed ? .white : type.highlighted ? .accent : .secondary
+        if viewModel.isButtonDisabled(type) {
+            return .secondary.opacity(0.25)
+        } else {
+            return pressed ? .white : type.highlighted ? .accent : .secondary
+        }
     }
 }
 

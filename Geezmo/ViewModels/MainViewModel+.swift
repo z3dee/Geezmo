@@ -32,6 +32,15 @@ extension MainViewModel {
         )
     }
     
+    func isButtonDisabled(_ type: KeyButtonType) -> Bool {
+        switch type {
+        case .powerOff:
+            return false
+        default:
+            return !isConnected
+        }
+    }
+    
     private func requestLocalNetworkAuthorization(_ completion: ((Bool) -> Void)?) {
         let authorization = LocalNetworkAuthorization()
         authorization.requestAuthorization { granted in

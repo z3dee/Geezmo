@@ -14,7 +14,7 @@ enum Strings {
         static let faq = "Frequently Asked Questions"
         static let rateUs = "Rate Us On App Store"
         static let connectTV = "Connect TV"
-        static let manuallyEnterIP = "Input IP Address Manually"
+        static let manuallyEnterIP = "Manually Input IP Address"
         static let resetConnectionData = "Reset Connection Data"
 
         static let alternativeLayout = "Alternative Layout"

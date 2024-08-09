@@ -51,6 +51,7 @@ struct MainView: View {
                     .padding(.leading, Globals.iconPadding)
                     .padding(.top, 10)
                 }
+                
 //                ToolbarItem(placement: .topBarTrailing) {
 //                    Image(
 //                        systemName: viewModel.isConnected ?
