@@ -22,7 +22,7 @@ struct FAQView: View {
                             Text("https://github.com/jareksedy/Geezmo")
                                 .foregroundColor(.accent)
                         
-                    } else if faqItem.answer.contains("contact the author") {
+                    } else if faqItem.answer.contains("reach out") {
                             Text(faqItem.answer + " ") +
                             Text("jareksedy@icloud.com")
                                 .foregroundColor(.accent)

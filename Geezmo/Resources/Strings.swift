@@ -64,7 +64,7 @@ enum Strings {
         static let a3 = "Yes, certain button types such as volume controls and arrow keys support continuous actions when held down."
         
         static let q4 = "How do I troubleshoot connection issues?"
-        static let a4 = "Ensure that both your iPhone and your TV are connected to the same WiFi network and that you have granted local network permissions to Geezmo. This is essential for the app to function properly."
+        static let a4 = "Ensure that both your iPhone and your TV are connected to the same WiFi network and that you have granted local network permissions to Geezmo. This is essential for the app to function properly. Please also ensure that your TV has the latest software installed to guarantee the best experience."
         
         static let q5 = "Does Geezmo support voice commands?"
         static let a5 = "No, currently Geezmo does not support voice commands."
@@ -82,7 +82,7 @@ enum Strings {
         static let a9 = "Yes, Geezmo is completely free and always will be. Additionally, it is open-source. Please visit our GitHub repository at"
         
         static let q10 = "Questions? Comments?"
-        static let a10 = "Please contact the author at"
+        static let a10 = "For any questions regarding this app, feel free to reach out to me at"
     }
 
     enum General {
