@@ -23,9 +23,7 @@ extension MainViewModel: WebOSClientDelegate {
 
     func didRegister(with clientKey: String) {
         AppSettings.shared.clientKey = clientKey
-
         subscribeAll()
-
         Task { @MainActor in
             isConnected = true
             isToastPresented = false
@@ -51,7 +49,7 @@ extension MainViewModel: WebOSClientDelegate {
         }
 
         if case .failure(let error) = result {
-            print("~e: \(error.localizedDescription)")
+            print("~err: \(error.localizedDescription)")
         }
         
         if case .failure(let error) = result {
@@ -65,10 +63,7 @@ extension MainViewModel: WebOSClientDelegate {
     func didReceiveNetworkError(_ error: Error?) {
         if let error = error as NSError? {
             if error.code == 57 || error.code == 60 || error.code == 54 {
-                Task { @MainActor in
-                    isConnected = false
-                    // connectAndRegister()
-                }
+                disconnect()
             }
         }
     }

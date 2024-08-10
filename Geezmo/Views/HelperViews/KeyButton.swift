@@ -81,10 +81,8 @@ struct KeyButtonStyle: ButtonStyle {
                 if type == .powerOff {
                     if viewModel.isConnected {
                         viewModel.send(.turnOff)
-                        Task { @MainActor in
-                            viewModel.isConnected = false
-                            viewModel.toast(.goingOff)
-                        }
+                        viewModel.toast(.goingOff)
+                        viewModel.disconnect()
                     } else {
                         viewModel.wakeMeUp()
                     }
@@ -108,16 +106,11 @@ private extension KeyButtonStyle {
 
     func getBackgroundColor(type: KeyButtonType, _ pressed: Bool) -> Color {
         switch type {
-        case .red:
-            return .red
-        case .green:
-            return .green
-        case .yellow:
-            return .yellow
-        case .blue:
-            return .blue
-        default:
-            break
+        case .red: return .red
+        case .green: return .green
+        case .yellow: return .yellow
+        case .blue: return .blue
+        default: break
         }
 
         if type == .grid && viewModel.colorButtonsPresented {

@@ -27,7 +27,10 @@ extension MainViewModel {
 
         connect()
         send(
-            .register(pairingType: .pin, clientKey: AppSettings.shared.clientKey),
+            .register(
+                pairingType: .pin,
+                clientKey: AppSettings.shared.clientKey
+            ),
             id: Globals.SubscriptionIds.registrationRequestId
         )
     }

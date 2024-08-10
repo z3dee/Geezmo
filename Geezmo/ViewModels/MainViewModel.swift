@@ -128,12 +128,16 @@ final class MainViewModel: NSObject, ObservableObject {
     }
 
     func toast(_ configuration: ToastConfiguration) {
-        toastConfiguration = configuration
-        isToastPresented = true
+        Task { @MainActor in
+            toastConfiguration = configuration
+            isToastPresented = true
+        }
     }
     
     func alert(_ configuration: AlertConfiguration) {
-        alertConfiguration = configuration
-        isAlertPresented = true
+        Task { @MainActor in
+            alertConfiguration = configuration
+            isAlertPresented = true
+        }
     }
 }
