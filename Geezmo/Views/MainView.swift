@@ -85,9 +85,7 @@ struct MainView: View {
                         .foregroundColor(.secondary)
                         .padding(.trailing, Globals.iconPadding)
                         .padding(.top, 10)
-                        .onTapGesture {
-                            viewModel.toast(Bool.random() ? .powerOn : .powerOff)
-                        }
+                        .onTapGesture {}
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {

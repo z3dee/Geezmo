@@ -39,6 +39,8 @@ enum Strings {
 
     enum ConnectTV {
         static let importantNote = "TV must be on and connected to the same network"
+        static let notFound = "No TV was discovered. Please ensure your iPhone is connected to the same WiFi network and rescan."
+        static let rescan = "Rescan Network"
     }
 
     enum InputIP {

@@ -14,32 +14,33 @@ struct DeviceDiscoveryView: View {
     var body: some View {
         VStack {
             if viewModel.deviceDiscoveryFinished {
-                List {
-                    Section("Discovered devices") {
-                        ForEach(Array(viewModel.devices)) { device in
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(device.name)
-                                        .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
-                                        .foregroundColor(.primary)
-                                    
-                                    Spacer().frame(height: 2.5)
-                                    
-                                    Text(device.host)
-                                        .font(.system(size: Globals.bodyFontSize * 0.75, weight: .regular, design: .rounded))
-                                        .foregroundColor(.secondary)
+                if viewModel.devices.isEmpty {
+                    Spacer()
+                    LargeTipView(
+                        systemName: "doc.text.magnifyingglass",
+                        color: .accent,
+                        message: Strings.ConnectTV.notFound
+                    )
+                    
+                    Spacer().frame(height: 5)
+                    
+                    Button(Strings.ConnectTV.rescan) {
+                        viewModel.discoverDevices()
+                    }
+                    .padding(25)
+                    .buttonStyle(.borderedProminent)
+                    .font(.system(size: Globals.bodyFontSize, weight: .bold, design: .rounded))
+                    
+                    Spacer()
+                } else {
+                    List(Array(viewModel.devices)) { device in
+                        Section("Discovered devices") {
+                            Label("\(device.name)", systemImage: "tv")
+                                .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
+                                .foregroundColor(.secondary)
+                                .onTapGesture {
+                                    viewModel.pairDiscoveredDevice(with: device)
                                 }
-                                
-                                Spacer()
-                                
-                                Image(systemName: "tv")
-                                    .foregroundColor(.secondary)
-                            }
-                            .padding(.vertical, 5)
-                            .contentShape(Rectangle())
-                            .onTapGesture {
-                                viewModel.pairDiscoveredDevice(with: device)
-                            }
                         }
                     }
                 }
