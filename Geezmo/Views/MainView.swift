@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct MainView: View {
     @Environment(\.scenePhase) var scenePhase
@@ -84,7 +85,9 @@ struct MainView: View {
                         .foregroundColor(.secondary)
                         .padding(.trailing, Globals.iconPadding)
                         .padding(.top, 10)
-                        .onTapGesture {}
+                        .onTapGesture {
+                            viewModel.toast(Bool.random() ? .powerOn : .powerOff)
+                        }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -158,6 +161,26 @@ struct MainView: View {
                         .presentationCornerRadius(24)
                 }
             )
+//            .popup(isPresented: $viewModel.isToastPresented) {
+//                PopupView(
+//                    viewModel: viewModel,
+//                    configuration: viewModel.toastConfiguration!
+//                )
+//            } customize: { popup in
+//                popup
+//                    .type(.floater())
+//                    .position(.bottom)
+//                    .animation(.spring(duration: 0.35))
+//                    .autohideIn(viewModel.toastConfiguration?.autohideIn)
+//                    .closeOnTap(viewModel.toastConfiguration?.closeOnTap ?? true)
+//                    .closeOnTapOutside(viewModel.toastConfiguration?.closeOnTapOutside ?? true)
+//                    .backgroundColor(Color(uiColor: .black).opacity(0.3))
+//                    .dismissCallback {
+//                        if viewModel.toastConfiguration == .prompted && viewModel.isConnected {
+//                            viewModel.toast(.promptAccepted)
+//                        }
+//                    }
+//            }
             .sheet(
                 isPresented: $viewModel.isToastPresented,
                 onDismiss: {

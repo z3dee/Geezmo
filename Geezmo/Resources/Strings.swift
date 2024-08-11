@@ -50,7 +50,8 @@ enum Strings {
         static let prompted = "Please accept the registration prompt on the TV"
         static let connectedAndRegistered = "Successfully connected and registered with the TV"
         static let disconnected = "Disconnected, tap any button to reconnect"
-        static let tvGoingOff = "The TV is going off, tap power button to turn it on again"
+        static let tvTurnedOn = "TV has been successfully powered on and is ready to use"
+        static let tvGoingOff = "TV is going off, tap the power button to turn it back on"
     }
 
     enum FAQ {
@@ -92,6 +93,7 @@ enum Strings {
         static let reset = "Reset"
         static let cancel = "Cancel"
         static let yourTextHere = "Enter text here..."
+        static let error = "Error"
     }
     
     enum Alerts {

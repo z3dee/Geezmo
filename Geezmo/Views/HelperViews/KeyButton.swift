@@ -81,7 +81,7 @@ struct KeyButtonStyle: ButtonStyle {
                 if type == .powerOff {
                     if viewModel.isConnected {
                         viewModel.send(.turnOff)
-                        viewModel.toast(.goingOff)
+                        viewModel.toast(.powerOff)
                         viewModel.disconnect()
                     } else {
                         viewModel.wakeMeUp()

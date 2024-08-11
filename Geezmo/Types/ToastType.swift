@@ -11,6 +11,8 @@ enum ToastType {
     case warning
     case success
     case notification
+    case powerOn
+    case powerOff
 }
 
 extension ToastType {
@@ -18,9 +20,9 @@ extension ToastType {
         switch self {
         case .notification:
             return .accent
-        case .warning:
+        case .warning, .powerOff:
             return .red
-        case .success:
+        case .success, .powerOn:
             return .green
         }
     }
@@ -33,6 +35,10 @@ extension ToastType {
             return "checkmark.circle.fill"
         case .notification:
             return "bell.circle.fill"
+        case .powerOn:
+            return "bolt.circle.fill"
+        case .powerOff:
+            return "bolt.slash.circle.fill"
         }
     }
 
@@ -40,9 +46,9 @@ extension ToastType {
         switch self {
         case .notification:
             return .warning
-        case .warning:
+        case .warning, .powerOff:
             return .error
-        case .success:
+        case .success, .powerOn:
             return .success
         }
     }

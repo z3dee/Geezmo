@@ -140,7 +140,7 @@ extension MainViewModel {
                 if case .failure(let error) = result {
                     let alertConfiguration =
                     AlertConfiguration(
-                        title: "Error",
+                        title: Strings.General.error,
                         message: error.localizedDescription,
                         primaryButton: .cancel(),
                         secondaryButton: nil
@@ -150,6 +150,7 @@ extension MainViewModel {
                 }
                 
                 connectAndRegister(forcingConnection: true)
+                toast(.powerOn)
             }
     }
 }

@@ -53,8 +53,13 @@ extension ToastConfiguration {
         message: Strings.ToastMessages.disconnected
     )
     
-    static let goingOff = ToastConfiguration(
-        type: .notification,
+    static let powerOn = ToastConfiguration(
+        type: .powerOn,
+        message: Strings.ToastMessages.tvTurnedOn
+    )
+    
+    static let powerOff = ToastConfiguration(
+        type: .powerOff,
         message: Strings.ToastMessages.tvGoingOff
     )
 }
