@@ -19,7 +19,7 @@ struct LargeTipView: View {
         VStack {
             Image(systemName: systemName)
                 .font(.system(size: 64, weight: .light, design: .rounded))
-                .foregroundStyle(.white, color)
+                .foregroundStyle(.primary, color)
                 .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
                 .onAppear {
                     animateSymbol.toggle()
