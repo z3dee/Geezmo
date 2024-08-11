@@ -45,11 +45,11 @@ struct PreferencesView: View {
                             .foregroundColor(.secondary)
                     }
 
-                    Button(action: { enterIpAlertShown.toggle() }, label: {
-                        Label(Strings.Titles.manuallyEnterIP, systemImage: "hand.raised.fingers.spread")
-                            .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
-                            .foregroundColor(.accentColor)
-                    })
+//                    Button(action: { enterIpAlertShown.toggle() }, label: {
+//                        Label(Strings.Titles.manuallyEnterIP, systemImage: "hand.raised.fingers.spread")
+//                            .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
+//                            .foregroundColor(.accentColor)
+//                    })
 
                     Button(action: { isClearAlertShown.toggle() }, label: {
                         Label(Strings.Titles.resetConnectionData, systemImage: "gear.badge.xmark")

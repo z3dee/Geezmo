@@ -77,6 +77,16 @@ struct MainView: View {
 //                            viewModel.keyboardPresented = true
 //                        }
 //                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Image(systemName: "rectangle.grid.2x2.fill")
+                        .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
+                        .foregroundColor(.secondary)
+                        .padding(.trailing, Globals.iconPadding)
+                        .padding(.top, 10)
+                        .onTapGesture {}
+                }
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "gearshape.fill")
                         .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))

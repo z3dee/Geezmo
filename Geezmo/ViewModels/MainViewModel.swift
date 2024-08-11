@@ -119,7 +119,9 @@ final class MainViewModel: NSObject, ObservableObject {
     func disconnect() {
         tv?.disconnect()
         Task { @MainActor in
-            isConnected = false
+            withAnimation(.easeInOut(duration: Globals.TimeIntervals.disabled)) {
+                isConnected = false
+            }
         }
     }
     

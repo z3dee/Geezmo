@@ -36,12 +36,21 @@ extension MainViewModel {
     }
     
     func isButtonDisabled(_ type: KeyButtonType) -> Bool {
-        switch type {
-        case .powerOff:
+        if type == .powerOff {
             return false
-        default:
-            return !isConnected
         }
+        
+        if !isConnected {
+            return false
+        }
+        
+        if type == .playPause {
+            if playState != "playing" || playState != "paused" {
+                return false
+            }
+        }
+        
+        return !isConnected
     }
     
     private func requestLocalNetworkAuthorization(_ completion: ((Bool) -> Void)?) {
@@ -74,7 +83,7 @@ extension MainViewModel {
     func handleScenePhase(_ scenePhase: ScenePhase) {
         switch scenePhase {
         case .active: connectAndRegister(forcingConnection: true)
-        case .background: disconnect()
+        case .inactive: disconnect()
         default: break
         }
     }

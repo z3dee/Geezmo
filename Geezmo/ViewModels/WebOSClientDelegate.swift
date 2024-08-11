@@ -25,7 +25,9 @@ extension MainViewModel: WebOSClientDelegate {
         AppSettings.shared.clientKey = clientKey
         subscribeAll()
         Task { @MainActor in
-            isConnected = true
+            withAnimation(.easeInOut(duration: Globals.TimeIntervals.disabled)) {
+                isConnected = true
+            }
             isToastPresented = false
         }
     }
