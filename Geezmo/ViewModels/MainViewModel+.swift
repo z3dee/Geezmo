@@ -40,16 +40,6 @@ extension MainViewModel {
             return false
         }
         
-        if !isConnected {
-            return false
-        }
-        
-        if type == .playPause {
-            if playState != "playing" || playState != "paused" {
-                return false
-            }
-        }
-        
         return !isConnected
     }
     
