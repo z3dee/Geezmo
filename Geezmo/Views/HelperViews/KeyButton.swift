@@ -134,7 +134,7 @@ private extension KeyButtonStyle {
         }
 
         if viewModel.isButtonDisabled(type) {
-            return .secondary.opacity(0.25)
+            return type.highlighted ? .accent.opacity(0.25) : .secondary.opacity(0.25)
         } else {
             return pressed ? .white : type.highlighted ? .accent : .secondary
         }
