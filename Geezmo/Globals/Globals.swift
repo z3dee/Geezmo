@@ -29,7 +29,7 @@ enum Globals {
     static let iconPadding: CGFloat = 15
     
     static var buttonSize: CGFloat {
-        return 70
+        return UIDevice.hasNotch ? 70 : 60
     }
     
     static var lineHeight: CGFloat {

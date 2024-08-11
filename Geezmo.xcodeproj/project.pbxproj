@@ -13,6 +13,7 @@
 		CA6044982C68B74A00B497A5 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = CA6044972C68B74A00B497A5 /* PopupView */; };
 		CA6116682C68BA2900AD5BCF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6116672C68BA2900AD5BCF /* PopupView.swift */; };
 		CA61166A2C68D5E600AD5BCF /* LargeTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6116692C68D5E600AD5BCF /* LargeTipView.swift */; };
+		CA61166C2C68D9F100AD5BCF /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61166B2C68D9F100AD5BCF /* UIDevice+.swift */; };
 		CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA667A672C4918F1007E8F87 /* GeezmoApp.swift */; };
 		CA667A6C2C4918F1007E8F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6B2C4918F1007E8F87 /* Assets.xcassets */; };
 		CA667A6F2C4918F1007E8F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA667A6E2C4918F1007E8F87 /* Preview Assets.xcassets */; };
@@ -138,6 +139,7 @@
 		CA409B9B2C61EC3C00888518 /* WakeOnLANService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeOnLANService.swift; sourceTree = "<group>"; };
 		CA6116672C68BA2900AD5BCF /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		CA6116692C68D5E600AD5BCF /* LargeTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTipView.swift; sourceTree = "<group>"; };
+		CA61166B2C68D9F100AD5BCF /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
 		CA667A642C4918F1007E8F87 /* Geezmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geezmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA667A672C4918F1007E8F87 /* GeezmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeezmoApp.swift; sourceTree = "<group>"; };
 		CA667A6B2C4918F1007E8F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 			children = (
 				CA667AC72C492F5C007E8F87 /* UINavigationController+.swift */,
 				CA409B992C61EBBE00888518 /* String+.swift */,
+				CA61166B2C68D9F100AD5BCF /* UIDevice+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				CA667A9F2C4921F9007E8F87 /* AboutView.swift in Sources */,
 				CA667ABB2C492E3A007E8F87 /* ButtonGroupColorAlternativeView.swift in Sources */,
 				CA667AA52C492265007E8F87 /* ToastConfiguration.swift in Sources */,
+				CA61166C2C68D9F100AD5BCF /* UIDevice+.swift in Sources */,
 				CA7C9AA12C58BCA0007C8045 /* PinPadView.swift in Sources */,
 				CA667AA12C492223007E8F87 /* TipView.swift in Sources */,
 				CA667ADF2C4930D8007E8F87 /* StringExtensions.swift in Sources */,
