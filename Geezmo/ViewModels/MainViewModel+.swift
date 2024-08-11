@@ -39,7 +39,6 @@ extension MainViewModel {
         if type == .powerOff {
             return false
         }
-        
         return !isConnected
     }
     

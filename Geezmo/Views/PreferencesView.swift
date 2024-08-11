@@ -31,11 +31,11 @@ struct PreferencesView: View {
                             .foregroundColor(.secondary)
                     }
                     
-                    Button(action: { }, label: {
-                        Label(Strings.Titles.rateUs, systemImage: "star.leadinghalf.filled")
-                            .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
-                            .foregroundColor(.accentColor)
-                    })
+//                    Button(action: { }, label: {
+//                        Label(Strings.Titles.rateUs, systemImage: "star.leadinghalf.filled")
+//                            .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
+//                            .foregroundColor(.accentColor)
+//                    })
                 }
 
                 Section(Strings.SectionHeaders.connection) {

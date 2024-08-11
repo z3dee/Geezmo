@@ -17,7 +17,7 @@ enum Globals {
     enum TimeIntervals {
         static let minimal: TimeInterval = 0.1
         static let medium: TimeInterval = 0.25
-        static let disabled: TimeInterval = 0.5
+        static let disabled: TimeInterval = 1.75
     }
     
     static let smallTitleSize: CGFloat = 18
