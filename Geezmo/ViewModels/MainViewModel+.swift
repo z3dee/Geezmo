@@ -100,6 +100,11 @@ extension MainViewModel {
             .getForegroundAppMediaStatus(subscribe: true),
             id: Globals.SubscriptionIds.mediaPlaybackInfoRequestId
         )
+        
+        send(
+            .getVolume(subscribe: true),
+            id: Globals.SubscriptionIds.volumeLevelRequestId
+        )
     }
     
     func showConnectionStatus() {

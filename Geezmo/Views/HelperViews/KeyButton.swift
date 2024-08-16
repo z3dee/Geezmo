@@ -43,7 +43,7 @@ struct KeyButtonStyle: ButtonStyle {
                         .font(.system(size: Globals.buttonFontSize, weight: .bold, design: .rounded))
                         .monospacedDigit()
                 } else {
-                    Image(systemName: type.systemName)
+                    Image(systemName: type.getSystemName(viewModel: viewModel))
                         .foregroundColor(getForegroundColor(type: type, isColorChanged))
                         .font(.system(size: Globals.buttonFontSize, weight: .bold, design: .rounded))
                 }

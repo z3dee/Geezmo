@@ -27,6 +27,7 @@ final class MainViewModel: NSObject, ObservableObject {
     @Published var pinPadPresented: Bool = false
     @Published var pairingCode: String? = nil
     @Published var isFocused: Bool = false
+    @Published var isMuted: Bool = false
     @Published var isConnected: Bool = false
     @Published var preferencesPresented: Bool = false
     @Published var devices = Set<DeviceData>()

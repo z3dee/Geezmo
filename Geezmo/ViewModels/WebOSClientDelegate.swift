@@ -49,6 +49,14 @@ extension MainViewModel: WebOSClientDelegate {
                 self.playState = playState
             }
         }
+        
+        if case .success(let response) = result,
+           response.id == Globals.SubscriptionIds.volumeLevelRequestId,
+           let muteState = response.payload?.volumeStatus?.muteStatus {
+            Task { @MainActor in
+                self.isMuted = muteState
+            }
+        }
 
         if case .failure(let error) = result {
             print("~err: \(error.localizedDescription)")

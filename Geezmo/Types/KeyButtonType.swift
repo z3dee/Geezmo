@@ -63,7 +63,7 @@ enum KeyButtonType {
 }
 
 extension KeyButtonType {
-    var systemName: String {
+    private var systemName: String {
         switch self {
         case .up:
             return "chevron.compact.up"
@@ -294,6 +294,14 @@ extension KeyButtonType {
             return .enabled
         default:
             return .disabled
+        }
+    }
+    
+    func getSystemName(viewModel: MainViewModel) -> String {
+        if self == .mute {
+            return viewModel.isMuted ? "speaker" : "speaker.slash"
+        } else {
+            return self.systemName
         }
     }
 }
