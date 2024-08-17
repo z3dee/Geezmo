@@ -16,6 +16,7 @@ private enum Constants {
 
 final class MainViewModel: NSObject, ObservableObject {
     @Published var isDiscoverDevicesActivityIndicatorShown: Bool = true
+    @Published var isAppsLoadingActivityIndicatorShown: Bool = true
     @Published var isAlertPresented: Bool = false
     @Published var alertConfiguration: AlertConfiguration?
     @Published var isToastPresented: Bool = false
@@ -31,7 +32,10 @@ final class MainViewModel: NSObject, ObservableObject {
     @Published var isScreenOff: Bool = false
     @Published var isConnected: Bool = false
     @Published var preferencesPresented: Bool = false
+    @Published var appListPresented: Bool = false
     @Published var devices = Set<DeviceData>()
+    @Published var loadingAppsFinished: Bool = false
+    @Published var apps = [WebOSResponseApplication]()
     @Published var navigationPath = [NavigationScreens]()
     @Published var preferencesAlternativeView: Bool = AppSettings.shared.phoneAlternativeView {
         didSet {

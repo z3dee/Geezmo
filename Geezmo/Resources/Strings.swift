@@ -9,6 +9,7 @@
 
 enum Strings {
     enum Titles {
+        static let apps = "TV Apps"
         static let preferences = "Preferences"
         static let aboutApp = "About Geezmo"
         static let faq = "Frequently Asked Questions"
@@ -35,6 +36,10 @@ enum Strings {
         static let madeWith = "Made with"
         static let madeIn = "in Kazakhstan"
         static let kzFlag = "🇰🇿"
+    }
+    
+    enum Apps {
+        static let loadingApps = "Please wait while we load your TV app list"
     }
 
     enum ConnectTV {

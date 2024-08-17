@@ -10,7 +10,8 @@
 		CA21441E2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21441D2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift */; };
 		CA409B9A2C61EBBE00888518 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA409B992C61EBBE00888518 /* String+.swift */; };
 		CA409B9C2C61EC3C00888518 /* WakeOnLANService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA409B9B2C61EC3C00888518 /* WakeOnLANService.swift */; };
-		CA6044982C68B74A00B497A5 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = CA6044972C68B74A00B497A5 /* PopupView */; };
+		CA510F902C70926600FC3800 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA510F8F2C70926600FC3800 /* AppsView.swift */; };
+		CA510F922C70B5B200FC3800 /* SingleAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA510F912C70B5B200FC3800 /* SingleAppView.swift */; };
 		CA6116682C68BA2900AD5BCF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6116672C68BA2900AD5BCF /* PopupView.swift */; };
 		CA61166A2C68D5E600AD5BCF /* LargeTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6116692C68D5E600AD5BCF /* LargeTipView.swift */; };
 		CA61166C2C68D9F100AD5BCF /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61166B2C68D9F100AD5BCF /* UIDevice+.swift */; };
@@ -137,6 +138,8 @@
 		CA33563A2C4A186000B55DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA409B992C61EBBE00888518 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		CA409B9B2C61EC3C00888518 /* WakeOnLANService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeOnLANService.swift; sourceTree = "<group>"; };
+		CA510F8F2C70926600FC3800 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
+		CA510F912C70B5B200FC3800 /* SingleAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAppView.swift; sourceTree = "<group>"; };
 		CA6116672C68BA2900AD5BCF /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		CA6116692C68D5E600AD5BCF /* LargeTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTipView.swift; sourceTree = "<group>"; };
 		CA61166B2C68D9F100AD5BCF /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
@@ -216,7 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */,
-				CA6044982C68B74A00B497A5 /* PopupView in Frameworks */,
 				CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */,
 				CA79FC3D2C57EBD500B357F1 /* WebOSClient in Frameworks */,
 				CA8C4FA12C5CD7F6004154E9 /* SSDPClient in Frameworks */,
@@ -325,6 +327,8 @@
 				CA667AB52C492CF4007E8F87 /* ButtonGroupViews */,
 				CA667A8B2C492101007E8F87 /* MainView.swift */,
 				CA667A8E2C49215F007E8F87 /* PreferencesView.swift */,
+				CA510F8F2C70926600FC3800 /* AppsView.swift */,
+				CA510F912C70B5B200FC3800 /* SingleAppView.swift */,
 				CA667A902C49218E007E8F87 /* DeviceDiscoveryView.swift */,
 				CA667A9E2C4921F9007E8F87 /* AboutView.swift */,
 				CA667AA02C492223007E8F87 /* TipView.swift */,
@@ -550,7 +554,6 @@
 				CA8C4F9A2C5CD581004154E9 /* SSDPClient */,
 				CA8C4F9D2C5CD657004154E9 /* SSDPClient */,
 				CA8C4FA02C5CD7F6004154E9 /* SSDPClient */,
-				CA6044972C68B74A00B497A5 /* PopupView */,
 			);
 			productName = Geezmo;
 			productReference = CA667A642C4918F1007E8F87 /* Geezmo.app */;
@@ -632,7 +635,6 @@
 				CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */,
 				CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */,
 				CA8C4F9F2C5CD7F6004154E9 /* XCLocalSwiftPackageReference "LocalPackages/SSDPClient" */,
-				CA6044962C68B74A00B497A5 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = CA667A652C4918F1007E8F87 /* Products */;
 			projectDirPath = "";
@@ -690,6 +692,7 @@
 				CA667AB42C492CF0007E8F87 /* ButtonGroupDefaultView.swift in Sources */,
 				CA97AE572C5F5326006917B1 /* LocalNetworkAuthorization.swift in Sources */,
 				CA97AE592C5FA91A006917B1 /* AlertConfiguration.swift in Sources */,
+				CA510F902C70926600FC3800 /* AppsView.swift in Sources */,
 				CA667A8C2C492101007E8F87 /* MainView.swift in Sources */,
 				CA667AD52C49303C007E8F87 /* ToastType.swift in Sources */,
 				CA6116682C68BA2900AD5BCF /* PopupView.swift in Sources */,
@@ -719,6 +722,7 @@
 				CA667AD12C49300D007E8F87 /* DeviceData.swift in Sources */,
 				CA667AA72C49227E007E8F87 /* ToastSheetView.swift in Sources */,
 				CA667ABD2C492E94007E8F87 /* MainViewModel.swift in Sources */,
+				CA510F922C70B5B200FC3800 /* SingleAppView.swift in Sources */,
 				CA667ADB2C4930B3007E8F87 /* BundleExtensions.swift in Sources */,
 				CA21441E2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift in Sources */,
 			);
@@ -1158,14 +1162,6 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CA6044962C68B74A00B497A5 /* XCRemoteSwiftPackageReference "PopupView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/PopupView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.5;
-			};
-		};
 		CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
@@ -1193,11 +1189,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CA6044972C68B74A00B497A5 /* PopupView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA6044962C68B74A00B497A5 /* XCRemoteSwiftPackageReference "PopupView" */;
-			productName = PopupView;
-		};
 		CA667A962C4921C5007E8F87 /* ActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CA667A952C4921C5007E8F87 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;

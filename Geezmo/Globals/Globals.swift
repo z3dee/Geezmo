@@ -14,6 +14,7 @@ enum Globals {
         static let remoteKeyboardRequestId = "remoteKeyboardSubscription"
         static let mediaPlaybackRequestId = "mediaPlaybackSubscription"
         static let volumeLevelRequestId = "volumeLevelSubscription"
+        static let listAppsRequestId = "listAppsRequest"
     }
     
     enum TimeIntervals {

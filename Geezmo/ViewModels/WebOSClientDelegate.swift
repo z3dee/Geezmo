@@ -65,6 +65,18 @@ extension MainViewModel: WebOSClientDelegate {
                 self.isScreenOff = screenState.uppercased().contains("SCREEN OFF")
             }
         }
+        
+        if case .success(let response) = result,
+           response.id == Globals.SubscriptionIds.listAppsRequestId {
+            guard let applications = response.payload?.applications else {
+                return
+            }
+            Task { @MainActor in
+                apps = applications.filter { !($0.systemApp ?? false) }
+                apps.append(contentsOf: applications.filter { $0.folderPath?.contains("com.webos.app.browser") ?? false })
+                loadingAppsFinished = true
+            }
+        }
 
         if case .failure(let error) = result {
             print("~err: \(error.localizedDescription)")

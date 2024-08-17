@@ -80,12 +80,17 @@ struct MainView: View {
 //                }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "square.grid.2x2.fill")
+                    Image(systemName: "circle.grid.2x2.fill")
                         .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
                         .foregroundColor(.secondary)
                         .padding(.trailing, Globals.iconPadding)
                         .padding(.top, 10)
-                        .onTapGesture {}
+                        .onTapGesture {
+                            viewModel.appListPresented = true
+                            if viewModel.preferencesHapticFeedback {
+                                UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+                            }
+                        }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -96,7 +101,6 @@ struct MainView: View {
                         .padding(.top, 10)
                         .onTapGesture {
                             viewModel.preferencesPresented = true
-                            
                             if viewModel.preferencesHapticFeedback {
                                 UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
                             }
@@ -125,6 +129,16 @@ struct MainView: View {
                     viewModel.navigationPath.removeAll()
                 }, content: {
                     PreferencesView(viewModel: viewModel)
+                        .presentationDragIndicator(.visible)
+                        .presentationCornerRadius(24)
+                }
+            )
+            .sheet(
+                isPresented: $viewModel.appListPresented,
+                onDismiss: {
+                    viewModel.navigationPath.removeAll()
+                }, content: {
+                    AppsView(viewModel: viewModel)
                         .presentationDragIndicator(.visible)
                         .presentationCornerRadius(24)
                 }

@@ -35,4 +35,17 @@ extension String {
         }
         return nil
     }
+    
+    func toInitials() -> String {
+        let cleanedString = self.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
+        let words = cleanedString.split(separator: " ")
+        if words.count == 1 {
+            return String(words[0].prefix(1))
+                .uppercased()
+                .replacingOccurrences(of: "-", with: "")
+        }
+        let firstInitial = words[0].prefix(1).uppercased()
+        let secondInitial = words[1].prefix(1).uppercased()
+        return (firstInitial + secondInitial).replacingOccurrences(of: "-", with: "")
+    }
 }

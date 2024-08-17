@@ -89,6 +89,17 @@ extension MainViewModel {
         devices.removeAll()
         ssdpClient.discoverService()
     }
+    
+    func loadApps() {
+        loadingAppsFinished = false
+        apps.removeAll()
+        send(.listApps, id: Globals.SubscriptionIds.listAppsRequestId)
+    }
+    
+    func launchApp(id: String) {
+        send(.launchApp(appId: id, contentId: nil, params: nil))
+        appListPresented = false
+    }
 
     func subscribeAll() {
         send(
