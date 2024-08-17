@@ -95,15 +95,17 @@ extension MainViewModel {
             .registerRemoteKeyboard,
             id: Globals.SubscriptionIds.remoteKeyboardRequestId
         )
-
         send(
             .getForegroundAppMediaStatus(subscribe: true),
-            id: Globals.SubscriptionIds.mediaPlaybackInfoRequestId
+            id: Globals.SubscriptionIds.mediaPlaybackRequestId
         )
-        
         send(
             .getVolume(subscribe: true),
             id: Globals.SubscriptionIds.volumeLevelRequestId
+        )
+        send(
+            .getPowerState(subscribe: true),
+            id: Globals.SubscriptionIds.powerStateRequestId
         )
     }
     

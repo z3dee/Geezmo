@@ -9,16 +9,17 @@ import SwiftUI
 
 enum Globals {
     enum SubscriptionIds {
+        static let powerStateRequestId = "powerStateSubscription"
         static let registrationRequestId = "registrationSubscription"
         static let remoteKeyboardRequestId = "remoteKeyboardSubscription"
-        static let mediaPlaybackInfoRequestId = "mediaPlaybackInfoSubscription"
+        static let mediaPlaybackRequestId = "mediaPlaybackSubscription"
         static let volumeLevelRequestId = "volumeLevelSubscription"
     }
     
     enum TimeIntervals {
         static let minimal: TimeInterval = 0.1
         static let medium: TimeInterval = 0.25
-        static let disabled: TimeInterval = 1.75
+        static let disabled: TimeInterval = 0.75
     }
     
     static let smallTitleSize: CGFloat = 18

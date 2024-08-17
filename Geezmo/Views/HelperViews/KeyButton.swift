@@ -163,7 +163,7 @@ private func performAction(type: KeyButtonType, viewModel: MainViewModel) {
     if let keyTarget = type.keyTarget {
         viewModel.sendKey(keyTarget)
     }
-    if let commonTarget = type.commonTarget {
+    if let commonTarget = type.getCommonTarget(viewModel: viewModel) {
         viewModel.send(commonTarget)
     }
 }

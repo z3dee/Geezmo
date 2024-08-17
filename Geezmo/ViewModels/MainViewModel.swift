@@ -28,6 +28,7 @@ final class MainViewModel: NSObject, ObservableObject {
     @Published var pairingCode: String? = nil
     @Published var isFocused: Bool = false
     @Published var isMuted: Bool = false
+    @Published var isScreenOff: Bool = false
     @Published var isConnected: Bool = false
     @Published var preferencesPresented: Bool = false
     @Published var devices = Set<DeviceData>()
@@ -45,16 +46,16 @@ final class MainViewModel: NSObject, ObservableObject {
     
     @Published
     var faqItems: [FAQItem] = [
-        FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q2, answer: Strings.FAQ.a2, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q3, answer: Strings.FAQ.a3, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q4, answer: Strings.FAQ.a4, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q5, answer: Strings.FAQ.a5, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q6, answer: Strings.FAQ.a6, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q7, answer: Strings.FAQ.a7, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q8, answer: Strings.FAQ.a8, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q9, answer: Strings.FAQ.a9, isExpanded: false),
-        FAQItem(question: Strings.FAQ.q10, answer: Strings.FAQ.a10, isExpanded: false),
+        FAQItem(question: Strings.FAQ.q1, answer: Strings.FAQ.a1, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q2, answer: Strings.FAQ.a2, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q3, answer: Strings.FAQ.a3, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q4, answer: Strings.FAQ.a4, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q5, answer: Strings.FAQ.a5, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q6, answer: Strings.FAQ.a6, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q7, answer: Strings.FAQ.a7, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q8, answer: Strings.FAQ.a8, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q9, answer: Strings.FAQ.a9, isExpanded: true),
+        FAQItem(question: Strings.FAQ.q10, answer: Strings.FAQ.a10, isExpanded: true),
     ]
     
     var session: WCSession
@@ -122,6 +123,8 @@ final class MainViewModel: NSObject, ObservableObject {
         Task { @MainActor in
             withAnimation(.easeInOut(duration: Globals.TimeIntervals.disabled)) {
                 isConnected = false
+                colorButtonsPresented = false
+                playState = nil
             }
         }
     }

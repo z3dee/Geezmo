@@ -193,10 +193,21 @@ extension KeyButtonType {
         }
     }
 
-    var commonTarget: WebOSTarget? {
+    private var commonTarget: WebOSTarget? {
         switch self {
         case .screenOff:
             return .screenOff
+        case .powerOff:
+            return .turnOff
+        default:
+            return nil
+        }
+    }
+    
+    func getCommonTarget(viewModel: MainViewModel) -> WebOSTarget? {
+        switch self {
+        case .screenOff:
+            return viewModel.isScreenOff ? .screenOn : .screenOff
         case .powerOff:
             return .turnOff
         default:
@@ -300,6 +311,8 @@ extension KeyButtonType {
     func getSystemName(viewModel: MainViewModel) -> String {
         if self == .mute {
             return viewModel.isMuted ? "speaker" : "speaker.slash"
+        } else if self == .screenOff {
+            return viewModel.isScreenOff ? "square" : "square.slash"
         } else {
             return self.systemName
         }

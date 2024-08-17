@@ -43,7 +43,7 @@ extension MainViewModel: WebOSClientDelegate {
         }
 
         if case .success(let response) = result,
-           response.id == Globals.SubscriptionIds.mediaPlaybackInfoRequestId,
+           response.id == Globals.SubscriptionIds.mediaPlaybackRequestId,
            let playState = response.payload?.foregroundAppInfo?.first?.playState {
             Task { @MainActor in
                 self.playState = playState
@@ -55,6 +55,14 @@ extension MainViewModel: WebOSClientDelegate {
            let muteState = response.payload?.volumeStatus?.muteStatus {
             Task { @MainActor in
                 self.isMuted = muteState
+            }
+        }
+        
+        if case .success(let response) = result,
+           response.id == Globals.SubscriptionIds.powerStateRequestId,
+           let screenState = response.payload?.state {
+            Task { @MainActor in
+                self.isScreenOff = screenState.uppercased().contains("SCREEN OFF")
             }
         }
 
