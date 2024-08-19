@@ -172,26 +172,6 @@ struct MainView: View {
                         .presentationCornerRadius(24)
                 }
             )
-//            .popup(isPresented: $viewModel.isToastPresented) {
-//                PopupView(
-//                    viewModel: viewModel,
-//                    configuration: viewModel.toastConfiguration!
-//                )
-//            } customize: { popup in
-//                popup
-//                    .type(.floater())
-//                    .position(.bottom)
-//                    .animation(.spring(duration: 0.35))
-//                    .autohideIn(viewModel.toastConfiguration?.autohideIn)
-//                    .closeOnTap(viewModel.toastConfiguration?.closeOnTap ?? true)
-//                    .closeOnTapOutside(viewModel.toastConfiguration?.closeOnTapOutside ?? true)
-//                    .backgroundColor(Color(uiColor: .black).opacity(0.3))
-//                    .dismissCallback {
-//                        if viewModel.toastConfiguration == .prompted && viewModel.isConnected {
-//                            viewModel.toast(.promptAccepted)
-//                        }
-//                    }
-//            }
             .sheet(
                 isPresented: $viewModel.isToastPresented,
                 onDismiss: {
