@@ -50,9 +50,9 @@ struct AccentButtonStyle: ButtonStyle {
         }
         .padding(.horizontal)
         .frame(width: (UIScreen.main.bounds.width - 60) / 3, height: (UIScreen.main.bounds.width - 60) / 3)
-        .background(Color(uiColor: .systemGray4))
+        //.background(Color(uiColor: .systemGray5).opacity(0.25))
         .cornerRadius(12)
-        .animation(.spring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.1), value: configuration.isPressed)
+        .animation(.easeInOut(duration: 0.25), value: configuration.isPressed)
         .onChange(of: configuration.isPressed) {
             if configuration.isPressed {
                 if viewModel.preferencesHapticFeedback {
