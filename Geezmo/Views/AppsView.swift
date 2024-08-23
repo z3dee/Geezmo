@@ -28,7 +28,24 @@ struct AppsView: View {
             VStack {
                 if viewModel.loadingAppsFinished {
                     if viewModel.apps.isEmpty {
-                        // Empty apps state
+                        Spacer()
+
+                        LargeTipView(
+                            systemName: "repeat.circle.fill",
+                            color: .accent,
+                            message: Strings.Apps.noAppsFound
+                        )
+                        
+                        Spacer().frame(height: 5)
+                        
+                        Button(Strings.Apps.reload) {
+                            viewModel.loadApps()
+                        }
+                        .padding(25)
+                        .buttonStyle(.borderedProminent)
+                        .font(.system(size: Globals.bodyFontSize, weight: .bold, design: .rounded))
+                        
+                        Spacer()
                     } else {
                         // Search bar
 //                        TextField("Search", text: $searchText)
@@ -55,7 +72,7 @@ struct AppsView: View {
                     .padding(.top, 50)
                     Spacer()
                     TipView(
-                        systemName: "timer.circle.fill",
+                        systemName: "clock.circle.fill",
                         color: .accent,
                         message: Strings.Apps.loadingApps
                     )

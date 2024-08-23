@@ -16,8 +16,9 @@ struct DeviceDiscoveryView: View {
             if viewModel.deviceDiscoveryFinished {
                 if viewModel.devices.isEmpty {
                     Spacer()
+
                     LargeTipView(
-                        systemName: "tv.slash",
+                        systemName: "repeat.circle.fill",
                         color: .accent,
                         message: Strings.ConnectTV.notFound
                     )

@@ -18,22 +18,21 @@ struct LargeTipView: View {
     var body: some View {
         VStack {
             Image(systemName: systemName)
-                .font(.system(size: 64, weight: .light, design: .rounded))
-                .foregroundStyle(.primary, color)
+                .font(.system(size: 64, weight: .regular, design: .rounded))
+                .foregroundStyle(.white, color)
                 .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
                 .onAppear {
                     animateSymbol.toggle()
                 }
 
-            Spacer().frame(height: 25)
+            Spacer().frame(height: 10)
 
             Text(message)
                 .font(.system(size: Globals.bodyFontSize, weight: .bold, design: .rounded))
                 .foregroundColor(.primary)
                 .multilineTextAlignment(.center)
                 .lineSpacing(Globals.lineHeight)
-                .padding([.leading, .trailing], 50)
+                .padding([.leading, .trailing], 25)
         }
     }
 }
-

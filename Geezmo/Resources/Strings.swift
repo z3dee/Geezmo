@@ -35,17 +35,18 @@ enum Strings {
         static let authorInfo = "by Yaroslav Sedyshev"
         static let madeWith = "Made with"
         static let madeIn = "in Kazakhstan"
-        static let kzFlag = "🇰🇿"
     }
     
     enum Apps {
         static let loadingApps = "Please wait while we load your TV app list"
+        static let noAppsFound = "Something went wrong while loading your TV app list. Please Reload."
+        static let reload = "Reload App List"
     }
 
     enum ConnectTV {
         static let discoveredDevices = "Discovered devices"
         static let importantNote = "TV must be on and connected to the same network"
-        static let notFound = "No TV was discovered. Please ensure your iPhone is connected to the same Wi-Fi network and rescan."
+        static let notFound = "No TV was discovered. Please rescan your network."
         static let rescan = "Rescan Network"
     }
 
