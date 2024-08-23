@@ -176,7 +176,7 @@ extension KeyButtonType {
 
     var hapticTypeReleased: WKHapticType? {
         switch self {
-        case .powerOff, .home, .ok:
+        case .powerOff:
             return .click
         default:
             return nil

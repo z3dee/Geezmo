@@ -292,7 +292,7 @@ extension KeyButtonType {
 
     var hapticTypeReleased: UIImpactFeedbackGenerator.FeedbackStyle? {
         switch self {
-        case .powerOff, .home, .ok, .keyboard:
+        case .powerOff:
             return .soft
         default:
             return nil
