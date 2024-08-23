@@ -52,20 +52,20 @@ struct MainView: View {
                     .padding(.top, 10)
                 }
                 
-                ToolbarItem(placement: .topBarTrailing) {
-                    Image(
-                        systemName: viewModel.isConnected ?
-                        "checkmark.circle.fill" : "exclamationmark.circle.fill"
-                    )
-                    .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white, viewModel.isConnected ? .green : .red)
-                    .padding(.trailing, Globals.iconPadding)
-                    .padding(.top, 10)
-                    .contentTransition(.symbolEffect(.replace.byLayer))
-                    .onTapGesture {
-                        viewModel.showConnectionStatus()
-                    }
-                }
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    Image(
+//                        systemName: viewModel.isConnected ?
+//                        "checkmark.circle.fill" : "exclamationmark.circle.fill"
+//                    )
+//                    .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
+//                    .foregroundStyle(.white, viewModel.isConnected ? .green : .red)
+//                    .padding(.trailing, Globals.iconPadding)
+//                    .padding(.top, 10)
+//                    .contentTransition(.symbolEffect(.replace.byLayer))
+//                    .onTapGesture {
+//                        viewModel.showConnectionStatus()
+//                    }
+//                }
 
 //                ToolbarItem(placement: .topBarTrailing) {
 //                    Image(systemName: "keyboard.fill")
@@ -81,7 +81,7 @@ struct MainView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "circle.grid.2x2.fill")
                         .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(viewModel.isConnected ? .secondary : Color(uiColor: .tertiaryLabel))
                         .padding(.trailing, Globals.iconPadding)
                         .padding(.top, 10)
                         .onTapGesture {
@@ -90,6 +90,7 @@ struct MainView: View {
                                 UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
                             }
                         }
+                        .disabled(!viewModel.isConnected)
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
