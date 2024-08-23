@@ -52,32 +52,6 @@ struct MainView: View {
                     .padding(.top, 10)
                 }
                 
-//                ToolbarItem(placement: .topBarTrailing) {
-//                    Image(
-//                        systemName: viewModel.isConnected ?
-//                        "checkmark.circle.fill" : "exclamationmark.circle.fill"
-//                    )
-//                    .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
-//                    .foregroundStyle(.white, viewModel.isConnected ? .green : .red)
-//                    .padding(.trailing, Globals.iconPadding)
-//                    .padding(.top, 10)
-//                    .contentTransition(.symbolEffect(.replace.byLayer))
-//                    .onTapGesture {
-//                        viewModel.showConnectionStatus()
-//                    }
-//                }
-
-//                ToolbarItem(placement: .topBarTrailing) {
-//                    Image(systemName: "keyboard.fill")
-//                        .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
-//                        .foregroundColor(.secondary)
-//                        .padding(.trailing, Globals.iconPadding)
-//                        .padding(.top, 10)
-//                        .onTapGesture {
-//                            viewModel.keyboardPresented = true
-//                        }
-//                }
-                
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "circle.grid.2x2.fill")
                         .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
