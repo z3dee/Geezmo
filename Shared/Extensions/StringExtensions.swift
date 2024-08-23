@@ -11,6 +11,8 @@ extension String {
     static let commonTarget = "sendCommon"
     static let keyTarget = "sendKey"
     static let service = "service"
+    static let muteState = "muteState"
+    static let screenState = "screenState"
 }
 
 extension String {

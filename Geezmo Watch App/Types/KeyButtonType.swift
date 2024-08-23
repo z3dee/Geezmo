@@ -191,5 +191,15 @@ extension KeyButtonType {
             return .disabled
         }
     }
+    
+    func getSystemName(viewModel: MainViewModel) -> String {
+        if self == .mute {
+            return viewModel.isMuted ? "speaker" : "speaker.slash"
+        } else if self == .screenOff {
+            return viewModel.isScreenOff ? "square" : "square.slash"
+        } else {
+            return self.systemName
+        }
+    }
 }
 

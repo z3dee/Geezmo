@@ -11,6 +11,8 @@ import WebOSClient
 
 final class MainViewModel: NSObject, ObservableObject {
     @Published var isConnected: Bool = false
+    @Published var isMuted: Bool = false
+    @Published var isScreenOff: Bool = false
     @Published var tvVolumeLevel: Double = 0
     @Published var isVolumeViewPresented: Bool = false
     @Published var preferencesAlternativeView: Bool = AppSettings.shared.watchAlternativeView {
@@ -41,6 +43,10 @@ extension MainViewModel {
 
     func send(_ target: WebOSTarget) {
         guard let targetJSON = target.request.jsonWithId(UUID().uuidString) else {
+            return
+        }
+        if targetJSON.contains("turnOffScreen") {
+            session.sendMessage([.screenState: isScreenOff], replyHandler: nil)
             return
         }
         if targetJSON.contains("turnOff") {
@@ -95,6 +101,16 @@ extension MainViewModel: WCSessionDelegate {
         if let volume = message["volumeChanged"] as? Double {
             Task { @MainActor in
                 tvVolumeLevel = volume
+            }
+        }
+        if let muteState = message[.muteState] as? Bool {
+            Task { @MainActor in
+                isMuted = muteState
+            }
+        }
+        if let screenState = message[.screenState] as? Bool {
+            Task { @MainActor in
+                isScreenOff = screenState
             }
         }
     }

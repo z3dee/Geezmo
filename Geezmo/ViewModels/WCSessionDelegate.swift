@@ -26,6 +26,10 @@ extension MainViewModel: WCSessionDelegate {
                 powerOnOrOff()
             }
         }
+        
+        if let shouldTurnOnScreen = message[.screenState] as? Bool {
+            send(shouldTurnOnScreen ? .screenOn : .screenOff)
+        }
 
         if let targetString = message[.keyTarget] as? String,
            let targetData = targetString.data(using: .utf8) {
