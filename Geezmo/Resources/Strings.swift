@@ -9,7 +9,7 @@
 
 enum Strings {
     enum Titles {
-        static let apps = "TV Apps"
+        static let apps = "Apps"
         static let preferences = "Preferences"
         static let aboutApp = "About Geezmo"
         static let faq = "Frequently Asked Questions"
