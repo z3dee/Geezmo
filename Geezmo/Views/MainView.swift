@@ -146,7 +146,7 @@ struct MainView: View {
             .sheet(
                 isPresented: $viewModel.keyboardPresented,
                 onDismiss: {
-                    if viewModel.isFocused { viewModel.sendKey(.back) }
+                    //if viewModel.isFocused { viewModel.sendKey(.back) }
                 },
                 content: {
                     KeyboardView(showModal: $viewModel.keyboardPresented, viewModel: viewModel)

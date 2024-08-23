@@ -76,7 +76,7 @@ struct FAQDisclosureStyle: DisclosureGroupStyle {
                 
                 Spacer()
                 
-                Image(systemName: "chevron.compact.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
                     .foregroundColor(.accent)
                     .rotationEffect(.degrees(configuration.isExpanded ? 90 : 0))
