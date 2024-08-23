@@ -20,6 +20,12 @@ extension MainViewModel: WCSessionDelegate {
         didReceiveMessage message: [String: Any]
     ) {
         connectAndRegister()
+        
+        if let serviceString = message[.service] as? String {
+            if serviceString == "TV_ON_OFF" {
+                powerOnOrOff()
+            }
+        }
 
         if let targetString = message[.keyTarget] as? String,
            let targetData = targetString.data(using: .utf8) {

@@ -153,6 +153,16 @@ extension MainViewModel {
         connectAndRegister(forcingConnection: true)
     }
     
+    func powerOnOrOff() {
+        if isConnected {
+            send(.turnOff)
+            toast(.powerOff)
+            disconnect()
+        } else {
+            wakeMeUp()
+        }
+    }
+    
     func wakeMeUp() {
         guard let host = AppSettings.shared.host,
               let mac = AppSettings.shared.mac else {

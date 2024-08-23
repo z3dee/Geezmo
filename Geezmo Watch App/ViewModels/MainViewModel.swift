@@ -43,6 +43,10 @@ extension MainViewModel {
         guard let targetJSON = target.request.jsonWithId(UUID().uuidString) else {
             return
         }
+        if targetJSON.contains("turnOff") {
+            session.sendMessage([.service: "TV_ON_OFF"], replyHandler: nil)
+            return
+        }
         session.sendMessage([.commonTarget: targetJSON], replyHandler: nil) { [weak self] _ in
             guard let self else {
                 return

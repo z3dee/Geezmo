@@ -119,4 +119,3 @@ enum Strings {
 }
 
 // swiftlint:enable line_length
-

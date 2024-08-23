@@ -10,6 +10,7 @@ import Foundation
 extension String {
     static let commonTarget = "sendCommon"
     static let keyTarget = "sendKey"
+    static let service = "service"
 }
 
 extension String {

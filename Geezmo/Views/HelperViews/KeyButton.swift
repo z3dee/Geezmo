@@ -79,13 +79,7 @@ struct KeyButtonStyle: ButtonStyle {
                 }
 
                 if type == .powerOff {
-                    if viewModel.isConnected {
-                        viewModel.send(.turnOff)
-                        viewModel.toast(.powerOff)
-                        viewModel.disconnect()
-                    } else {
-                        viewModel.wakeMeUp()
-                    }
+                    viewModel.powerOnOrOff()
                 }
             })
     }
