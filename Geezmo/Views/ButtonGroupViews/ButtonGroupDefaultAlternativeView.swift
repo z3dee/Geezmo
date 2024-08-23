@@ -51,9 +51,9 @@ struct ButtonGroupDefaultAlternativeView: View {
                 KeyButton(.volumeDown)
             }
             KeyButtonRow {
-                KeyButton(.channelUpAlternative)
+                KeyButton(.rewind)
                 KeyButton(.playPause)
-                KeyButton(.channelDownAlternative)
+                KeyButton(.fastForward)
             }
         }
     }

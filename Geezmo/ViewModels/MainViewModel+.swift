@@ -39,13 +39,13 @@ extension MainViewModel {
         if type == .powerOff {
             return false
         }
-        if type == .playPause {
-            if (playState == "playing" || playState == "paused") && isConnected {
-                return false
-            } else {
-                return true
-            }
-        }
+//        if type == .playPause {
+//            if (playState == "playing" || playState == "paused") && isConnected {
+//                return false
+//            } else {
+//                return true
+//            }
+//        }
         return !isConnected
     }
     
