@@ -44,7 +44,7 @@ enum Strings {
 
     enum ConnectTV {
         static let importantNote = "TV must be on and connected to the same network"
-        static let notFound = "No TV was discovered. Please ensure your iPhone is connected to the same WiFi network and rescan."
+        static let notFound = "No TV was discovered. Please ensure your iPhone is connected to the same Wi-Fi network and rescan."
         static let rescan = "Rescan Network"
     }
 
@@ -72,7 +72,7 @@ enum Strings {
         static let a3 = "Yes, certain button types such as volume controls and arrow keys support continuous actions when held down."
         
         static let q4 = "How do I troubleshoot connection issues?"
-        static let a4 = "Ensure that both your iPhone and your TV are connected to the same WiFi network and that you have granted local network permissions to Geezmo. This is essential for the app to function properly. Please also ensure that your TV has the latest software installed to guarantee the best experience."
+        static let a4 = "Ensure that both your iPhone and your TV are connected to the same Wi-Fi network and that you have granted local network permissions to Geezmo. This is essential for the app to function properly. Please also ensure that your TV has the latest software installed to guarantee the best experience."
         
         static let q5 = "Does Geezmo support voice commands?"
         static let a5 = "No, currently Geezmo does not support voice commands."
