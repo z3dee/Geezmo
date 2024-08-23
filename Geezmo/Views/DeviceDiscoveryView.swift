@@ -34,7 +34,7 @@ struct DeviceDiscoveryView: View {
                     Spacer()
                 } else {
                     List(Array(viewModel.devices)) { device in
-                        Section("Discovered devices") {
+                        Section(Strings.ConnectTV.discoveredDevices) {
                             Label("\(device.name)", systemImage: "tv")
                                 .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                                 .foregroundColor(.secondary)
