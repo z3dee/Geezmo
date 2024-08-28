@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Geezmo/Assets.xcassets/AppIcon.appiconset/AppIcon.png" alt="App Icon" width="120" height="120" style="border-radius: 25px;">
+  <img src="Geezmo/Geezmo/Assets.xcassets/AppIcon.appiconset/AppIcon.png" alt="App Icon" width="120" height="120" style="border-radius: 50%;">
 </p>
 
 # Geezmo
