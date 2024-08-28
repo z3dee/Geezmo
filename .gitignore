@@ -57,3 +57,6 @@ playground.xcworkspace
 
 # Swift Package Manager
 /.swiftpm
+
+# Firebase Google Analytics
+GoogleService-Info.plist
