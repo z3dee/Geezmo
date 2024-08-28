@@ -124,6 +124,13 @@ extension MainViewModel {
         toast(isConnected ? .connected : .disconnected)
     }
     
+    func isCurrentLanguageKazakh() -> Bool {
+        if let currentLanguage = Locale.preferredLanguages.first {
+            return currentLanguage.hasPrefix("kk")
+        }
+        return false
+    }
+    
     func pairDiscoveredDevice(with device: DeviceData) {
         disconnect()
         AppSettings.shared.deviceName = device.name

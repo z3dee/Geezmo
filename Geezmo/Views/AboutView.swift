@@ -43,16 +43,29 @@ struct AboutView: View {
             Spacer()
 
             HStack(spacing: 5) {
-                Text(Strings.About.madeWith)
-                    .foregroundColor(.primary)
-                Image(systemName: "heart.fill")
-                    .foregroundColor(.accent)
-                    .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
-                    .onAppear {
-                        animateSymbol.toggle()
-                    }
-                Text(Strings.About.madeIn)
-                    .foregroundColor(.primary)
+                if viewModel.isCurrentLanguageKazakh() {
+                    Text(Strings.About.madeIn)
+                        .foregroundColor(.primary)
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.accent)
+                        .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
+                        .onAppear {
+                            animateSymbol.toggle()
+                        }
+                    Text(Strings.About.madeWith)
+                        .foregroundColor(.primary)
+                } else {
+                    Text(Strings.About.madeWith)
+                        .foregroundColor(.primary)
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.accent)
+                        .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
+                        .onAppear {
+                            animateSymbol.toggle()
+                        }
+                    Text(Strings.About.madeIn)
+                        .foregroundColor(.primary)
+                }
             }
             .font(.system(size: Globals.bodyFontSize, weight: .bold, design: .rounded))
             .multilineTextAlignment(.center)
