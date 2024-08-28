@@ -9,9 +9,7 @@ Geezmo is a simple yet powerful remote control app for LG Smart TVs, designed sp
 ## Features
 
 - **Full TV Control**: Navigate your LG Smart TV, easily adjust channels and volume levels with intuitive controls. Turn your TV on or off directly from the app.
-
 - **App Browser**: Browse apps installed on your LG Smart TV and easily launch them.
-
 - **Apple Watch Companion App**: Control your TV from your wrist with the companion app for Apple Watch.
 
 ## Built with SwiftUI
