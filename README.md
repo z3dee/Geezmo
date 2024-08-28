@@ -1,4 +1,4 @@
-![App Icon](Geezmo/Geezmo/Assets.xcassets/AppIcon.appiconset/AppIcon.png)
+![App Icon](Geezmo/Assets.xcassets/AppIcon.appiconset/AppIcon.png)
 
 # Geezmo
 
