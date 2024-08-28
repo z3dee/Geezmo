@@ -1,4 +1,6 @@
-![App Icon](Geezmo/Assets.xcassets/AppIcon.appiconset/AppIcon.png)
+<p align="center">
+  <img src="Geezmo/Assets.xcassets/AppIcon.appiconset/AppIcon.png" alt="App Icon" width="120" height="120" style="border-radius: 25px;">
+</p>
 
 # Geezmo
 
