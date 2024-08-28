@@ -10,14 +10,14 @@
 "#apps" = "Apps";
 "#preferences" = "Preferences";
 "#aboutApp" = "About Geezmo";
-"#faq" = "Frequently Asked Questions";
-"#rateUs" = "Rate Us On App Store";
+"#faq" = "Frequently asked questions";
+"#rateUs" = "Rate us on App Store";
 "#connectTV" = "Connect TV";
-"#manuallyEnterIP" = "Manually Input IP Address";
-"#resetConnectionData" = "Reset Connection Data";
-"#alternativeLayout" = "Alternative Layout";
-"#hapticFeedback" = "Haptic Feedback";
-"#pairingTitle" = "Pairing Code";
+"#manuallyEnterIP" = "Manually input IP address";
+"#resetConnectionData" = "Reset connection data";
+"#alternativeLayout" = "Alternative layout";
+"#hapticFeedback" = "Haptic feedback";
+"#pairingTitle" = "Pairing code";
 
 /* SectionHeaders */
 "#app" = "App";
@@ -33,13 +33,13 @@
 /* Apps */
 "#loadingApps" = "Please wait while we load your TV app list";
 "#noAppsFound" = "Something went wrong while loading your TV app list. Please Reload.";
-"#reload" = "Reload App List";
+"#reload" = "Reload app list";
 
 /* ConnectTV */
 "#discoveredDevices" = "Discovered devices";
 "#importantNote" = "TV must be on and connected to the same network";
 "#notFound" = "No TV was discovered. Please rescan your network.";
-"#rescan" = "Rescan Network";
+"#rescan" = "Rescan network";
 
 /* InputIP */
 "#inputIPMessage" = "IP address of your TV";

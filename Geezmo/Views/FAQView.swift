@@ -17,12 +17,12 @@ struct FAQView: View {
                     faqItem.question,
                     isExpanded: $viewModel.faqItems[index].isExpanded
                 ) {
-                    if faqItem.answer.contains("GitHub") {
+                    if index == 8 {
                             Text(faqItem.answer + "  ") +
                             Text("https://github.com/jareksedy/Geezmo")
                                 .foregroundColor(.accent)
                         
-                    } else if faqItem.answer.contains("reach out") {
+                    } else if index == 9 {
                             Text(faqItem.answer + " ") +
                             Text("jareksedy@icloud.com")
                                 .foregroundColor(.accent)
