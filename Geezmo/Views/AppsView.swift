@@ -2,7 +2,7 @@
 //  AppsView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 17.08.2024.
+//  Created by Yaroslav Sedyshev on 17.08.2024.
 //
 
 import SwiftUI

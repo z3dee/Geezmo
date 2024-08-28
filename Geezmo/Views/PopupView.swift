@@ -2,7 +2,7 @@
 //  PopupView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 11.08.2024.
+//  Created by Yaroslav Sedyshev on 11.08.2024.
 //
 
 import SwiftUI
