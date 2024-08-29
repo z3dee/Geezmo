@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ActivityIndicatorView
+import FirebaseAnalytics
 
 struct DeviceDiscoveryView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -92,6 +93,7 @@ struct DeviceDiscoveryView: View {
         }
         .onAppear {
             viewModel.discoverDevices()
+            Analytics.logEvent(AnalyticsEvents.PreferencesView.connectTVStarted.rawValue, parameters: nil)
         }
     }
 }

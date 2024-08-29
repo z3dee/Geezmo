@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct MainView: View {
     @Environment(\.scenePhase) var scenePhase
@@ -172,6 +173,7 @@ struct MainView: View {
             }
             .onAppear {
                 viewModel.navigateToDeviceDiscoveryViewIfNeeded(.fromMainView)
+                Analytics.logEvent(AnalyticsEvents.MainView.mainViewStarted.rawValue, parameters: nil)
             }
         }
     }

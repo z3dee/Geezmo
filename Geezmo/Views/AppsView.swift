@@ -8,6 +8,7 @@
 import SwiftUI
 import ActivityIndicatorView
 import WebOSClient
+import FirebaseAnalytics
 
 struct AppsView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -94,6 +95,7 @@ struct AppsView: View {
             }
             .onAppear {
                 viewModel.loadApps()
+                Analytics.logEvent(AnalyticsEvents.AppsView.appsViewStarted.rawValue, parameters: nil)
             }
         }
     }

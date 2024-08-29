@@ -92,6 +92,9 @@
 		CA9302B52C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */; };
 		CA9302B62C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */; };
 		CA9302B72C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */; };
+		CA9302B92C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */; };
+		CA9302BA2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */; };
+		CA9302BB2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */; };
 		CA97AE572C5F5326006917B1 /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */; };
 		CA97AE592C5FA91A006917B1 /* AlertConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97AE582C5FA91A006917B1 /* AlertConfiguration.swift */; };
 		CAE576A82C78ADB800DE9A82 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE576A62C78ADB800DE9A82 /* Localizable.strings */; };
@@ -216,6 +219,7 @@
 		CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPadView.swift; sourceTree = "<group>"; };
 		CA8B526C2C59406800A9BA2B /* Geezmo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Geezmo.entitlements; sourceTree = "<group>"; };
 		CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
 		CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		CA97AE582C5FA91A006917B1 /* AlertConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfiguration.swift; sourceTree = "<group>"; };
 		CAE576A72C78ADB800DE9A82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -413,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				CA21441D2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift */,
+				CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */,
 				CA667ACD2C492FD3007E8F87 /* KeyButtonType.swift */,
 				CA667AD02C49300D007E8F87 /* DeviceData.swift */,
 				CA667AD22C493021007E8F87 /* NavigationScreens.swift */,
@@ -704,6 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667ACE2C492FD3007E8F87 /* KeyButtonType.swift in Sources */,
+				CA9302B92C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */,
 				CA667AB72C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift in Sources */,
 				CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
 				CA667AC82C492F5C007E8F87 /* UINavigationController+.swift in Sources */,
@@ -755,6 +761,7 @@
 			files = (
 				CA667A7A2C4918F1007E8F87 /* GeezmoWatchApp.swift in Sources */,
 				CA667AF62C49361C007E8F87 /* NavigationView.swift in Sources */,
+				CA9302BA2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */,
 				CA667B012C4937B7007E8F87 /* KeyButtonRow.swift in Sources */,
 				CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */,
 				CA667AF82C493655007E8F87 /* PlaybackView.swift in Sources */,
@@ -781,6 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667B202C49428B007E8F87 /* GeezmoWidget.swift in Sources */,
+				CA9302BB2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

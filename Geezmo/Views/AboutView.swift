@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct AboutView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -94,6 +95,9 @@ struct AboutView: View {
                     .padding(.trailing, Globals.iconPadding)
                     .padding(.top, 10)
             }
+        }
+        .onAppear {
+            Analytics.logEvent(AnalyticsEvents.PreferencesView.aboutViewStarted.rawValue, parameters: nil)
         }
     }
 }

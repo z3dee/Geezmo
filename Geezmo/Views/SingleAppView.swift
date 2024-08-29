@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WebOSClient
+import FirebaseAnalytics
 
 struct SingleAppView: View {
     let app: WebOSResponseApplication
@@ -17,6 +18,7 @@ struct SingleAppView: View {
             Button(app.title ?? "N/A", action: {
                 if let appId = app.id {
                     viewModel.launchApp(id: appId)
+                    Analytics.logEvent(AnalyticsEvents.AppsView.appLaunchTapped.rawValue, parameters: ["app_title": app.title ?? "unknown"])
                     if viewModel.preferencesHapticFeedback {
                         UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
                     }

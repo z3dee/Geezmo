@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct FAQView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -82,6 +83,9 @@ struct FAQDisclosureStyle: DisclosureGroupStyle {
                     .rotationEffect(.degrees(configuration.isExpanded ? 90 : 0))
             }
             .contentShape(Rectangle())
+            .onAppear {
+                Analytics.logEvent(AnalyticsEvents.PreferencesView.faqViewStarted.rawValue, parameters: nil)
+            }
             .onTapGesture {
                 withAnimation(.smooth) {
                     configuration.isExpanded.toggle()
