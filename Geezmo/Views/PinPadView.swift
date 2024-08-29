@@ -2,7 +2,7 @@
 //  PinPadView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 30.07.2024.
+//  Created by Yaroslav Sedyshev on 30.07.2024.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  WCSessionDelegate.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
@@ -20,6 +20,16 @@ extension MainViewModel: WCSessionDelegate {
         didReceiveMessage message: [String: Any]
     ) {
         connectAndRegister()
+        
+        if let serviceString = message[.service] as? String {
+            if serviceString == "TV_ON_OFF" {
+                powerOnOrOff()
+            }
+        }
+        
+        if let shouldTurnOnScreen = message[.screenState] as? Bool {
+            send(shouldTurnOnScreen ? .screenOn : .screenOff)
+        }
 
         if let targetString = message[.keyTarget] as? String,
            let targetData = targetString.data(using: .utf8) {

@@ -2,10 +2,11 @@
 //  PreferencesView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct PreferencesView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -51,7 +52,10 @@ struct PreferencesView: View {
 //                            .foregroundColor(.accentColor)
 //                    })
 
-                    Button(action: { isClearAlertShown.toggle() }, label: {
+                    Button(action: {
+                        isClearAlertShown.toggle()
+                        Analytics.logEvent(AnalyticsEvents.PreferencesView.resetConnectionDataTapped.rawValue, parameters: nil)
+                    }, label: {
                         Label(Strings.Titles.resetConnectionData, systemImage: "gear.badge.xmark")
                             .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                             .foregroundColor(.accentColor)
@@ -70,6 +74,7 @@ struct PreferencesView: View {
                     .contentShape(Rectangle())
                     .onTapGesture {
                         viewModel.preferencesAlternativeView.toggle()
+                        Analytics.logEvent(AnalyticsEvents.PreferencesView.altLayoutTapped.rawValue, parameters: nil)
                     }
 
                     Toggle(
@@ -83,6 +88,7 @@ struct PreferencesView: View {
                     .contentShape(Rectangle())
                     .onTapGesture {
                         viewModel.preferencesHapticFeedback.toggle()
+                        Analytics.logEvent(AnalyticsEvents.PreferencesView.hapticFeedbackTapped.rawValue, parameters: nil)
                     }
                 }
 
@@ -142,6 +148,7 @@ struct PreferencesView: View {
             }
             .onAppear {
                 viewModel.navigateToDeviceDiscoveryViewIfNeeded(.fromPreferences)
+                Analytics.logEvent(AnalyticsEvents.PreferencesView.preferencesViewStarted.rawValue, parameters: nil)
             }
         }
     }

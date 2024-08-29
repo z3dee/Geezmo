@@ -2,7 +2,7 @@
 //  KeyButton.swift
 //  Geezmo Watch App
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
@@ -43,7 +43,7 @@ struct KeyButtonStyle: ButtonStyle {
             .frame(width: Globals.buttonSize, height: Globals.buttonSize)
             .foregroundColor(getBackgroundColor(type: type, isColorChanged))
             .overlay {
-                Image(systemName: type.systemName)
+                Image(systemName: type.getSystemName(viewModel: viewModel))
                     .foregroundColor(getForegroundColor(type: type, isColorChanged))
                     .font(.system(size: Globals.buttonFontSize, weight: .bold, design: .rounded))
             }

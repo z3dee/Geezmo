@@ -2,7 +2,7 @@
 //  KeyButtonType.swift
 //  Geezmo Watch App
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
@@ -176,7 +176,7 @@ extension KeyButtonType {
 
     var hapticTypeReleased: WKHapticType? {
         switch self {
-        case .powerOff, .home, .ok:
+        case .powerOff:
             return .click
         default:
             return nil
@@ -189,6 +189,16 @@ extension KeyButtonType {
             return .enabled
         default:
             return .disabled
+        }
+    }
+    
+    func getSystemName(viewModel: MainViewModel) -> String {
+        if self == .mute {
+            return viewModel.isMuted ? "speaker" : "speaker.slash"
+        } else if self == .screenOff {
+            return viewModel.isScreenOff ? "square" : "square.slash"
+        } else {
+            return self.systemName
         }
     }
 }

@@ -2,10 +2,11 @@
 //  FAQView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct FAQView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -17,12 +18,12 @@ struct FAQView: View {
                     faqItem.question,
                     isExpanded: $viewModel.faqItems[index].isExpanded
                 ) {
-                    if faqItem.answer.contains("GitHub") {
+                    if index == 8 {
                             Text(faqItem.answer + "  ") +
                             Text("https://github.com/jareksedy/Geezmo")
                                 .foregroundColor(.accent)
                         
-                    } else if faqItem.answer.contains("reach out") {
+                    } else if index == 9 {
                             Text(faqItem.answer + " ") +
                             Text("jareksedy@icloud.com")
                                 .foregroundColor(.accent)
@@ -76,12 +77,15 @@ struct FAQDisclosureStyle: DisclosureGroupStyle {
                 
                 Spacer()
                 
-                Image(systemName: "chevron.compact.right")
+                Image(systemName: "chevron.right")
                     .font(.system(size: Globals.iconSize, weight: .bold, design: .rounded))
                     .foregroundColor(.accent)
                     .rotationEffect(.degrees(configuration.isExpanded ? 90 : 0))
             }
             .contentShape(Rectangle())
+            .onAppear {
+                Analytics.logEvent(AnalyticsEvents.PreferencesView.faqViewStarted.rawValue, parameters: nil)
+            }
             .onTapGesture {
                 withAnimation(.smooth) {
                     configuration.isExpanded.toggle()

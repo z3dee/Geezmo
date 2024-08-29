@@ -2,12 +2,13 @@
 //  AppsView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 17.08.2024.
+//  Created by Yaroslav Sedyshev on 17.08.2024.
 //
 
 import SwiftUI
 import ActivityIndicatorView
 import WebOSClient
+import FirebaseAnalytics
 
 struct AppsView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -28,7 +29,24 @@ struct AppsView: View {
             VStack {
                 if viewModel.loadingAppsFinished {
                     if viewModel.apps.isEmpty {
-                        // Empty apps state
+                        Spacer()
+
+                        LargeTipView(
+                            systemName: "repeat.circle.fill",
+                            color: .accent,
+                            message: Strings.Apps.noAppsFound
+                        )
+                        
+                        Spacer().frame(height: 5)
+                        
+                        Button(Strings.Apps.reload) {
+                            viewModel.loadApps()
+                        }
+                        .padding(25)
+                        .buttonStyle(.borderedProminent)
+                        .font(.system(size: Globals.bodyFontSize, weight: .bold, design: .rounded))
+                        
+                        Spacer()
                     } else {
                         // Search bar
 //                        TextField("Search", text: $searchText)
@@ -55,7 +73,7 @@ struct AppsView: View {
                     .padding(.top, 50)
                     Spacer()
                     TipView(
-                        systemName: "timer.circle.fill",
+                        systemName: "clock.circle.fill",
                         color: .accent,
                         message: Strings.Apps.loadingApps
                     )
@@ -77,6 +95,7 @@ struct AppsView: View {
             }
             .onAppear {
                 viewModel.loadApps()
+                Analytics.logEvent(AnalyticsEvents.AppsView.appsViewStarted.rawValue, parameters: nil)
             }
         }
     }

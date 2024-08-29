@@ -2,7 +2,7 @@
 //  MainViewModel+.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
@@ -21,8 +21,8 @@ extension MainViewModel {
             url: url,
             delegate: self,
             shouldPerformHeartbeat: true,
-            heartbeatTimeInterval: 60,
-            shouldLogActivity: true
+            heartbeatTimeInterval: 20,
+            shouldLogActivity: false
         )
 
         connect()
@@ -39,13 +39,13 @@ extension MainViewModel {
         if type == .powerOff {
             return false
         }
-        if type == .playPause {
-            if (playState == "playing" || playState == "paused") && isConnected {
-                return false
-            } else {
-                return true
-            }
-        }
+//        if type == .playPause {
+//            if (playState == "playing" || playState == "paused") && isConnected {
+//                return false
+//            } else {
+//                return true
+//            }
+//        }
         return !isConnected
     }
     
@@ -79,7 +79,7 @@ extension MainViewModel {
     func handleScenePhase(_ scenePhase: ScenePhase) {
         switch scenePhase {
         case .active: connectAndRegister(forcingConnection: true)
-        case .inactive: disconnect()
+        case .background, .inactive: disconnect()
         default: break
         }
     }
@@ -124,6 +124,13 @@ extension MainViewModel {
         toast(isConnected ? .connected : .disconnected)
     }
     
+    func isCurrentLanguageKazakh() -> Bool {
+        if let currentLanguage = Locale.preferredLanguages.first {
+            return currentLanguage.hasPrefix("kk")
+        }
+        return false
+    }
+    
     func pairDiscoveredDevice(with device: DeviceData) {
         disconnect()
         AppSettings.shared.deviceName = device.name
@@ -151,6 +158,16 @@ extension MainViewModel {
         AppSettings.shared.clientKey = nil
         preferencesPresented = false
         connectAndRegister(forcingConnection: true)
+    }
+    
+    func powerOnOrOff() {
+        if isConnected {
+            send(.turnOff)
+            toast(.powerOff)
+            disconnect()
+        } else {
+            wakeMeUp()
+        }
     }
     
     func wakeMeUp() {

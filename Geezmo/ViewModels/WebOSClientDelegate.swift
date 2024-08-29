@@ -2,7 +2,7 @@
 //  WebOSClientDelegate.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
@@ -55,6 +55,7 @@ extension MainViewModel: WebOSClientDelegate {
            let muteState = response.payload?.volumeStatus?.muteStatus {
             Task { @MainActor in
                 self.isMuted = muteState
+                self.session.sendMessage([.muteState: self.isMuted], replyHandler: nil)
             }
         }
         
@@ -63,6 +64,7 @@ extension MainViewModel: WebOSClientDelegate {
            let screenState = response.payload?.state {
             Task { @MainActor in
                 self.isScreenOff = screenState.uppercased().contains("SCREEN OFF")
+                self.session.sendMessage([.screenState: self.isScreenOff], replyHandler: nil)
             }
         }
         

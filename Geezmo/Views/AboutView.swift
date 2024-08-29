@@ -2,10 +2,11 @@
 //  AboutView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct AboutView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -43,16 +44,29 @@ struct AboutView: View {
             Spacer()
 
             HStack(spacing: 5) {
-                Text(Strings.About.madeWith)
-                    .foregroundColor(.primary)
-                Image(systemName: "heart.fill")
-                    .foregroundColor(.accent)
-                    .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
-                    .onAppear {
-                        animateSymbol.toggle()
-                    }
-                Text(Strings.About.madeIn)
-                    .foregroundColor(.primary)
+                if viewModel.isCurrentLanguageKazakh() {
+                    Text(Strings.About.madeIn)
+                        .foregroundColor(.primary)
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.accent)
+                        .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
+                        .onAppear {
+                            animateSymbol.toggle()
+                        }
+                    Text(Strings.About.madeWith)
+                        .foregroundColor(.primary)
+                } else {
+                    Text(Strings.About.madeWith)
+                        .foregroundColor(.primary)
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.accent)
+                        .symbolEffect(.bounce.up.byLayer, value: animateSymbol)
+                        .onAppear {
+                            animateSymbol.toggle()
+                        }
+                    Text(Strings.About.madeIn)
+                        .foregroundColor(.primary)
+                }
             }
             .font(.system(size: Globals.bodyFontSize, weight: .bold, design: .rounded))
             .multilineTextAlignment(.center)
@@ -81,6 +95,9 @@ struct AboutView: View {
                     .padding(.trailing, Globals.iconPadding)
                     .padding(.top, 10)
             }
+        }
+        .onAppear {
+            Analytics.logEvent(AnalyticsEvents.PreferencesView.aboutViewStarted.rawValue, parameters: nil)
         }
     }
 }

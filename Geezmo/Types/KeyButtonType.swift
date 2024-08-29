@@ -2,7 +2,7 @@
 //  KeyButtonType.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
@@ -292,7 +292,7 @@ extension KeyButtonType {
 
     var hapticTypeReleased: UIImpactFeedbackGenerator.FeedbackStyle? {
         switch self {
-        case .powerOff, .home, .ok, .keyboard:
+        case .powerOff:
             return .soft
         default:
             return nil

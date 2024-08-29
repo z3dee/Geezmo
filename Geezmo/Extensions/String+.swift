@@ -2,7 +2,7 @@
 //  String+.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 06.08.2024.
+//  Created by Yaroslav Sedyshev on 06.08.2024.
 //
 
 import Foundation

@@ -2,11 +2,12 @@
 //  DeviceDiscoveryView.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
 import ActivityIndicatorView
+import FirebaseAnalytics
 
 struct DeviceDiscoveryView: View {
     @ObservedObject var viewModel: MainViewModel
@@ -16,8 +17,9 @@ struct DeviceDiscoveryView: View {
             if viewModel.deviceDiscoveryFinished {
                 if viewModel.devices.isEmpty {
                     Spacer()
+
                     LargeTipView(
-                        systemName: "doc.text.magnifyingglass",
+                        systemName: "repeat.circle.fill",
                         color: .accent,
                         message: Strings.ConnectTV.notFound
                     )
@@ -34,7 +36,7 @@ struct DeviceDiscoveryView: View {
                     Spacer()
                 } else {
                     List(Array(viewModel.devices)) { device in
-                        Section("Discovered devices") {
+                        Section(Strings.ConnectTV.discoveredDevices) {
                             Label("\(device.name)", systemImage: "tv")
                                 .font(.system(size: Globals.bodyFontSize, weight: .medium, design: .rounded))
                                 .foregroundColor(.secondary)
@@ -91,6 +93,7 @@ struct DeviceDiscoveryView: View {
         }
         .onAppear {
             viewModel.discoverDevices()
+            Analytics.logEvent(AnalyticsEvents.PreferencesView.connectTVStarted.rawValue, parameters: nil)
         }
     }
 }

@@ -2,13 +2,14 @@
 //  MainViewModel.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
 import WatchConnectivity
 import WebOSClient
 import SSDPClient
+import FirebaseAnalytics
 
 private enum Constants {
     static let volumeSubscriptionRequestId = "volumeSubscription"
@@ -116,10 +117,12 @@ final class MainViewModel: NSObject, ObservableObject {
 
     func sendKey(_ keyTarget: WebOSKeyTarget) {
         tv?.sendKey(keyTarget)
+        Analytics.logEvent(AnalyticsEvents.General.buttonTapped.rawValue, parameters: nil)
     }
     
     func sendKey(keyData: Data) {
         tv?.sendKey(keyData: keyData)
+        Analytics.logEvent(AnalyticsEvents.General.buttonTapped.rawValue, parameters: nil)
     }
     
     func disconnect() {
@@ -131,10 +134,12 @@ final class MainViewModel: NSObject, ObservableObject {
                 playState = nil
             }
         }
+        Analytics.logEvent(AnalyticsEvents.General.tvDisconnected.rawValue, parameters: nil)
     }
     
     func connect() {
         tv?.connect()
+        Analytics.logEvent(AnalyticsEvents.General.tvConnected.rawValue, parameters: nil)
     }
 
     func toast(_ configuration: ToastConfiguration) {

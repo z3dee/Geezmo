@@ -2,7 +2,7 @@
 //  AlertConfiguration.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 04.08.2024.
+//  Created by Yaroslav Sedyshev on 04.08.2024.
 //
 
 import SwiftUI

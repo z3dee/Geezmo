@@ -87,8 +87,17 @@
 		CA8C4F9B2C5CD581004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4F9A2C5CD581004154E9 /* SSDPClient */; };
 		CA8C4F9E2C5CD657004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4F9D2C5CD657004154E9 /* SSDPClient */; };
 		CA8C4FA12C5CD7F6004154E9 /* SSDPClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA8C4FA02C5CD7F6004154E9 /* SSDPClient */; };
+		CA9302B12C7F270100AAEBEB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CA9302B02C7F270100AAEBEB /* FirebaseAnalytics */; };
+		CA9302B32C7F270100AAEBEB /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CA9302B22C7F270100AAEBEB /* FirebaseCrashlytics */; };
+		CA9302B52C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */; };
+		CA9302B62C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */; };
+		CA9302B72C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */; };
+		CA9302B92C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */; };
+		CA9302BA2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */; };
+		CA9302BB2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */; };
 		CA97AE572C5F5326006917B1 /* LocalNetworkAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */; };
 		CA97AE592C5FA91A006917B1 /* AlertConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97AE582C5FA91A006917B1 /* AlertConfiguration.swift */; };
+		CAE576A82C78ADB800DE9A82 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAE576A62C78ADB800DE9A82 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,8 +218,13 @@
 		CA667B232C49428C007E8F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA7C9AA02C58BCA0007C8045 /* PinPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPadView.swift; sourceTree = "<group>"; };
 		CA8B526C2C59406800A9BA2B /* Geezmo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Geezmo.entitlements; sourceTree = "<group>"; };
+		CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
 		CA97AE562C5F5326006917B1 /* LocalNetworkAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkAuthorization.swift; sourceTree = "<group>"; };
 		CA97AE582C5FA91A006917B1 /* AlertConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfiguration.swift; sourceTree = "<group>"; };
+		CAE576A72C78ADB800DE9A82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAE576A92C78ADBB00DE9A82 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAE576AA2C78ADBF00DE9A82 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,10 +232,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9302B12C7F270100AAEBEB /* FirebaseAnalytics in Frameworks */,
 				CA667A972C4921C5007E8F87 /* ActivityIndicatorView in Frameworks */,
 				CA667A9A2C4921CF007E8F87 /* Foil in Frameworks */,
 				CA79FC3D2C57EBD500B357F1 /* WebOSClient in Frameworks */,
 				CA8C4FA12C5CD7F6004154E9 /* SSDPClient in Frameworks */,
+				CA9302B32C7F270100AAEBEB /* FirebaseCrashlytics in Frameworks */,
 				CA8C4F9B2C5CD581004154E9 /* SSDPClient in Frameworks */,
 				CA8C4F9E2C5CD657004154E9 /* SSDPClient in Frameworks */,
 			);
@@ -275,6 +291,7 @@
 			children = (
 				CA8B526C2C59406800A9BA2B /* Geezmo.entitlements */,
 				CA33563A2C4A186000B55DB3 /* Info.plist */,
+				CA9302B42C7F27B900AAEBEB /* GoogleService-Info.plist */,
 				CA667A672C4918F1007E8F87 /* GeezmoApp.swift */,
 				CA667A8D2C49211F007E8F87 /* Views */,
 				CA667ABE2C492E99007E8F87 /* ViewModels */,
@@ -391,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				CA667ACA2C492F8A007E8F87 /* Strings.swift */,
+				CAE576A62C78ADB800DE9A82 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -399,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				CA21441D2C60BFCA00D3931A /* DeviceDiscoveryNavigationContext.swift */,
+				CA9302B82C803A8100AAEBEB /* AnalyticsEvents.swift */,
 				CA667ACD2C492FD3007E8F87 /* KeyButtonType.swift */,
 				CA667AD02C49300D007E8F87 /* DeviceData.swift */,
 				CA667AD22C493021007E8F87 /* NavigationScreens.swift */,
@@ -554,6 +573,8 @@
 				CA8C4F9A2C5CD581004154E9 /* SSDPClient */,
 				CA8C4F9D2C5CD657004154E9 /* SSDPClient */,
 				CA8C4FA02C5CD7F6004154E9 /* SSDPClient */,
+				CA9302B02C7F270100AAEBEB /* FirebaseAnalytics */,
+				CA9302B22C7F270100AAEBEB /* FirebaseCrashlytics */,
 			);
 			productName = Geezmo;
 			productReference = CA667A642C4918F1007E8F87 /* Geezmo.app */;
@@ -635,6 +656,7 @@
 				CA667A982C4921CF007E8F87 /* XCRemoteSwiftPackageReference "Foil" */,
 				CA79FC3B2C57EBD500B357F1 /* XCRemoteSwiftPackageReference "WebOSClient" */,
 				CA8C4F9F2C5CD7F6004154E9 /* XCLocalSwiftPackageReference "LocalPackages/SSDPClient" */,
+				CA9302AF2C7F270100AAEBEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CA667A652C4918F1007E8F87 /* Products */;
 			projectDirPath = "";
@@ -653,6 +675,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667A6F2C4918F1007E8F87 /* Preview Assets.xcassets in Resources */,
+				CA9302B52C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */,
+				CAE576A82C78ADB800DE9A82 /* Localizable.strings in Resources */,
 				CA667A6C2C4918F1007E8F87 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667A812C4918F2007E8F87 /* Preview Assets.xcassets in Resources */,
+				CA9302B62C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */,
 				CA667B122C49403F007E8F87 /* Localizable.strings in Resources */,
 				CA667A7E2C4918F2007E8F87 /* Assets.xcassets in Resources */,
 			);
@@ -672,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667B222C49428C007E8F87 /* Assets.xcassets in Resources */,
+				CA9302B72C7F27B900AAEBEB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667ACE2C492FD3007E8F87 /* KeyButtonType.swift in Sources */,
+				CA9302B92C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */,
 				CA667AB72C492D86007E8F87 /* ButtonGroupDefaultAlternativeView.swift in Sources */,
 				CA667A682C4918F1007E8F87 /* GeezmoApp.swift in Sources */,
 				CA667AC82C492F5C007E8F87 /* UINavigationController+.swift in Sources */,
@@ -734,6 +761,7 @@
 			files = (
 				CA667A7A2C4918F1007E8F87 /* GeezmoWatchApp.swift in Sources */,
 				CA667AF62C49361C007E8F87 /* NavigationView.swift in Sources */,
+				CA9302BA2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */,
 				CA667B012C4937B7007E8F87 /* KeyButtonRow.swift in Sources */,
 				CA667AE02C4930DB007E8F87 /* StringExtensions.swift in Sources */,
 				CA667AF82C493655007E8F87 /* PlaybackView.swift in Sources */,
@@ -760,6 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA667B202C49428B007E8F87 /* GeezmoWidget.swift in Sources */,
+				CA9302BB2C803A8100AAEBEB /* AnalyticsEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +814,16 @@
 				CA667B112C49403F007E8F87 /* en */,
 				CA667B132C494045007E8F87 /* kk */,
 				CA667B142C494045007E8F87 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CAE576A62C78ADB800DE9A82 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAE576A72C78ADB800DE9A82 /* en */,
+				CAE576A92C78ADBB00DE9A82 /* kk */,
+				CAE576AA2C78ADBF00DE9A82 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -917,7 +956,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 98;
 				DEVELOPMENT_ASSET_PATHS = "\"Geezmo Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				ENABLE_PREVIEWS = YES;
@@ -948,7 +987,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 98;
 				DEVELOPMENT_ASSET_PATHS = "\"Geezmo Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				ENABLE_PREVIEWS = YES;
@@ -982,7 +1021,7 @@
 				CODE_SIGN_ENTITLEMENTS = Geezmo/Geezmo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 98;
 				DEVELOPMENT_ASSET_PATHS = "\"Geezmo/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				ENABLE_PREVIEWS = YES;
@@ -1021,7 +1060,7 @@
 				CODE_SIGN_ENTITLEMENTS = Geezmo/Geezmo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 98;
 				DEVELOPMENT_ASSET_PATHS = "\"Geezmo/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				ENABLE_PREVIEWS = YES;
@@ -1058,7 +1097,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 98;
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeezmoWidget/Info.plist;
@@ -1088,7 +1127,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 98;
 				DEVELOPMENT_TEAM = 4NK62H99X6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeezmoWidget/Info.plist;
@@ -1186,6 +1225,14 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		CA9302AF2C7F270100AAEBEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1225,6 +1272,16 @@
 		CA8C4FA02C5CD7F6004154E9 /* SSDPClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SSDPClient;
+		};
+		CA9302B02C7F270100AAEBEB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9302AF2C7F270100AAEBEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CA9302B22C7F270100AAEBEB /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9302AF2C7F270100AAEBEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

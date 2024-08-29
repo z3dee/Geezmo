@@ -2,7 +2,7 @@
 //  KeyButton.swift
 //  Geezmo
 //
-//  Created by Ярослав Седышев on 18.07.2024.
+//  Created by Yaroslav Sedyshev on 18.07.2024.
 //
 
 import SwiftUI
@@ -79,13 +79,7 @@ struct KeyButtonStyle: ButtonStyle {
                 }
 
                 if type == .powerOff {
-                    if viewModel.isConnected {
-                        viewModel.send(.turnOff)
-                        viewModel.toast(.powerOff)
-                        viewModel.disconnect()
-                    } else {
-                        viewModel.wakeMeUp()
-                    }
+                    viewModel.powerOnOrOff()
                 }
             })
     }
