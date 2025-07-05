@@ -1,4 +1,4 @@
-name: iOS 18 App
+name: Build iOS App
 
 on:
   push:
@@ -8,24 +8,32 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14  # or macos-latest, macos-13, etc.
+    runs-on: macos-14
 
     steps:
-      - name: Checkout source code
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Select Xcode version (Xcode 16 for iOS 18)
+      - name: Select Xcode 16 (for iOS 18)
         run: sudo xcode-select -s /Applications/Xcode_16.0.app
-
-      - name: Install CocoaPods (if needed)
-        run: pod install
-        working-directory: ./YourProjectFolder
 
       - name: Build the app
         run: |
+          set -o pipefail
           xcodebuild clean build \
-            -workspace YourApp.xcworkspace \
-            -scheme YourAppScheme \
+            -project Geezmo.xcodeproj \
+            -scheme Geezmo \
             -sdk iphoneos \
             -configuration Release \
-            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+            -destination 'generic/platform=iOS' \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee build.log | xcpretty
+
+      - name: Upload xcodebuild log if build fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
